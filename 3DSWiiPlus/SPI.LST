@@ -1,0 +1,71 @@
+C51 COMPILER V9.52.0.0   SPI                                                               08/08/2017 16:17:41 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE SPI
+OBJECT MODULE PLACED IN SPI.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE SPI.c OPTIMIZE(9,SPEED) REGFILE(.\3DSWiiPlus.ORC) BROWSE DEFINE(LCM_DRIVER_
+                    -IST3932) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include "SPI.h"
+   2          
+   3          
+   4          #define USE_HARDWARE_SPI
+   5          
+   6          
+   7          // 每个SPI设备的/CS要在各自的.c中单独定义
+   8          #ifndef USE_HARDWARE_SPI
+              sbit SPI_MOSI   = P1^3;
+              sbit SPI_MISO   = P1^4;
+              sbit SPI_CLK    = P1^5;
+              #endif
+  13          
+  14          
+  15          void SPI_Init(){
+  16   1      #ifdef USE_HARDWARE_SPI
+  17   1              P_SW1 &= 0xF3;  // 将硬件SPI设置到第一组管脚（P1.2、P1.3、P1.4、P1.5）
+  18   1      #endif
+  19   1              P1M0 &= 0xC7;
+  20   1              P1M1 &= 0xC7;   // 将SPI_CLK、SPI_MOSI和SPI_MISO设置成准双向
+  21   1      #ifdef USE_HARDWARE_SPI
+  22   1              SPDAT = 0;              // 初始化SPI缓冲区
+  23   1              SPSTAT = 0xC0;  // 初始化SPI状态
+  24   1              SPCTL = 0xDC;   // 开启硬件SPI，主机模式，高位先发，下降沿发送上升沿接收，CLK频率为1/4主频
+  25   1      #endif
+  26   1      }
+  27          
+  28          u8 SPI_SendAndReceive(u8 value){
+  29   1      #ifdef USE_HARDWARE_SPI
+  30   1              SPDAT = value;                          // 填充缓冲区
+  31   1              while(!(SPSTAT & 0x80));        // 等待传输完成
+  32   1              SPSTAT = 0xC0;                          // 清标志位
+  33   1              return SPDAT;                           // 返回从机发送过来的数据
+  34   1      #else
+                      u8 i;
+                      for(i=0;i<8;++i){
+                              SPI_CLK = 0;
+                              SPI_MOSI = value & 0x80;
+                              SPI_CLK = 1;
+                              value <<= 1;
+                              value |= SPI_MISO;
+                      }
+                      return value;
+              #endif
+  45   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     32    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+C51 COMPILER V9.52.0.0   SPI                                                               08/08/2017 16:17:41 PAGE 2   
+
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

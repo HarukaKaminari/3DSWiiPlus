@@ -1,0 +1,75 @@
+C51 COMPILER V9.52.0.0   PWM                                                               08/08/2017 16:17:41 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE PWM
+OBJECT MODULE PLACED IN PWM.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE PWM.c OPTIMIZE(9,SPEED) REGFILE(.\3DSWiiPlus.ORC) BROWSE DEFINE(LCM_DRIVER_
+                    -IST3932) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include "PWM.h"
+   2          
+   3          
+   4          // 预定义寄存器地址
+   5          static const u16 code addr_PWM_T1[] = {0xff00, 0xff10, 0xff20, 0xff30, 0xff40, 0xff50};
+   6          static const u16 code addr_PWM_T2[] = {0xff02, 0xff12, 0xff22, 0xff32, 0xff42, 0xff52};
+   7          static const u16 code addr_PWM_CR[] = {0xff04, 0xff14, 0xff24, 0xff34, 0xff44, 0xff54};
+   8          
+   9          
+  10          void PWM_Init(){
+  11   1              P3M0 |= 0x80;
+  12   1              P3M1 &= 0x7F;   // P3.7设置为强推挽
+  13   1              P2M0 |= 0x0E;
+  14   1              P2M1 &= 0xF1;   // P2.1、P2.2、P2.3设置为强推挽
+  15   1              P_SW2 |= 0x80;  // 使能访问XSFR（PWM的寄存器位于XSFR区域）
+  16   1          PWMCFG = 0x00;      // 配置PWM的输出初始电平为低电平
+  17   1              PWMCR = 0x00;   // 关闭PWM计数器归零中断
+  18   1              PWMCKS = 0x00;  // 选择PWM的时钟为系统时钟/(0+1)
+  19   1              PWMC = 0x100;   // 设置PWM周期为256
+  20   1              P_SW2 &= ~0x80; // 禁止访问XSFR
+  21   1      }
+  22          
+  23          void PWM_Start(){
+  24   1              P_SW2 |= 0x80;  // 使能访问XSFR（PWM的寄存器位于XSFR区域）
+  25   1              PWMCR |= 0x80;  // 启动PWM
+  26   1              P_SW2 &= ~0x80; // 禁止访问XSFR
+  27   1      }
+  28          
+  29          void PWM_Stop(){
+  30   1              P_SW2 |= 0x80;  // 使能访问XSFR（PWM的寄存器位于XSFR区域）
+  31   1              PWMCR &= ~0x80; // 停止PWM
+  32   1              P_SW2 &= ~0x80; // 禁止访问XSFR
+  33   1      }
+  34          
+  35          void PWM_SetChannelStatus(u8 channel){
+  36   1              P_SW2 |= 0x80;                          // 使能访问XSFR（PWM的寄存器位于XSFR区域）
+  37   1              channel &= 0x30;                        // 保证channel在6路范围之内
+  38   1              channel |= (PWMCR & 0xC0);      // 创建PWMCR的值
+  39   1              PWMCR = channel;                        // 赋值给PWMCR
+  40   1              P_SW2 &= ~0x80;                         // 禁止访问XSFR
+  41   1      }
+  42          
+  43          void PWM_SetDuty(u8 channel, u8 duty){
+  44   1              P_SW2 |= 0x80;                                                                  // 使能访问XSFR（PWM的寄存器位于XSFR区域）
+  45   1              *((vu16 xdata*)addr_PWM_T1[channel]) = 0;
+  46   1              *((vu16 xdata*)addr_PWM_T2[channel]) = duty;
+  47   1              *((vu16 xdata*)addr_PWM_CR[channel]) = 0x00;    // 选择PWM管脚为默认，关闭PWM中断
+  48   1              P_SW2 &= ~0x80;                                                                 // 禁止访问XSFR
+  49   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    152    ----
+   CONSTANT SIZE    =     36    ----
+C51 COMPILER V9.52.0.0   PWM                                                               08/08/2017 16:17:41 PAGE 2   
+
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

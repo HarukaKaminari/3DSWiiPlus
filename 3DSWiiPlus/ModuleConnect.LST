@@ -1,0 +1,53 @@
+C51 COMPILER V9.52.0.0   MODULECONNECT                                                     08/08/2017 16:17:41 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MODULECONNECT
+OBJECT MODULE PLACED IN ModuleConnect.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE ModuleConnect.c OPTIMIZE(9,SPEED) REGFILE(.\3DSWiiPlus.ORC) BROWSE DEFINE(L
+                    -CM_DRIVER_IST3932) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include "ModuleConnect.h"
+   2          #include "main.h"
+   3          #include "LCM12864.h"
+   4          #include "Controller.h"
+   5          
+   6          
+   7          static void Init(){
+   8   1              
+   9   1      }
+  10          
+  11          void ModuleConnect(){
+  12   1              u16 len;
+  13   1              
+  14   1              Init();
+  15   1              
+  16   1              if(Controller_IsConnected()){
+  17   2                      currentModule = Module_Countdown;
+  18   2                      return;
+  19   2              }
+  20   1              
+  21   1              LCM12864_Clear();
+  22   1              len = LCM12864_GetStrLenFromIdx(10, JOYSTICK_NOT_FOUND) - 1;
+  23   1              LCM12864_DrawStringIdx(10, JOYSTICK_NOT_FOUND, (128 - len) >> 1, 32 - 10, 1);   // 未检测到手柄！
+  24   1              len = LCM12864_GetStrLenFromIdx(10, RESTART) - 1;
+  25   1              LCM12864_DrawStringIdx(10, RESTART, (128 - len) >> 1, 32, 1);   // 设备将自动重启！
+  26   1              LCM12864_Refresh();
+  27   1              Delay(1000);
+  28   1              SoftReset();
+  29   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     94    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

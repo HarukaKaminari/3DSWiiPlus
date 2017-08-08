@@ -1,0 +1,172 @@
+C51 COMPILER V9.52.0.0   MODULETURBOSETTING                                                08/08/2017 16:17:42 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MODULETURBOSETTING
+OBJECT MODULE PLACED IN ModuleTurboSetting.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE ModuleTurboSetting.c OPTIMIZE(9,SPEED) REGFILE(.\3DSWiiPlus.ORC) BROWSE DEF
+                    -INE(LCM_DRIVER_IST3932) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <STRING.H>
+   2          #include "ModuleTurboSetting.h"
+   3          #include "main.h"
+   4          #include "LCM12864.h"
+   5          #include "SaveData.h"
+   6          #include "Controller.h"
+   7          
+   8          
+   9          #define CONFIG_ITEM_COUNT       3
+  10          
+  11          
+  12          static const char* code items[] = {
+  13                  "…Ë∂®º¸",
+  14                  "»°œ˚º¸",
+  15                  "¡¨∑¢ÀŸ∂»",
+  16          };
+  17          static const char* code wiiButtons[] = {
+  18                  "Œﬁ",
+  19                  "\x80\x00",
+  20                  "\x80\x01",
+  21                  "\x80\x02",
+  22                  "\x80\x03",
+  23                  "\x80\x10",
+  24                  "\x80\x11",
+  25                  "\x80\x12",
+  26                  "\x80\x13",
+  27                  "\x80\x20\x80\x21",
+  28                  "\x80\x22\x80\x23",
+  29                  "\x80\x24\x80\x25",
+  30                  "\x80\x26\x80\x27",
+  31                  "\x80\x40",
+  32                  "\x80\x41",
+  33                  "\x80\x42",
+  34          };
+  35          static const char* code freq[] = {
+  36                  "√ø√Î10¥Œ",
+  37                  "√ø√Î15¥Œ",
+  38                  "√ø√Î20¥Œ",
+  39                  "√ø√Î25¥Œ",
+  40                  "√ø√Î30¥Œ",
+  41          };
+  42          
+  43          
+  44          static void Init(){
+  45   1              SaveData_Read();
+  46   1              
+  47   1              if(1){
+  48   2                      u8 len = LCM12864_GetStrLenFromIdx(10, TITLE_TURBO_SETTING) - 1;
+  49   2                      LCM12864_FillRect(((128 - len) >> 1) - 1, 0, len + 2, 11, 1);
+  50   2                      LCM12864_DrawStringIdx(10, TITLE_TURBO_SETTING, (128 - len) >> 1, 1, 0);        // ¡¨∑¢…Ë∂®
+  51   2                      LCM12864_DrawString(10, "=", 61, 12, 1);
+  52   2              }
+  53   1      }
+  54          
+C51 COMPILER V9.52.0.0   MODULETURBOSETTING                                                08/08/2017 16:17:42 PAGE 2   
+
+  55          void ModuleTurboSetting(){
+  56   1              s16 offset = 128 << 4;  // ∂®µ„ ˝
+  57   1              s8 selectedItem = 0;
+  58   1              
+  59   1              Init();
+  60   1              
+  61   1              while(1){
+  62   2                      if(1){
+  63   3                              u16 len = LCM12864_GetStrLenFromIdx(10, DESC_5) - 1;
+  64   3      
+  65   3                              LCM12864_FillRect(0, 12, 40, 10, 0);
+  66   3                              LCM12864_DrawStringIdx(10, TURBO_KEY_ENABLE + selectedItem, 0, 12, 1);  // …Ë∂®º¸ »°œ˚º¸ ¡¨∑¢ÀŸ∂»
+  67   3                              
+  68   3                              LCM12864_FillRect(89, 12, 39, 10, 0);
+  69   3                              switch(selectedItem){
+  70   4                                      case 0:
+  71   4                                      case 1:{
+  72   5                                              LCM12864_DrawStringIdx(10, TURBO_WII, 89, 12, 1);       // WII
+  73   5                                              LCM12864_DrawStringIdx(10, TURBO_WII_NONE + (selectedItem ? saveData.turboDisableKey : saveData.turbo
+             -EnableKey), 109, 12, 1);      // Œﬁ ◊Û ”“ …œ œ¬ A B X Y L R ZL ZR + - H
+  74   5                                      }break;
+  75   4                                      case 2:{
+  76   5                                              LCM12864_DrawStringIdx(10, TURBO_10 + saveData.turboFreq, 89, 12, 1);   // √ø√Î10¥Œ √ø√Î15¥Œ √ø√Î20¥Œ √
+             -ø√Î25¥Œ √ø√Î30¥Œ
+  77   5                                      }break;
+  78   4                              }
+  79   3                              
+  80   3                              LCM12864_FillRect(0, 22, 128, 10, 0);
+  81   3                              LCM12864_DrawStringIdx(10, DESC_5, offset >> 4, 22, 1); // …œ/œ¬—°‘Ò…Ë∂®œÓƒø ◊Û/”“µ˜’˚…Ë∂®÷µ A±£¥Ê…Ë∂®≤
+             -¢∑µªÿ…Ë÷√≤Àµ• B≤ª±£¥Ê…Ë∂®÷±Ω”∑µªÿ…Ë÷√≤Àµ•
+  82   3                              
+  83   3                              offset -= 8;
+  84   3                              if(offset < -(len << 4))offset = 128 << 4;
+  85   3                      }
+  86   2                      LCM12864_Refresh();
+  87   2                      
+  88   2                      Controller_Read();
+  89   2                      
+  90   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_UP)){
+  91   3                              selectedItem--;
+  92   3                              if(selectedItem < 0)selectedItem = CONFIG_ITEM_COUNT - 1;
+  93   3                      }
+  94   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_DOWN)){
+  95   3                              selectedItem++;
+  96   3                              if(selectedItem > CONFIG_ITEM_COUNT - 1)selectedItem = 0;
+  97   3                      }
+  98   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_LEFT)){
+  99   3                              switch(selectedItem){
+ 100   4                                      case 0:
+ 101   4                                              saveData.turboEnableKey--;
+ 102   4                                              if(saveData.turboEnableKey < 0)saveData.turboEnableKey = KEY_ITEM_COUNT;
+ 103   4                                              break;
+ 104   4                                      case 1:
+ 105   4                                              saveData.turboDisableKey--;
+ 106   4                                              if(saveData.turboDisableKey < 0)saveData.turboDisableKey = KEY_ITEM_COUNT;
+ 107   4                                              break;
+ 108   4                                      case 2:
+ 109   4                                              saveData.turboFreq--;
+ 110   4                                              if(saveData.turboFreq < 0)saveData.turboFreq = 5 - 1;
+ 111   4                                              break;
+ 112   4                              }
+ 113   3                      }
+C51 COMPILER V9.52.0.0   MODULETURBOSETTING                                                08/08/2017 16:17:42 PAGE 3   
+
+ 114   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_RIGHT)){
+ 115   3                              switch(selectedItem){
+ 116   4                                      case 0:
+ 117   4                                              saveData.turboEnableKey++;
+ 118   4                                              if(saveData.turboEnableKey > KEY_ITEM_COUNT)saveData.turboEnableKey = 0;
+ 119   4                                              break;
+ 120   4                                      case 1:
+ 121   4                                              saveData.turboDisableKey++;
+ 122   4                                              if(saveData.turboDisableKey > KEY_ITEM_COUNT)saveData.turboDisableKey = 0;
+ 123   4                                              break;
+ 124   4                                      case 2:
+ 125   4                                              saveData.turboFreq++;
+ 126   4                                              if(saveData.turboFreq > 5 - 1)saveData.turboFreq = 0;
+ 127   4                                              break;
+ 128   4                              }
+ 129   3                      }
+ 130   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_A)){
+ 131   3                              SaveData_Flush();
+ 132   3                              
+ 133   3                              currentModule = Module_ConfigMenu;
+ 134   3                              return;
+ 135   3                      }
+ 136   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_B)){
+ 137   3                              currentModule = Module_ConfigMenu;
+ 138   3                              return;
+ 139   3                      }
+ 140   2              }
+ 141   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    552    ----
+   CONSTANT SIZE    =    198    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       6
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,150 @@
+C51 COMPILER V9.52.0.0   CTRINTERFACE                                                      08/08/2017 16:17:41 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE CTRINTERFACE
+OBJECT MODULE PLACED IN CTRInterface.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE CTRInterface.c OPTIMIZE(9,SPEED) REGFILE(.\3DSWiiPlus.ORC) BROWSE DEFINE(LC
+                    -M_DRIVER_IST3932) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include "CTRInterface.h"
+   2          #include "PWM.h"
+   3          #include "Timer.h"
+   4          #include "SaveData.h"
+   5          #include "Controller.h"
+   6          
+   7          
+   8          static const u16 code map[] = {
+   9                  WII_CLASSIC_CONTROLLER_BUTTON_DUMMY,
+  10                  WII_CLASSIC_CONTROLLER_BUTTON_LEFT,
+  11                  WII_CLASSIC_CONTROLLER_BUTTON_RIGHT,
+  12                  WII_CLASSIC_CONTROLLER_BUTTON_UP,
+  13                  WII_CLASSIC_CONTROLLER_BUTTON_DOWN,
+  14                  WII_CLASSIC_CONTROLLER_BUTTON_A,
+  15                  WII_CLASSIC_CONTROLLER_BUTTON_B,
+  16                  WII_CLASSIC_CONTROLLER_BUTTON_X,
+  17                  WII_CLASSIC_CONTROLLER_BUTTON_Y,
+  18                  WII_CLASSIC_CONTROLLER_BUTTON_L,
+  19                  WII_CLASSIC_CONTROLLER_BUTTON_R,
+  20                  WII_CLASSIC_CONTROLLER_BUTTON_ZL,
+  21                  WII_CLASSIC_CONTROLLER_BUTTON_ZR,
+  22                  WII_CLASSIC_CONTROLLER_BUTTON_PLUS,
+  23                  WII_CLASSIC_CONTROLLER_BUTTON_MINUS,
+  24                  WII_CLASSIC_CONTROLLER_BUTTON_HOME,
+  25          };
+  26          static const u8 code freq[] = {100, 66, 50, 40, 33};
+  27          
+  28          static u16 turboStatus = 0;
+  29          static vu8 isDown = 0;
+  30          
+  31          
+  32          static void Timer_Interrupt(){
+  33   1              isDown = ~isDown;
+  34   1      }
+  35          
+  36          void CTRInterface_Init(){
+  37   1              P0M0 |= 0xFF;
+  38   1              P0M1 |= 0xFF;
+  39   1              P4M0 |= 0xFF;
+  40   1              P4M1 |= 0xFF;                   // 将P0和P4口设置为开漏
+  41   1      }
+  42          
+  43          void CTRInterface_Prepare(){
+  44   1              Timer_SetInterval(freq[saveData.turboFreq]);
+  45   1              Timer_SetCallback(Timer_Interrupt);
+  46   1              Timer_Start();
+  47   1              
+  48   1              PWM_SetChannelStatus(0x0F);
+  49   1              PWM_Start();
+  50   1      }
+  51          
+  52          void CTRInterface_Update(){
+  53   1              u8 i;
+  54   1              u16 buttons = 0;
+C51 COMPILER V9.52.0.0   CTRINTERFACE                                                      08/08/2017 16:17:41 PAGE 2   
+
+  55   1              s16 tlx = 0, tly = 0, trx = 0, try = 0;
+  56   1              
+  57   1              Controller_Read();
+  58   1              
+  59   1              if(saveData.turboEnableKey && Controller_IsKeyHold(map[saveData.turboEnableKey])){
+  60   2                      for(i=0;i<KEY_ITEM_COUNT+1;++i){
+  61   3                              if(i == saveData.turboEnableKey || i == saveData.turboDisableKey)continue;
+  62   3                              if(Controller_IsKeyHold(map[i]))turboStatus |= (1 << i);
+  63   3                      }
+  64   2              }else if(saveData.turboDisableKey && Controller_IsKeyHold(map[saveData.turboDisableKey])){
+  65   2                      for(i=0;i<KEY_ITEM_COUNT+1;++i){
+  66   3                              if(i == saveData.turboEnableKey || i == saveData.turboDisableKey)continue;
+  67   3                              if(Controller_IsKeyHold(map[i]))turboStatus &= ~(1 << i);
+  68   3                      }
+  69   2              }
+  70   1              
+  71   1              for(i=0;i<KEY_ITEM_COUNT;++i){
+  72   2                      if(Controller_IsKeyHold(map[i + 1]))buttons |= (1 << saveData.keyMapping[i]);
+  73   2                      if(turboStatus & (1 << (i + 1)) & isDown)buttons &= ~(1 << saveData.keyMapping[i]);
+  74   2              }
+  75   1              
+  76   1              P0 = ~(buttons & 0xFF);
+  77   1              P4 = ~((buttons >> 8) & 0xFF);
+  78   1              
+  79   1              if(saveData.analogMapping){
+  80   2                      trx = Controller_GetLAnalogX();
+  81   2                      try = Controller_GetLAnalogY();
+  82   2                      tlx = Controller_GetRAnalogX();
+  83   2                      tly = Controller_GetRAnalogY();
+  84   2              }else{
+  85   2                      tlx = Controller_GetLAnalogX();
+  86   2                      tly = Controller_GetLAnalogY();
+  87   2                      trx = Controller_GetRAnalogX();
+  88   2                      try = Controller_GetRAnalogY();
+  89   2              }
+  90   1              if(saveData.reverseAnalogX){
+  91   2                      tlx = -tlx;
+  92   2                      trx = -trx;
+  93   2              }
+  94   1              if(saveData.reverseAnalogY){
+  95   2                      tly = -tly;
+  96   2                      try = -try;
+  97   2              }
+  98   1              tlx *= saveData.analogRatioL;
+  99   1              tlx >>= 6;
+ 100   1              tlx += saveData.analogOffsetL;
+ 101   1              tly *= saveData.analogRatioL;
+ 102   1              tly >>= 6;
+ 103   1              tly += saveData.analogOffsetL;
+ 104   1              if(tlx < 0)tlx = 0;
+ 105   1              if(tlx > 0xFF)tlx = 0xFF;
+ 106   1              if(tly < 0)tly = 0;
+ 107   1              if(tly > 0xFF)tly = 0xFF;
+ 108   1              trx *= saveData.analogRatioR;
+ 109   1              trx >>= 6;
+ 110   1              trx += saveData.analogOffsetR;
+ 111   1              try *= saveData.analogRatioR;
+ 112   1              try >>= 6;
+ 113   1              try += saveData.analogOffsetR;
+ 114   1              if(trx < 0)trx = 0;
+ 115   1              if(trx > 0xFF)trx = 0xFF;
+ 116   1              if(try < 0)try = 0;
+C51 COMPILER V9.52.0.0   CTRINTERFACE                                                      08/08/2017 16:17:41 PAGE 3   
+
+ 117   1              if(try > 0xFF)try = 0xFF;
+ 118   1              PWM_SetDuty(0, tlx);
+ 119   1              PWM_SetDuty(1, tly);
+ 120   1              PWM_SetDuty(2, trx);
+ 121   1              PWM_SetDuty(3, try);
+ 122   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    921    ----
+   CONSTANT SIZE    =     37    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      3      11
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

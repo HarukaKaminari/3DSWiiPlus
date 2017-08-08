@@ -1,0 +1,108 @@
+C51 COMPILER V9.52.0.0   IAP                                                               08/08/2017 16:17:40 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE IAP
+OBJECT MODULE PLACED IN IAP.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE IAP.c OPTIMIZE(9,SPEED) REGFILE(.\3DSWiiPlus.ORC) BROWSE DEFINE(LCM_DRIVER_
+                    -IST3932) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <INTRINS.h>
+   2          #include "IAP.h"
+   3          
+   4          
+   5          /*
+   6          每个扇区为512字节
+   7          */
+   8          
+   9          
+  10          /* 定义IAP指令 */
+  11          #define CMD_IDLE        0       // 等待
+  12          #define CMD_READ        1       // 字节读取
+  13          #define CMD_PROGRAM     2       // 字节编程
+  14          #define CMD_ERASE       3       // 扇区擦除
+  15          
+  16          /* 定义等待时间 */
+  17          #define WAIT_TIME       0x00    // 系统时钟>=30MHz
+  18          //#define WAIT_TIME     0x01    // 系统时钟>=24MHz
+  19          //#define WAIT_TIME     0x02    // 系统时钟>=20MHz
+  20          //#define WAIT_TIME     0x03    // 系统时钟>=12MHz
+  21          //#define WAIT_TIME     0x04    // 系统时钟>=6MHz
+  22          //#define WAIT_TIME     0x05    // 系统时钟>=3MHz
+  23          //#define WAIT_TIME     0x06    // 系统时钟>=2MHz
+  24          //#define WAIT_TIME     0x07    // 系统时钟>=1MHz
+  25          
+  26          
+  27          /*
+  28          关闭IAP
+  29          */
+  30          void IAP_Idle(){
+  31   1          IAP_CONTR = 0;              // 关闭IAP功能
+  32   1          IAP_CMD = 0;                // 清除命令寄存器
+  33   1          IAP_TRIG = 0;               // 清除触发寄存器
+  34   1          IAP_ADDRH = 0x80;   // 将地址设置到非IAP区域
+  35   1          IAP_ADDRL = 0;
+  36   1      }
+  37          
+  38          /*
+  39          从IAP区域指定地址读1字节
+  40          */
+  41          u8 IAP_ReadByte(u16 addr){
+  42   1          u8 dat;                                                     // 数据缓冲区
+  43   1          IAP_CONTR = WAIT_TIME | 0x80;       // 打开IAP功能，并且设置等待时间
+  44   1          IAP_CMD = CMD_READ;                         // 设置IAP的指令为读
+  45   1          IAP_ADDRL = addr;                           // 设置地址
+  46   1          IAP_ADDRH = addr >> 8;
+  47   1          IAP_TRIG = 0x5A;                            // 触发指令1（0x5A）
+  48   1          IAP_TRIG = 0xA5;                            // 触发指令2（0xA5）
+  49   1          _nop_();                                            // 等待操作完成
+  50   1          dat = IAP_DATA;                                     // 读IAP数据
+  51   1          IAP_Idle();                                         // 关闭IAP
+  52   1          return dat;
+  53   1      }
+  54          
+C51 COMPILER V9.52.0.0   IAP                                                               08/08/2017 16:17:40 PAGE 2   
+
+  55          /*
+  56          写1字节数据到IAP指定地址
+  57          */
+  58          void IAP_ProgramByte(u16 addr, u8 dat){
+  59   1          IAP_CONTR = WAIT_TIME | 0x80;       // 打开IAP功能，并且设置等待时间
+  60   1          IAP_CMD = CMD_PROGRAM;                      // 设置IAP的指令为编程
+  61   1          IAP_ADDRL = addr;                           // 设置地址
+  62   1          IAP_ADDRH = addr >> 8;
+  63   1          IAP_DATA = dat;                                     // 写IAP数据
+  64   1          IAP_TRIG = 0x5A;                            // 触发指令1（0x5A）
+  65   1          IAP_TRIG = 0xA5;                            // 触发指令2（0xA5）
+  66   1          _nop_();                                            // 等待操作完成
+  67   1          IAP_Idle();                                         // 关闭IAP
+  68   1      }
+  69          
+  70          /*
+  71          擦除指定扇区
+  72          */
+  73          void IAP_EraseSector(u16 addr){
+  74   1          IAP_CONTR = WAIT_TIME | 0x80;       // 打开IAP功能，并且设置等待时间
+  75   1          IAP_CMD = CMD_ERASE;                        // 设置IAP的指令为擦除
+  76   1          IAP_ADDRL = addr;                           // 设置地址
+  77   1          IAP_ADDRH = addr >> 8;
+  78   1          IAP_TRIG = 0x5A;                            // 触发指令1（0x5A）
+  79   1          IAP_TRIG = 0xA5;                            // 触发指令2（0xA5）
+  80   1          _nop_();                                            // 等待操作完成
+  81   1          IAP_Idle();                                         // 关闭IAP
+  82   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     72    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

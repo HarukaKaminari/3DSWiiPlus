@@ -1,0 +1,171 @@
+C51 COMPILER V9.52.0.0   WIICLASSICCONTROLLER                                              08/08/2017 16:17:41 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE WIICLASSICCONTROLLER
+OBJECT MODULE PLACED IN WiiClassicController.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE WiiClassicController.c OPTIMIZE(9,SPEED) REGFILE(.\3DSWiiPlus.ORC) BROWSE D
+                    -EFINE(LCM_DRIVER_IST3932) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <INTRINS.h>
+   2          #include "WiiClassicController.h"
+   3          #include "I2C.h"
+   4          #include "Uart.h"
+   5          
+   6          
+   7          typedef struct WiiControllerData{
+   8                  u8 xLAnalog;
+   9                  u8 yLAnalog;
+  10                  
+  11                  u8 xRAnalog;
+  12                  u8 yRAnalog;
+  13                  
+  14                  u8 LTrigger;
+  15                  u8 RTrigger;
+  16                  
+  17                  u16 buttons;
+  18          }structWiiControllerData;
+  19          
+  20          
+  21          static structWiiControllerData wiiControllerData;
+  22          static u16 prevButtons = 0;
+  23          
+  24          
+  25          static u8 Decrypt(u8 x){
+  26   1              return x;
+  27   1              //return (x ^ 0x17) + 0x17;
+  28   1      }
+  29          
+  30          void WiiClassicController_Init(){
+  31   1              s8 result;
+  32   1              u8 buf[6];
+  33   1              u8 i;
+  34   1              
+  35   1              Uart_String("Initializing Wii Classic Controller...\r\n");
+  36   1              
+  37   1              buf[0] = 0xF0;
+  38   1              buf[1] = 0x55;
+  39   1              result = I2C_Puts(WII_CLASSIC_CONTROLLER_ID, 0, 0, buf, 2);
+  40   1              while(result != 0);
+  41   1              
+  42   1              Delay(1);
+  43   1              
+  44   1              buf[0] = 0xFB;
+  45   1              buf[1] = 0x00;
+  46   1              result = I2C_Puts(WII_CLASSIC_CONTROLLER_ID, 0, 0, buf, 2);
+  47   1              while(result != 0);
+  48   1              
+  49   1              Delay(1);
+  50   1              
+  51   1              Uart_String("Reading ID...\r\n");
+  52   1              
+  53   1              buf[0] = 0xFA;
+  54   1              result = I2C_Puts(WII_CLASSIC_CONTROLLER_ID, 0, 0, buf, 1);
+C51 COMPILER V9.52.0.0   WIICLASSICCONTROLLER                                              08/08/2017 16:17:41 PAGE 2   
+
+  55   1              while(result != 0);
+  56   1              
+  57   1              result = I2C_Gets(WII_CLASSIC_CONTROLLER_ID, 0, 0, buf, 6);
+  58   1              while(result != 0);
+  59   1              
+  60   1              Uart_String("ID=");
+  61   1              for(i=0;i<6;++i){
+  62   2                      Uart_Hex(buf[i]);
+  63   2                      Uart_String(" ");
+  64   2              }
+  65   1              Uart_String("\r\n\r\n");
+  66   1              
+  67   1              Delay(1);
+  68   1              
+  69   1              Uart_String("Wii Classic Controller Initialization Finished.\r\n");
+  70   1      }
+  71          
+  72          static void WiiClassicController_GetData(){
+  73   1              u8 buf[6];
+  74   1              s8 result;
+  75   1              u8 i;
+  76   1              
+  77   1              buf[0] = 0;
+  78   1              result = I2C_Puts(WII_CLASSIC_CONTROLLER_ID, 0, 0, buf, 1);
+  79   1              while(result != 0);
+  80   1              
+  81   1              Delay(0);
+  82   1              
+  83   1              result = I2C_Gets(WII_CLASSIC_CONTROLLER_ID, 0, 0, buf, 6);
+  84   1              while(result != 0);
+  85   1              
+  86   1              for(i=0;i<6;++i)buf[i] = Decrypt(buf[i]);
+  87   1              
+  88   1              wiiControllerData.xLAnalog = (buf[0] & 0x3F);
+  89   1              wiiControllerData.yLAnalog = (buf[1] & 0x3F);
+  90   1              
+  91   1              wiiControllerData.xRAnalog = ((buf[0] >> 6) & 0x03) << 3;
+  92   1              wiiControllerData.xRAnalog |= ((buf[1] >> 6) & 0x03) << 1;
+  93   1              wiiControllerData.xRAnalog |= ((buf[2] >> 7) & 0x01);
+  94   1              
+  95   1              wiiControllerData.yRAnalog = buf[2] & 0x1F;
+  96   1              
+  97   1              wiiControllerData.LTrigger = ((buf[2] >> 5) & 0x03) << 3;
+  98   1              wiiControllerData.LTrigger |= (buf[3] >> 5) & 0x07;
+  99   1              
+ 100   1              wiiControllerData.RTrigger = buf[3] & 0x1F;
+ 101   1              
+ 102   1              wiiControllerData.buttons = buf[5];
+ 103   1              wiiControllerData.buttons <<= 8;
+ 104   1              wiiControllerData.buttons |= buf[4];
+ 105   1              wiiControllerData.buttons = ~wiiControllerData.buttons;
+ 106   1      }
+ 107          
+ 108          void WiiClassicController_Read(){
+ 109   1              prevButtons = wiiControllerData.buttons;
+ 110   1              WiiClassicController_GetData();
+ 111   1      }
+ 112          
+ 113          u8* WiiClassicController_GetPtr(){
+ 114   1              return &wiiControllerData;
+ 115   1      }
+ 116          
+C51 COMPILER V9.52.0.0   WIICLASSICCONTROLLER                                              08/08/2017 16:17:41 PAGE 3   
+
+ 117          bit WiiClassicController_IsKeyDown(u16 key){
+ 118   1              return (~prevButtons & wiiControllerData.buttons & key);
+ 119   1      }
+ 120          
+ 121          bit WiiClassicController_IsKeyHold(u16 key){
+ 122   1              return (wiiControllerData.buttons & key);
+ 123   1      }
+ 124          
+ 125          bit WiiClassicController_IsKeyUp(u16 key){
+ 126   1              return (prevButtons & ~wiiControllerData.buttons & key);
+ 127   1      }
+ 128          
+ 129          s8 WiiClassicController_GetLAnalogX(){
+ 130   1              return wiiControllerData.xLAnalog - 32;
+ 131   1      }
+ 132          
+ 133          s8 WiiClassicController_GetLAnalogY(){
+ 134   1              return wiiControllerData.yLAnalog - 32;
+ 135   1      }
+ 136          
+ 137          s8 WiiClassicController_GetRAnalogX(){
+ 138   1              return (wiiControllerData.xRAnalog << 1) - 32;
+ 139   1      }
+ 140          
+ 141          s8 WiiClassicController_GetRAnalogY(){
+ 142   1              return (wiiControllerData.yRAnalog << 1) - 32;
+ 143   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    478    ----
+   CONSTANT SIZE    =    118    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     10      12
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

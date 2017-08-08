@@ -1,0 +1,401 @@
+C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE IST3932
+OBJECT MODULE PLACED IN IST3932.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE IST3932.c OPTIMIZE(9,SPEED) REGFILE(.\3DSWiiPlus.ORC) BROWSE DEFINE(LCM_DRI
+                    -VER_IST3932) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #ifdef LCM_DRIVER_IST3932
+   2          
+   3          #define USE_TABLE
+   4          
+   5          
+   6          #include "IST3932.h"
+   7          #include "LCM12864.h"
+   8          #include "SPI.h"
+   9          
+  10          
+  11          // ÏÔ´æ»º³åÇøÊý¾Ý¸ñÊ½
+  12          //              0               1               2               .       F
+  13          //   +-------+-------+-------+---+-------+
+  14          // 00|Byte000|Byte001|Byte002|...|Byte00F|
+  15          //   +-------+-------+-------+---+-------+
+  16          // 01|Byte010|Byte011|Byte012|...|Byte01F|
+  17          //   +-------+-------+-------+---+-------+
+  18          // ..|.......|.......|.......|...|.......|
+  19          //   +-------+-------+-------+---+-------+
+  20          // 1F|Byte1F0|Byte1F1|Byte1F2|...|Byte1FF|
+  21          //   +-------+-------+-------+---+-------+ <--- 12832µ½´ËÎªÖ¹
+  22          // ..|.......|.......|.......|...|.......|
+  23          //   +-------+-------+-------+---+-------+
+  24          // 3F|Byte3F0|Byte3F1|Byte3F2|...|Byte3FF|
+  25          //   +-------+-------+-------+---+-------+ <--- 12864µ½´ËÎªÖ¹
+  26          
+  27          
+  28          /*
+  29          ÉèÖÃÐÐµØÖ·¡£ÏÔÈ»rowÈ¡Öµ·¶Î§Ö»ÄÜÎª0~31»ò63
+  30          */
+  31          static void IST3932_SetRow(u8 row){
+  32   1              LCM12864_SendCommand(row & 0xF);
+  33   1              LCM12864_SendCommand(0x10 | (row >> 4));
+  34   1      }
+  35          
+  36          /*
+  37          ÆÁÄ»ÉÏµç
+  38          */
+  39          static void IST3932_Power(bit isOn){
+  40   1              if(isOn == 0){
+  41   2                      LCM12864_SendCommand(0x2D);
+  42   2              }else{
+  43   2                      LCM12864_SendCommand(0x2F);
+  44   2              }
+  45   1      }
+  46          
+  47          /*
+  48          ÉèÖÃÆ«Ñ¹±È¡£È¡Öµ·¶Î§Îª5¡¢1¡¢0¡¢2¡¢3¡¢4¡£Ã²ËÆºÍ¶Ô±È¶ÈÓÐ¹Ø¡­¡­
+  49          */
+  50          static void IST3932_SetBias(u8 bias){
+  51   1              LCM12864_SendCommand(0x30 | (bias & 0x7));
+  52   1      }
+  53          
+  54          /*
+C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 2   
+
+  55          Ë¯ÃßÄ£Ê½
+  56          */
+  57          static void IST3932_Sleep(bit isSleep){
+  58   1              if(isSleep == 0)
+  59   1                      LCM12864_SendCommand(0x38);
+  60   1              else
+  61   1                      LCM12864_SendCommand(0x39);
+  62   1      }
+  63          
+  64          /*
+  65          Î´Öª
+  66          */
+  67          static void IST3932_Osc(bit isOff){
+  68   1              if(isOff == 0){
+  69   2                      LCM12864_SendCommand(0x3A);
+  70   2              }else{
+  71   2                      LCM12864_SendCommand(0x3B);
+  72   2              }
+  73   1      }
+  74          
+  75          /*
+  76          ¿ª/¹ØÏÔÊ¾
+  77          */
+  78          static void IST3932_Display(bit isOn){
+  79   1              if(isOn == 0){
+  80   2                      LCM12864_SendCommand(0x3C);
+  81   2              }else{
+  82   2                      LCM12864_SendCommand(0x3D);
+  83   2              }
+  84   1      }
+  85          
+  86          /*
+  87          ÉèÖÃÆðÊ¼µØÖ·¡£È¡Öµ·¶Î§Îª0~64¡£Ã²ËÆÊÇÓÃÀ´ÉèÖÃ´¹Ö±¾íÖáÆ«ÒÆÁ¿µÄ
+  88          */
+  89          static void IST3932_SetStartingLine(u8 line){
+  90   1              LCM12864_SendCommand(0x40 | (line & 0xF));
+  91   1              LCM12864_SendCommand(0x50 | (line >> 4));
+  92   1      }
+  93          
+  94          /*
+  95          ÉèÖÃÇý¶¯ÏÔÊ¾¡£µÚÒ»¸ö²ÎÊý´ú±íÊÇ·ñÓ²¼þÈ«ÆÁ´¹Ö±¾µÏñ£¬µÚ¶þ¸ö²ÎÊýÓëÓ²¼þÈ«ÆÁË®Æ½¾µÏñÓÐ¹Ø£¨µ«ÊÇÓÉÓÚmapÎÊÌâ»áµ¼ÖÂ´
+             -íÂÒ£¬×îºÃ±£³ÖÎª0£©£¬µÚÈý¸ö²ÎÊý´ú±íÊÇ·ñÈ«ÁÁ£¬µÚËÄ¸ö²ÎÊý´ú±íÊÇ·ñ·´ÏÔ
+  96          */
+  97          static void IST3932_DriverControl(bit isVFlip, bit isADC, bit isDisplayAll, bit isNegative){
+  98   1              u8 cmd = 0x60;
+  99   1              if(isVFlip)cmd |= (1 << 3);
+ 100   1              if(isADC)cmd |= (1 << 2);
+ 101   1              if(isDisplayAll)cmd |= (1 << 1);
+ 102   1              if(isNegative)cmd |= (1 << 0);
+ 103   1              LCM12864_SendCommand(cmd);
+ 104   1      }
+ 105          
+ 106          /*
+ 107          Èí¸´Î»
+ 108          */
+ 109          static void IST3932_SoftReset(){
+ 110   1              LCM12864_SendCommand(0x76);
+ 111   1      }
+ 112          
+ 113          /*
+ 114          ÉèÖÃÕ¼¿Õ±È¡£È¡Öµ·¶Î§Îª1~65¡£Ã²ËÆºÍ¶Ô±È¶ÈÓÐ¹Ø
+ 115          */
+C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 3   
+
+ 116          static void IST3932_SetDuty(u8 duty){
+ 117   1              LCM12864_SendCommand(0x90 | (duty & 0xF));
+ 118   1              LCM12864_SendCommand(0xA0 | (duty >> 4));
+ 119   1      }
+ 120          
+ 121          /*
+ 122          ÉèÖÃÁÐµØÖ·¡£colÈ¡Öµ·¶Î§Îª0~31
+ 123          */
+ 124          static void IST3932_SetCol(u8 col){
+ 125   1              LCM12864_SendCommand(0xC0 | (col & 0x1F));
+ 126   1      }
+ 127          
+ 128          /*
+ 129          ÉèÖÃ¶Ô±È¶È¡£È¡Öµ·¶Î§Îª0~255
+ 130          */
+ 131          static void IST3932_SetContrast(u8 contrast){
+ 132   1              LCM12864_SendCommand(0xB1);
+ 133   1              LCM12864_SendCommand(contrast);
+ 134   1      }
+ 135          
+ 136          /*
+ 137          Î´Öª
+ 138          */
+ 139          static void IST3932_SetFrameControl(u8 value0, u8 value1){
+ 140   1              LCM12864_SendCommand(0xB2);
+ 141   1              LCM12864_SendCommand(value0);
+ 142   1              LCM12864_SendCommand(value1);
+ 143   1      }
+ 144          
+ 145          /*
+ 146          ¿ÕÖ¸Áî¡£Í¬Ê±Ò²ÊÇÍË³ö±à³ÌÄ£Ê½ºÍISTÄ£Ê½µÄÖ¸Áî¡£²»¹ý£¬ÎÒ²¢²»´òËãÓÃ±à³ÌÄ£Ê½¡­¡­
+ 147          */
+ 148          static void IST3932_Nop(){
+ 149   1              LCM12864_SendCommand(0xE3);
+ 150   1      }
+ 151          
+ 152          /*
+ 153          ½øÈëISTÄ£Ê½
+ 154          */
+ 155          static void IST3932_BeginIST(){
+ 156   1              LCM12864_SendCommand(0x88);
+ 157   1              LCM12864_SendCommand(0x88);
+ 158   1              LCM12864_SendCommand(0x88);
+ 159   1              LCM12864_SendCommand(0x88);
+ 160   1      }
+ 161          
+ 162          /*
+ 163          ÉèÖÃÐÐ½»´íÄ£Ê½
+ 164          */
+ 165          static void IST3932_SetInterleave(bit isInterleave){
+ 166   1              if(isInterleave == 0){
+ 167   2                      LCM12864_SendCommand(0x60);
+ 168   2              }else{
+ 169   2                      LCM12864_SendCommand(0x61);
+ 170   2              }
+ 171   1      }
+ 172          
+ 173          /*
+ 174          ÍË³öISTÄ£Ê½¡£µÈÐ§ÓÚNOP
+ 175          */
+ 176          static void IST3932_EndIST(){
+ 177   1              LCM12864_SendCommand(0xE3);
+C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 4   
+
+ 178   1      }
+ 179          
+ 180          void IST3932_Init(){
+ 181   1              LCM12864_CS = 0;
+ 182   1      
+ 183   1              // Ê×ÏÈÑÓÊ±100msÁî×Ô¶¯Ó²¼þ¸´Î»Íê³É
+ 184   1              Delay(100);
+ 185   1              // Set Power
+ 186   1              IST3932_Power(1);
+ 187   1              // Set Bias
+ 188   1              IST3932_SetBias(3);
+ 189   1              // Set Contrast
+ 190   1              IST3932_SetContrast(0xDF);
+ 191   1              // Set FrameControl
+ 192   1              IST3932_SetFrameControl(0x90, 0x01);
+ 193   1              // Set Duty
+ 194   1              IST3932_SetDuty(0x40);
+ 195   1              // Set Driver Display Control
+ 196   1              IST3932_DriverControl(0, 0, 0, 0);
+ 197   1              // Set Display ON
+ 198   1              IST3932_Display(1);
+ 199   1              // Set Interleave
+ 200   1              IST3932_BeginIST();
+ 201   1              IST3932_SetInterleave(0);
+ 202   1              IST3932_EndIST();
+ 203   1      
+ 204   1              LCM12864_CS = 1;
+ 205   1      }
+ 206          
+ 207          void IST3932_Refresh(){
+ 208   1              u8 x, y;
+ 209   1              LCM12864_CS = 0;
+ 210   1      #ifdef USE_12832
+                      for(y=0;y<32;++y){
+              #else
+ 213   1              for(y=0;y<64;++y){
+ 214   2      #endif
+ 215   2                      IST3932_SetRow(y);
+ 216   2                      IST3932_SetCol(0);
+ 217   2                      for(x=0;x<16;++x){
+ 218   3                              LCM12864_SendData(VRAM[15 - x + (y << 4)]);
+ 219   3                      }
+ 220   2              }
+ 221   1              LCM12864_CS = 1;
+ 222   1      }
+ 223          
+ 224          /*
+ 225          ½«×Ö·û»º³åÇøÖÐµÄ×Ö·û»æÖÆµ½VRAM»º³åÇø
+ 226          x×îÐ¡È¡ÖµÎª-fontSize£¬×î´óÈ¡ÖµÎª127
+ 227          y×îÐ¡È¡ÖµÎª-fontSize£¬×î´óÈ¡ÖµÎª31»ò63
+ 228          */
+ 229          void IST3932_DrawChar(u8 fontSize, s8 x, s8 y, bit c){
+ 230   1              u8 i;
+ 231   1              s8 page;
+ 232   1          if(x < -fontSize)x = -fontSize;
+ 233   1          if(x > 127)return;
+ 234   1          if(y < -fontSize)y = -fontSize;
+ 235   1      #ifdef USE_12832
+                      if(y > 31)return;
+              #else
+ 238   1              if(y > 63)return;
+ 239   1      #endif
+C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 5   
+
+ 240   1              page = x >> 3;
+ 241   1              
+ 242   1              for(i=0;i<fontSize;++i){
+ 243   2                      // Èç¹û´¹Ö±·½ÏòÐ¡ÓÚ0ÏñËØÔò²»ÔÙ½øÐÐ»æÖÆ
+ 244   2                      if(y + i < 0)continue;
+ 245   2                      // Èç¹û´¹Ö±·½Ïò³¬¹ý32»ò64ÏñËØÔò²»ÔÙ½øÐÐ»æÖÆ
+ 246   2      #ifdef USE_12832
+                              if(y + i < 32){
+              #else
+ 249   2                      if(y + i < 64){
+ 250   3      #endif
+ 251   3                              // »ñµÃVRAMÆ«ÒÆÁ¿
+ 252   3                              s16 vramOffset = ((y + i) << 4) + page;
+ 253   3                              // »ñµÃÒ³ÄÚÆ«ÒÆÁ¿
+ 254   3                              u8 offsetInPage = x & 7;
+ 255   3                              // Èç¹ûpage<0ÔòµÚÒ»´Î»æÖÆºöÂÔ
+ 256   3                              if(page + 0 >= 0){
+ 257   4                                      if(vramOffset >= 0){
+ 258   5                                              // Ð´Êý¾Ý
+ 259   5                                              if(c)
+ 260   5                                                      VRAM[vramOffset] |= (tmpBuf[i] << offsetInPage) & 0xFF;
+ 261   5                                              else
+ 262   5                                                      VRAM[vramOffset] &= ~(tmpBuf[i] << offsetInPage) & 0xFF;
+ 263   5                                      }
+ 264   4                              }
+ 265   3                              // Æ«ÒÆµ½ÏÂÒ»¸öÒ³
+ 266   3                              vramOffset++;
+ 267   3                              if(page + 1 >= 0){
+ 268   4                                      // Èç¹ûË®Æ½·½Ïò³¬¹ý128ÏñËØÔò²»ÔÙ½øÐÐ»æÖÆ
+ 269   4                                      if(vramOffset >= ((y + i + 1) << 4))continue;
+ 270   4                                      if(vramOffset >= 0){
+ 271   5                                              if(c)
+ 272   5                                                      VRAM[vramOffset] |= (tmpBuf[i] >> (8 - offsetInPage)) & 0xFF;
+ 273   5                                              else
+ 274   5                                                      VRAM[vramOffset] &= ~(tmpBuf[i] >> (8 - offsetInPage)) & 0xFF;
+ 275   5                                      }
+ 276   4                              }
+ 277   3                              // Æ«ÒÆµ½ÏÂÒ»¸öÒ³
+ 278   3                              vramOffset++;
+ 279   3                              if(page + 2 >= 0){
+ 280   4                                      // Èç¹ûË®Æ½·½Ïò³¬¹ý128ÏñËØÔò²»ÔÙ½øÐÐ»æÖÆ
+ 281   4                                      if(vramOffset >= ((y + i + 1) << 4))continue;
+ 282   4                                      if(vramOffset >= 0){
+ 283   5                                              if(c)
+ 284   5                                                      VRAM[vramOffset] |= (tmpBuf[i] >> (16 - offsetInPage)) & 0xFF;
+ 285   5                                              else
+ 286   5                                                      VRAM[vramOffset] &= ~(tmpBuf[i] >> (16 - offsetInPage)) & 0xFF;
+ 287   5                                      }
+ 288   4                              }
+ 289   3                      }
+ 290   2              }
+ 291   1      }
+ 292          
+ 293          /*
+ 294          ÔÚ»º³åÇøÈÎÒâÎ»ÖÃ»­µã
+ 295          */
+ 296          void IST3932_DrawPixel(u8 x, u8 y, bit c){
+ 297   1              if(x > 127)return;
+ 298   1      #ifdef USE_12832
+                      if(y > 31)return;
+              #else
+ 301   1              if(y > 63)return;
+C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 6   
+
+ 302   1      #endif
+ 303   1              
+ 304   1              if(c)
+ 305   1                      VRAM[(x >> 3) + (y << 4)] |= 1 << (x & 7);
+ 306   1              else
+ 307   1                      VRAM[(x >> 3) + (y << 4)] &= ~(1 << (x & 7));
+ 308   1      }
+ 309          
+ 310          /*
+ 311          ÔÚ»º³åÇøÈÎÒâÎ»ÖÃÌî³ä¾ØÐÎ
+ 312          */
+ 313          void IST3932_FillRect(u8 x, u8 y, u8 w, u8 h, bit c){
+ 314   1              u8 i, j;
+ 315   1              if(x > 127)return;
+ 316   1              if(x + w > 128)w = 128 - x;
+ 317   1      #ifdef USE_12832
+                      if(y > 31)return;
+                      if(y + h > 32)h = 32 - y;
+              #else
+ 321   1              if(y > 63)return;
+ 322   1              if(y + h > 64)h = 64 - y;
+ 323   1      #endif
+ 324   1              
+ 325   1              for(i=y;i<y+h;++i){
+ 326   2                      u8 page0 = x >> 3;
+ 327   2                      u8 page1 = (x + w) >> 3;
+ 328   2                      u8 _x0 = x & 7;
+ 329   2                      u8 _x1 = (x + w) & 7;
+ 330   2                      if(page0 == page1){
+ 331   3                              u8 mask = 0;
+ 332   3                              for(j=_x0;j<_x1;++j){
+ 333   4                                      mask |= (1 << j);
+ 334   4                              }
+ 335   3                              if(c){
+ 336   4                                      VRAM[page0 + (i << 4)] |= mask;
+ 337   4                              }else{
+ 338   4                                      VRAM[page0 + (i << 4)] &= ~mask;
+ 339   4                              }
+ 340   3                      }else{
+ 341   3                              for(j=page0;j<=page1;++j){
+ 342   4                                      if(j == page0){
+ 343   5                                              if(c)
+ 344   5                                                      VRAM[j + (i << 4)] |= (0xFF << _x0);
+ 345   5                                              else
+ 346   5                                                      VRAM[j + (i << 4)] &= ~(0xFF << _x0);
+ 347   5                                      }else if(j == page1){
+ 348   5                                              if(c)
+ 349   5                                                      VRAM[j + (i << 4)] |= (0xFF >> (8 - _x1));
+ 350   5                                              else
+ 351   5                                                      VRAM[j + (i << 4)] &= ~(0xFF >> (8 - _x1));
+ 352   5                                      }else{
+ 353   5                                              if(c)
+ 354   5                                                      VRAM[j + (i << 4)] = 0xFF;
+ 355   5                                              else
+ 356   5                                                      VRAM[j + (i << 4)] = 0;
+ 357   5                                      }
+ 358   4                              }
+ 359   3                      }
+ 360   2              }
+ 361   1      }
+ 362          
+ 363          
+C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 7   
+
+ 364          #endif
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1359    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      17
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----      12
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

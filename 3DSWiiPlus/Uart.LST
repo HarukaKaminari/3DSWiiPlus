@@ -1,0 +1,135 @@
+C51 COMPILER V9.52.0.0   UART                                                              08/08/2017 16:17:40 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE UART
+OBJECT MODULE PLACED IN Uart.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE Uart.c OPTIMIZE(9,SPEED) REGFILE(.\3DSWiiPlus.ORC) BROWSE DEFINE(LCM_DRIVER
+                    -_IST3932) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <STRING.H>
+   2          #include "Uart.h"
+   3          
+   4          
+   5          bit busy = 0;   // 发送忙标志
+   6          static xdata u8 sendBuf[0x100]; // 发送缓冲
+   7          static xdata u8 recvBuf[0x100]; // 接收缓冲
+   8          static u8 sendP = 0;
+   9          static u8 sendBufP = 0;
+  10          static u8 recvP = 0;
+  11          static u8 recvBufP = 0;
+  12          
+  13          
+  14          static void Uart() interrupt 4 using 1{
+  15   1              if(RI){
+  16   2                      RI = 0;         // 清除RI位
+  17   2                      //P0 = SBUF;    // P0显示串口数据
+  18   2                      //P22 = RB8;    // P2.2显示校验位
+  19   2                      recvBuf[recvBufP++] = SBUF;     // 从UART数据接收寄存器中读数据，写入缓冲
+  20   2              }
+  21   1              if(TI){
+  22   2                      TI = 0;         // 清除TI位
+  23   2                      busy = 0;       // 清忙标志
+  24   2              }
+  25   1      }
+  26          
+  27          static void Uart_Flush(){
+  28   1              if(sendP != sendBufP){
+  29   2                      while(busy);    // 等待前面的数据发送完成
+  30   2                      busy = 1;
+  31   2                      SBUF = sendBuf[sendP++];        // 写数据到UART数据发送寄存器
+  32   2              }
+  33   1      }
+  34          
+  35          // 主频30M
+  36          void Uart_Init(){
+  37   1              P_SW1 &= 0x3F;  // 串口1的TX/RX位于P3.1/P3.0
+  38   1              PCON &= 0x3F;   // 波特率不倍速，SCON.6不作为帧错误检测功能
+  39   1              SCON = 0x50;    // 8位数据，可变波特率，无奇偶校验
+  40   1              AUXR |= 0x40;   // 定时器1时钟为Fosc，即1T
+  41   1              AUXR &= 0xFE;   // 串口1选择定时器1为波特率发生器
+  42   1              TMOD &= 0x0F;   // 清除定时器1模式位
+  43   1              TMOD |= 0x20;   // 设定定时器1为8位自动重装方式
+  44   1              TL1 = 0xF8;             // 设定定时初值（波特率115200）
+  45   1              TH1 = 0xF8;             // 设定定时器重装值
+  46   1              ET1 = 0;                // 禁止定时器1中断
+  47   1              TR1 = 1;                // 启动定时器1
+  48   1              ES = 1;                 // 使能串口中断
+  49   1          EA = 1;                     // 全局中断打开
+  50   1      }
+  51          
+  52          void Uart_Send(u8 value){
+  53   1              sendBuf[sendBufP++] = value;
+  54   1              Uart_Flush();
+C51 COMPILER V9.52.0.0   UART                                                              08/08/2017 16:17:40 PAGE 2   
+
+  55   1      }
+  56          
+  57          void Uart_SendBuf(void* p, u8 len){
+  58   1              u8 remains = 0x100 - sendBufP;
+  59   1              if(remains >= len)
+  60   1                      memcpy(sendBuf + sendBufP, p, len);
+  61   1              else{
+  62   2                      memcpy(sendBuf + sendBufP, p, remains);
+  63   2                      memcpy(sendBuf, (u8*)p + remains, len - remains);
+  64   2              }
+  65   1              sendBufP += len;
+  66   1              Uart_Flush();
+  67   1      }
+  68          
+  69          void Uart_Recv(u8* value){
+  70   1              if(recvP != recvBufP)
+  71   1                      *value = recvBuf[recvBufP++];
+  72   1              else
+  73   1                      *value = 0;
+  74   1      }
+  75          
+  76          void Uart_RecvBuf(void* p, u8* len){
+  77   1              if(recvP < recvBufP){
+  78   2                      *len = recvBufP - recvP;
+  79   2                      memcpy(p, recvBuf + recvP, recvBufP - recvP);
+  80   2                      recvP = recvBufP;
+  81   2              }else if(recvP > recvBufP){
+  82   2                      u8 remains = 0x100 - recvP;
+  83   2                      memcpy(p, recvBuf + recvP, remains);
+  84   2                      memcpy((u8*)p + remains, recvBuf, recvBufP - remains);
+  85   2                      *len = 0x100 + recvBufP - recvP;
+  86   2              }else{
+  87   2                      *len = 0;
+  88   2              }
+  89   1      }
+  90          
+  91          void Uart_String(const char* str){
+  92   1              Uart_SendBuf(str, strlen(str));
+  93   1      }
+  94          
+  95          void Uart_Dec(u8 val){
+  96   1              u8 i = 0;
+  97   1              u8 strBuf[4];
+  98   1              Dec2String(val, strBuf);
+  99   1              Uart_String(strBuf);
+ 100   1      }
+ 101          
+ 102          void Uart_Hex(u8 val){
+ 103   1              u8 i = 0;
+ 104   1              u8 strBuf[3];
+ 105   1              Hex2String(val, strBuf);
+ 106   1              Uart_String(strBuf);
+ 107   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    441    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =    512    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4      24
+   IDATA SIZE       =   ----    ----
+C51 COMPILER V9.52.0.0   UART                                                              08/08/2017 16:17:40 PAGE 3   
+
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

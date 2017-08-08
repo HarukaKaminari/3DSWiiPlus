@@ -1,0 +1,163 @@
+C51 COMPILER V9.52.0.0   MODULEDEVICESETTING                                               05/09/2015 17:37:41 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MODULEDEVICESETTING
+OBJECT MODULE PLACED IN ModuleDeviceSetting.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE ModuleDeviceSetting.c OPTIMIZE(9,SPEED) BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <STRING.H>
+   2          #include "ModuleDeviceSetting.h"
+   3          #include "main.h"
+   4          #include "LCM12864.h"
+   5          #include "SaveData.h"
+   6          #include "Controller.h"
+   7          
+   8          
+   9          #define CONFIG_ITEM_COUNT       3
+  10          
+  11          
+  12          static const char* code items[] = {
+  13                  "粗调对比度",
+  14                  "微调对比度",
+  15                  "偏压比设定",
+  16          };
+  17          
+  18          
+  19          static void Init(){
+  20   1              SaveData_Read();
+  21   1              
+  22   1              if(1){
+  23   2                      const char* code title = "设备调整";
+  24   2                      u8 len = strlen(title) * (10 >> 1) - 1;
+  25   2                      LCM12864_FillRect(((128 - len) >> 1) - 1, 0, len + 2, 11, 1);
+  26   2                      LCM12864_DrawString(10, title, (128 - len) >> 1, 1, 0);
+  27   2                      LCM12864_DrawString(10, "=", 61, 12, 1);
+  28   2              }
+  29   1      }
+  30          
+  31          void ModuleDeviceSetting(){
+  32   1              s16 offset = 128 << 4;  // 定点数
+  33   1              s8 selectedItem = 0;
+  34   1              u8 value[4];
+  35   1              
+  36   1              Init();
+  37   1              
+  38   1              while(1){
+  39   2                      if(1){
+  40   3                              const char* code desc = "\x80\x02/\x80\x03选择设定项目 \x80\x00/\x80\x01调整设定值 \x80\x10保存设定并返
+             -回设置菜单 \x80\x11不保存设定直接返回设置菜单";
+  41   3                              s16 len = strlen(desc) * (10 >> 1) - 1;
+  42   3                              LCM12864_FillRect(0, 22, 128, 10, 0);
+  43   3                              LCM12864_DrawString(10, desc, offset >> 4, 22, 1);
+  44   3      
+  45   3                              LCM12864_FillRect(0, 12, 40, 10, 0);
+  46   3                              LCM12864_DrawString(10, items[selectedItem], 0, 12, 1);
+  47   3                              
+  48   3                              LCM12864_FillRect(89, 12, 39, 10, 0);
+  49   3                              switch(selectedItem){
+  50   4                                      case 0:{
+  51   5                                              Hex2String(saveData.contrast0, value);
+  52   5                                      }break;
+  53   4                                      case 1:{
+  54   5                                              Hex2String(saveData.contrast1, value);
+C51 COMPILER V9.52.0.0   MODULEDEVICESETTING                                               05/09/2015 17:37:41 PAGE 2   
+
+  55   5                                      }break;
+  56   4                                      case 2:{
+  57   5                                              static const char* code str[] = {"1/9", "1/7"};
+  58   5                                              strcpy(value, str[saveData.bias]);
+  59   5                                      }break;
+  60   4                              }
+  61   3                              LCM12864_DrawString(10, value, 111, 12, 1);
+  62   3                              
+  63   3                              offset -= 8;
+  64   3                              if(offset < -(len << 4))offset = 128 << 4;
+  65   3                      }
+  66   2      
+  67   2                      LCM12864_Refresh();
+  68   2                      
+  69   2                      Controller_Read();
+  70   2                      // 上下键选择设定项目，左右键调整设定值，A键存档，B键不存档直接退回菜单界面
+  71   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_UP)){
+  72   3                              selectedItem--;
+  73   3                              if(selectedItem < 0)selectedItem = CONFIG_ITEM_COUNT - 1;
+  74   3                      }
+  75   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_DOWN)){
+  76   3                              selectedItem++;
+  77   3                              if(selectedItem > CONFIG_ITEM_COUNT - 1)selectedItem = 0;
+  78   3                      }
+  79   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_LEFT)){
+  80   3                              switch(selectedItem){
+  81   4                                      case 0:
+  82   4                                              saveData.contrast0--;
+  83   4                                              saveData.contrast0 &= 7;
+  84   4                                              break;
+  85   4                                      case 1:
+  86   4                                              saveData.contrast1--;
+  87   4                                              saveData.contrast1 &= 0x3F;
+  88   4                                              break;
+  89   4                                      case 2:
+  90   4                                              saveData.bias--;
+  91   4                                              saveData.bias &= 1;
+  92   4                                              break;
+  93   4                              }
+  94   3                              LCM12864_SetContrast0(saveData.contrast0);
+  95   3                              LCM12864_SetContrast1(saveData.contrast1);
+  96   3                              LCM12864_SetBias(saveData.bias);
+  97   3                              
+  98   3                      }
+  99   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_RIGHT)){
+ 100   3                              switch(selectedItem){
+ 101   4                                      case 0:
+ 102   4                                              saveData.contrast0++;
+ 103   4                                              saveData.contrast0 &= 7;
+ 104   4                                              break;
+ 105   4                                      case 1:
+ 106   4                                              saveData.contrast1++;
+ 107   4                                              saveData.contrast1 &= 0x3F;
+ 108   4                                              break;
+ 109   4                                      case 2:
+ 110   4                                              saveData.bias++;
+ 111   4                                              saveData.bias &= 1;
+ 112   4                                              break;
+ 113   4                              }
+ 114   3                              LCM12864_SetContrast0(saveData.contrast0);
+ 115   3                              LCM12864_SetContrast1(saveData.contrast1);
+ 116   3                              LCM12864_SetBias(saveData.bias);
+C51 COMPILER V9.52.0.0   MODULEDEVICESETTING                                               05/09/2015 17:37:41 PAGE 3   
+
+ 117   3                      }
+ 118   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_A)){
+ 119   3                              SaveData_Flush();
+ 120   3                              
+ 121   3                              currentModule = Module_ConfigMenu;
+ 122   3                              return;
+ 123   3                      }
+ 124   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_B)){
+ 125   3                              SaveData_Read();
+ 126   3                              
+ 127   3                              LCM12864_SetContrast0(saveData.contrast0);
+ 128   3                              LCM12864_SetContrast1(saveData.contrast1);
+ 129   3                              LCM12864_SetBias(saveData.bias);
+ 130   3              
+ 131   3                              currentModule = Module_ConfigMenu;
+ 132   3                              return;
+ 133   3                      }
+ 134   2              }
+ 135   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    657    ----
+   CONSTANT SIZE    =    161    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      10
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

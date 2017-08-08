@@ -1,0 +1,104 @@
+C51 COMPILER V9.52.0.0   MODULEKEYMAPPING                                                  08/08/2017 16:17:41 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MODULEKEYMAPPING
+OBJECT MODULE PLACED IN ModuleKeyMapping.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE ModuleKeyMapping.c OPTIMIZE(9,SPEED) REGFILE(.\3DSWiiPlus.ORC) BROWSE DEFIN
+                    -E(LCM_DRIVER_IST3932) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <STRING.H>
+   2          #include "ModuleKeyMapping.h"
+   3          #include "main.h"
+   4          #include "LCM12864.h"
+   5          #include "SaveData.h"
+   6          #include "Controller.h"
+   7          
+   8          
+   9          static void Init(){
+  10   1              SaveData_Read();
+  11   1              
+  12   1              if(1){
+  13   2                      u8 len = LCM12864_GetStrLenFromIdx(10, TITLE_KEY_MAPPING) - 1;
+  14   2                      LCM12864_FillRect(((128 - len) >> 1) - 1, 0, len + 2, 11, 1);
+  15   2                      LCM12864_DrawStringIdx(10, TITLE_KEY_MAPPING, (128 - len) >> 1, 1, 0);  // ∞¥º¸”≥…‰
+  16   2                      LCM12864_DrawStringIdx(10, KEY_WII, 0, 12, 1);                                          // WII
+  17   2                      LCM12864_DrawString(10, "=", 61, 12, 1);
+  18   2                      LCM12864_DrawStringIdx(10, KEY_CTR, 89, 12, 1);                                         // CTR
+  19   2              }
+  20   1      }
+  21          
+  22          void ModuleKeyMapping(){
+  23   1              s8 selectedIndex = 0;
+  24   1              s16 offset = 128 << 4;  // ∂®µ„ ˝
+  25   1              s8 selectedWiiButton = 0;
+  26   1      
+  27   1              Init();
+  28   1              while(1){
+  29   2                      if(1){
+  30   3                              u8 lenWII = LCM12864_GetStrLenFromIdx(10, KEY_WII_LEFT + selectedWiiButton) - 1;
+  31   3                              u8 lenCTR = LCM12864_GetStrLenFromIdx(10, KEY_CTR_LEFT + saveData.keyMapping[selectedWiiButton]) - 1;
+  32   3                              u16 len = LCM12864_GetStrLenFromIdx(10, DESC_2) - 1;
+  33   3                              LCM12864_FillRect(20, 12, 20, 10, 0);
+  34   3                              LCM12864_FillRect(109, 12, 20, 10, 0);
+  35   3                              LCM12864_DrawStringIdx(10, KEY_WII_LEFT + selectedWiiButton, 20 + ((20 - lenWII) >> 1), 12, 1);                                                 /
+             -/ ◊Û ”“ …œ œ¬ A B X Y L R ZL ZR + - H
+  36   3                              LCM12864_DrawStringIdx(10, KEY_CTR_LEFT + saveData.keyMapping[selectedWiiButton], 109 + ((20 - lenCTR) 
+             ->> 1), 12, 1);        // ◊Û ”“ …œ œ¬ A B X Y L R ZL ZR START SELECT HOME
+  37   3      
+  38   3                              LCM12864_FillRect(0, 22, 128, 10, 0);
+  39   3                              LCM12864_DrawStringIdx(10, DESC_2, offset >> 4, 22, 1); // …œ/œ¬«–ªªWII∂À∞¥º¸ ◊Û/”“«–ªªCTR∂À∞¥º¸ A±£¥Ê…
+             -Ë∂®≤¢∑µªÿ…Ë÷√≤Àµ• B≤ª±£¥Ê…Ë∂®÷±Ω”∑µªÿ…Ë÷√≤Àµ•
+  40   3      
+  41   3                              offset -= 8;
+  42   3                              if(offset < -(len << 4))offset = 128 << 4;
+  43   3                      }
+  44   2                      LCM12864_Refresh();
+  45   2                              
+  46   2                      Controller_Read();
+  47   2                      
+  48   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_UP)){
+  49   3                              selectedWiiButton--;
+  50   3                              if(selectedWiiButton < 0)selectedWiiButton = KEY_ITEM_COUNT - 1;
+  51   3                      }
+C51 COMPILER V9.52.0.0   MODULEKEYMAPPING                                                  08/08/2017 16:17:41 PAGE 2   
+
+  52   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_DOWN)){
+  53   3                              selectedWiiButton++;
+  54   3                              if(selectedWiiButton > KEY_ITEM_COUNT - 1)selectedWiiButton = 0;
+  55   3                      }
+  56   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_LEFT)){
+  57   3                              saveData.keyMapping[selectedWiiButton]--;
+  58   3                              if(saveData.keyMapping[selectedWiiButton] < 0)saveData.keyMapping[selectedWiiButton] = KEY_ITEM_COUNT;
+  59   3                      }
+  60   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_RIGHT)){
+  61   3                              saveData.keyMapping[selectedWiiButton]++;
+  62   3                              if(saveData.keyMapping[selectedWiiButton] > KEY_ITEM_COUNT)saveData.keyMapping[selectedWiiButton] = 0;
+  63   3                      }
+  64   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_A)){
+  65   3                              SaveData_Flush();
+  66   3                              
+  67   3                              currentModule = Module_ConfigMenu;
+  68   3                              return;
+  69   3                      }
+  70   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_B)){
+  71   3                              currentModule = Module_ConfigMenu;
+  72   3                              return;
+  73   3                      }
+  74   2              }
+  75   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    518    ----
+   CONSTANT SIZE    =      2    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       9
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

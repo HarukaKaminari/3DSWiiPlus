@@ -1,0 +1,98 @@
+C51 COMPILER V9.52.0.0   SAVEDATA                                                          08/08/2017 16:17:41 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE SAVEDATA
+OBJECT MODULE PLACED IN SaveData.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE SaveData.c OPTIMIZE(9,SPEED) REGFILE(.\3DSWiiPlus.ORC) BROWSE DEFINE(LCM_DR
+                    -IVER_IST3932) DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <STRING.H>
+   2          #include "SaveData.h"
+   3          #include "IAP.h"
+   4          #include "Uart.h"
+   5          
+   6          
+   7          #define SECTOR  121     // IAP15W4K61S4，第121号扇区为最后一号扇区
+   8          #define SECTOR_ADDR(x)  (((u16)(x)) << 9)
+   9          
+  10          
+  11          structSaveData xdata saveData;
+  12          
+  13          
+  14          void SaveData_Init(){
+  15   1              // 检测文件头是否合法。不合法的话则格式化存档
+  16   1              u8 i = 0;
+  17   1              for(;i<sizeof(saveData.signature);++i){
+  18   2                      saveData.signature[i] = IAP_ReadByte(SECTOR_ADDR(SECTOR) + i);
+  19   2              }
+  20   1              if(strcmp(saveData.signature, "3DSWii+")){
+  21   2                      memset(&saveData, 0, sizeof(saveData));
+  22   2                      strcpy(saveData.signature, "3DSWii+");
+  23   2                      SaveData_Flush();
+  24   2              }
+  25   1      }
+  26          
+  27          void SaveData_Read(){
+  28   1              u8 i = 0;
+  29   1              for(;i<sizeof(saveData);++i){
+  30   2                      *((u8*)&saveData + i) = IAP_ReadByte(SECTOR_ADDR(SECTOR) + i);
+  31   2              }
+  32   1              for(i=0;i<KEY_ITEM_COUNT;++i){
+  33   2                      // 保证键值必定在3DS键值范围内
+  34   2                      if(saveData.keyMapping[i] > KEY_ITEM_COUNT - 1)saveData.keyMapping[i] = KEY_ITEM_COUNT - 1;
+  35   2                      if(saveData.keyMapping[i] < 0)saveData.keyMapping[i] = KEY_ITEM_COUNT - 1;
+  36   2              }
+  37   1              // 保证摇杆必定映射为正常或反向
+  38   1              saveData.analogMapping &= 1;
+  39   1              // 保证摇杆的两个轴必定要么为正要么为负
+  40   1              saveData.reverseAnalogX &= 1;
+  41   1              saveData.reverseAnalogY &= 1;
+  42   1              // 保证两个按键必定在3DS键值范围内，连发频率最大30Hz
+  43   1              if(saveData.turboEnableKey > KEY_ITEM_COUNT)saveData.turboEnableKey = 0;
+  44   1              if(saveData.turboEnableKey < 0)saveData.turboEnableKey = 0;
+  45   1              if(saveData.turboDisableKey > KEY_ITEM_COUNT)saveData.turboDisableKey = 0;
+  46   1              if(saveData.turboDisableKey < 0)saveData.turboDisableKey = 0;
+  47   1              if(saveData.turboFreq > 5 - 1)saveData.turboFreq = 5 - 1;
+  48   1              if(saveData.turboFreq < 0)saveData.turboFreq = 0;
+  49   1              // 保证阈值和偏移量必定为正数
+  50   1              saveData.analogRatioL &= 0x80;
+  51   1              saveData.analogOffsetL &= 0x80;
+  52   1              saveData.analogRatioR &= 0x80;
+  53   1              saveData.analogOffsetR &= 0x80;
+  54   1      }
+C51 COMPILER V9.52.0.0   SAVEDATA                                                          08/08/2017 16:17:41 PAGE 2   
+
+  55          
+  56          void SaveData_Flush(){
+  57   1              u8 i = 0;
+  58   1              IAP_EraseSector(SECTOR_ADDR(SECTOR));
+  59   1              for(;i<sizeof(saveData);++i){
+  60   2                      IAP_ProgramByte(SECTOR_ADDR(SECTOR) + i, *((u8*)&saveData + i));
+  61   2              }
+  62   1      }
+  63          
+  64          void SaveData_Dump(){
+  65   1              Uart_SendBuf(&saveData, sizeof(saveData));
+  66   1      }
+  67          
+  68          void SaveData_Restore(){
+  69   1              u8 len = 0;
+  70   1              Uart_RecvBuf(&saveData, &len);
+  71   1              SaveData_Flush();
+  72   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    363    ----
+   CONSTANT SIZE    =      8    ----
+   XDATA SIZE       =     33    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       3
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
