@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        08/08/2017  16:17:42  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        08/10/2017  10:00:40  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -59,7 +59,7 @@ INPUT MODULES INCLUDED:
 LINK MAP OF MODULE:  3DSWiiPlus (UTILITY)
 
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 2
 
 
             TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
@@ -118,165 +118,165 @@ LINK MAP OF MODULE:  3DSWiiPlus (UTILITY)
             CODE    2C76H     00CDH     UNIT         ?PR?_LCM12864_DRAWLINE?LCM12864
             CODE    2D43H     00C6H     UNIT         ?CO?MODULETURBOSETTING
             CODE    2E09H     00C3H     UNIT         ?PR?_LCM12864_DRAWCIRCLE?LCM12864
-            CODE    2ECCH     00B4H     UNIT         ?PR?WIICLASSICCONTROLLER_INIT?WIICLASSICCONTROLLER
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 3
+            CODE    2ECCH     00BBH     UNIT         ?PR?WIICLASSICCONTROLLER_INIT?WIICLASSICCONTROLLER
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 3
 
 
-            CODE    2F80H     00B1H     UNIT         ?PR?SAVEDATA_READ?SAVEDATA
-            CODE    3031H     00B0H     UNIT         ?PR?WIICLASSICCONTROLLER_GETDATA?WIICLASSICCONTROLLER
-            CODE    30E1H     00ADH     UNIT         ?PR?IST3932
-            CODE    318EH     008CH     UNIT         ?C_C51STARTUP
-            CODE    321AH     008BH     UNIT         ?PR?_LCM12864_DRAWSTRINGIDX?LCM12864
-            CODE    32A5H     0087H     UNIT         ?PR?_LCM12864_DRAWSTRING?LCM12864
-            CODE    332CH     0086H     UNIT         ?PR?_DEC2STRING?UTILITY
-            CODE    33B2H     0084H     UNIT         ?PR?_I2C_GETS?I2C
-            CODE    3436H     007CH     UNIT         ?PR?MAIN?MAIN
-            CODE    34B2H     0076H     UNIT         ?CO?WIICLASSICCONTROLLER
-            CODE    3528H     0074H     UNIT         ?PR?_I2C_PUTS?I2C
-            CODE    359CH     0073H     UNIT         ?PR?INIT?MODULEKEYMAPPING
-            CODE    360FH     006FH     UNIT         ?PR?LCM12864
-            CODE    367EH     0066H     UNIT         ?PR?_UART_RECVBUF?UART
-            CODE    36E4H     005FH     UNIT         ?PR?CONTROLLER_INIT?CONTROLLER
-            CODE    3743H     005EH     UNIT         ?PR?_I2C_CHECKSLAVEVALIDITY?I2C
-            CODE    37A1H     005EH     UNIT         ?PR?INIT?MODULEANALOGCALIBRATION
-            CODE    37FFH     005DH     UNIT         ?PR?MODULECONNECT?MODULECONNECT
-            CODE    385CH     0058H     UNIT         ?PR?INIT?MODULEANALOGMAPPING
-            CODE    38B4H     0058H     UNIT         ?PR?INIT?MODULETURBOSETTING
-            CODE    390CH     0056H     UNIT         ?PR?_NRF24L01_SEND?NRF24L01
-            CODE    3962H     0056H     UNIT         ?PR?INIT?MODULECONFIGMENU
-            CODE    39B8H     0054H     UNIT         ?PR?_LCM12864_GETSTRLENFROMIDX?LCM12864
-            CODE    3A0CH     0053H     UNIT         ?PR?_UART_SENDBUF?UART
-            CODE    3A5FH     004BH     UNIT         ?PR?NRF24L01_CHECK?NRF24L01
-            CODE    3AAAH     0047H     UNIT         ?PR?MODULECOUNTDOWN?MODULECOUNTDOWN
-            CODE    3AF1H     0046H     UNIT         ?PR?_LCM12864_DRAWCHAR?LCM12864
-            CODE    3B37H     0044H     UNIT         ?C_INITSEG
-            CODE    3B7BH     0044H     UNIT         ?PR?_I2C_ENUMERATEALLDEVICES?I2C
-            CODE    3BBFH     0042H     UNIT         ?PR?IST3932_INIT?IST3932
-            CODE    3C01H     0041H     UNIT         ?PR?NRF24L01_TX_MODE?NRF24L01
-            CODE    3C42H     0040H     UNIT         ?PR?_IST3932_DRAWPIXEL?IST3932
-            CODE    3C82H     003FH     UNIT         ?PR?UART
-            CODE    3CC1H     003EH     UNIT         ?PR?_PWM_SETDUTY?PWM
-            CODE    3CFFH     003CH     UNIT         ?PR?SAVEDATA_INIT?SAVEDATA
-            CODE    3D3BH     003BH     UNIT         ?PR?TIMER0_INTERRUPT?TIMER
-            CODE    3D76H     0036H     UNIT         ?PR?_LCM12864_GETIDXFROMASCII?LCM12864
-            CODE    3DACH     0035H     UNIT         ?PR?NRF24L01_RX_MODE?NRF24L01
-            CODE    3DE1H     0034H     UNIT         ?PR?INIT?MODULECOUNTDOWN
-            CODE    3E15H     0033H     UNIT         ?PR?_HEX2STRING?UTILITY
-            CODE    3E48H     0031H     UNIT         ?PR?CTRINTERFACE
-            CODE    3E79H     0031H     UNIT         ?PR?SAVEDATA_FLUSH?SAVEDATA
-            CODE    3EAAH     0031H     UNIT         ?PR?SAVEDATA
-            CODE    3EDBH     0031H     UNIT         ?PR?_NRF24L01_SPI_READ_BUF?NRF24L01
-            CODE    3F0CH     0031H     UNIT         ?PR?IST3932_REFRESH?IST3932
-            CODE    3F3DH     002FH     UNIT         ?PR?CTRINTERFACE_PREPARE?CTRINTERFACE
-            CODE    3F6CH     002FH     UNIT         ?PR?_NRF24L01_SPI_WRITE_BUF?NRF24L01
-            CODE    3F9BH     002CH     UNIT         ?PR?MODULEANALOGCALIBRATION
-            CODE    3FC7H     0028H     UNIT         ?PR?_NRF24L01_RECV?NRF24L01
-            CODE    3FEFH     0026H     UNIT         ?PR?UART?UART
-            CODE    4015H     0025H     UNIT         ?CO?CTRINTERFACE
-            CODE    403AH     0025H     UNIT         ?PR?INIT?MAIN
-            CODE    405FH     0024H     UNIT         ?PR?UART_INIT?UART
-            CODE    4083H     0024H     UNIT         ?PR?PWM_INIT?PWM
-            CODE    40A7H     0024H     UNIT         ?CO?PWM
-            CODE    40CBH     0023H     UNIT         ?PR?I2C_READ?I2C
-            CODE    40EEH     0023H     UNIT         ?PR?I2C_GETACK?I2C
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 4
+            CODE    2F87H     00B1H     UNIT         ?PR?SAVEDATA_READ?SAVEDATA
+            CODE    3038H     00B0H     UNIT         ?PR?WIICLASSICCONTROLLER_GETDATA?WIICLASSICCONTROLLER
+            CODE    30E8H     00ADH     UNIT         ?PR?IST3932
+            CODE    3195H     008CH     UNIT         ?C_C51STARTUP
+            CODE    3221H     008BH     UNIT         ?PR?_LCM12864_DRAWSTRINGIDX?LCM12864
+            CODE    32ACH     0087H     UNIT         ?PR?_LCM12864_DRAWSTRING?LCM12864
+            CODE    3333H     0086H     UNIT         ?PR?_DEC2STRING?UTILITY
+            CODE    33B9H     0084H     UNIT         ?PR?_I2C_GETS?I2C
+            CODE    343DH     0084H     UNIT         ?PR?MAIN?MAIN
+            CODE    34C1H     0076H     UNIT         ?CO?WIICLASSICCONTROLLER
+            CODE    3537H     0074H     UNIT         ?PR?_I2C_PUTS?I2C
+            CODE    35ABH     0073H     UNIT         ?PR?INIT?MODULEKEYMAPPING
+            CODE    361EH     006FH     UNIT         ?PR?LCM12864
+            CODE    368DH     0066H     UNIT         ?PR?_UART_RECVBUF?UART
+            CODE    36F3H     0065H     UNIT         ?PR?_I2C_CHECKSLAVEVALIDITY?I2C
+            CODE    3758H     005FH     UNIT         ?PR?CONTROLLER_INIT?CONTROLLER
+            CODE    37B7H     005EH     UNIT         ?PR?INIT?MODULEANALOGCALIBRATION
+            CODE    3815H     005DH     UNIT         ?PR?MODULECONNECT?MODULECONNECT
+            CODE    3872H     0058H     UNIT         ?PR?INIT?MODULEANALOGMAPPING
+            CODE    38CAH     0058H     UNIT         ?PR?INIT?MODULETURBOSETTING
+            CODE    3922H     0056H     UNIT         ?PR?_NRF24L01_SEND?NRF24L01
+            CODE    3978H     0056H     UNIT         ?PR?INIT?MODULECONFIGMENU
+            CODE    39CEH     0054H     UNIT         ?PR?_LCM12864_GETSTRLENFROMIDX?LCM12864
+            CODE    3A22H     0053H     UNIT         ?PR?_UART_SENDBUF?UART
+            CODE    3A75H     0053H     UNIT         ?PR?NRF24L01_CHECK?NRF24L01
+            CODE    3AC8H     0047H     UNIT         ?PR?MODULECOUNTDOWN?MODULECOUNTDOWN
+            CODE    3B0FH     0046H     UNIT         ?PR?_LCM12864_DRAWCHAR?LCM12864
+            CODE    3B55H     0044H     UNIT         ?C_INITSEG
+            CODE    3B99H     0044H     UNIT         ?PR?_I2C_ENUMERATEALLDEVICES?I2C
+            CODE    3BDDH     0042H     UNIT         ?PR?IST3932_INIT?IST3932
+            CODE    3C1FH     0041H     UNIT         ?PR?NRF24L01_TX_MODE?NRF24L01
+            CODE    3C60H     0040H     UNIT         ?PR?_IST3932_DRAWPIXEL?IST3932
+            CODE    3CA0H     003FH     UNIT         ?PR?UART
+            CODE    3CDFH     003EH     UNIT         ?PR?_PWM_SETDUTY?PWM
+            CODE    3D1DH     003CH     UNIT         ?PR?SAVEDATA_INIT?SAVEDATA
+            CODE    3D59H     003BH     UNIT         ?PR?TIMER0_INTERRUPT?TIMER
+            CODE    3D94H     0036H     UNIT         ?PR?_LCM12864_GETIDXFROMASCII?LCM12864
+            CODE    3DCAH     0035H     UNIT         ?PR?NRF24L01_RX_MODE?NRF24L01
+            CODE    3DFFH     0034H     UNIT         ?PR?INIT?MODULECOUNTDOWN
+            CODE    3E33H     0033H     UNIT         ?PR?_HEX2STRING?UTILITY
+            CODE    3E66H     0031H     UNIT         ?PR?CTRINTERFACE
+            CODE    3E97H     0031H     UNIT         ?PR?SAVEDATA_FLUSH?SAVEDATA
+            CODE    3EC8H     0031H     UNIT         ?PR?SAVEDATA
+            CODE    3EF9H     0031H     UNIT         ?PR?_NRF24L01_SPI_READ_BUF?NRF24L01
+            CODE    3F2AH     0031H     UNIT         ?PR?IST3932_REFRESH?IST3932
+            CODE    3F5BH     002FH     UNIT         ?PR?CTRINTERFACE_PREPARE?CTRINTERFACE
+            CODE    3F8AH     002FH     UNIT         ?PR?_NRF24L01_SPI_WRITE_BUF?NRF24L01
+            CODE    3FB9H     002CH     UNIT         ?PR?MODULEANALOGCALIBRATION
+            CODE    3FE5H     0028H     UNIT         ?PR?_NRF24L01_RECV?NRF24L01
+            CODE    400DH     0026H     UNIT         ?PR?UART?UART
+            CODE    4033H     0025H     UNIT         ?CO?CTRINTERFACE
+            CODE    4058H     0025H     UNIT         ?PR?INIT?MAIN
+            CODE    407DH     0024H     UNIT         ?PR?UART_INIT?UART
+            CODE    40A1H     0024H     UNIT         ?PR?PWM_INIT?PWM
+            CODE    40C5H     0024H     UNIT         ?CO?PWM
+            CODE    40E9H     0023H     UNIT         ?PR?I2C_READ?I2C
+            CODE    410CH     0023H     UNIT         ?PR?I2C_GETACK?I2C
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 4
 
 
-            CODE    4111H     0022H     UNIT         ?PR?WIICLASSICCONTROLLER
-            CODE    4133H     001FH     UNIT         ?PR?I2C_INIT?I2C
-            CODE    4152H     001FH     UNIT         ?PR?MODULEKEYMAPPING
-            CODE    4171H     001EH     UNIT         ?PR?I2C
-            CODE    418FH     001DH     UNIT         ?PR?UART_FLUSH?UART
-            CODE    41ACH     001DH     UNIT         ?PR?IST3932_DRIVERCONTROL?IST3932
-            CODE    41C9H     001CH     UNIT         ?PR?MODULETURBOSETTING
-            CODE    41E5H     001BH     UNIT         ?CO?I2C
-            CODE    4200H     0019H     UNIT         ?PR?_DELAY?UTILITY
-            CODE    4219H     0018H     UNIT         ?PR?I2C_STOP?I2C
-            CODE    4231H     0018H     UNIT         ?PR?CONTROLLER_READ?CONTROLLER
-            CODE    4249H     0017H     UNIT         ?PR?UTILITY
-            CODE    4260H     0017H     UNIT         ?PR?_I2C_WRITE?I2C
-            CODE    4277H     0015H     UNIT         ?PR?_IST3932_SETDUTY?IST3932
-            CODE    428CH     0015H     UNIT         ?PR?_STRLEN?STRLEN
-            CODE    42A1H     0014H     UNIT         ?PR?_DELAY10US?UTILITY
-            CODE    42B5H     0014H     UNIT         ?PR?_UART_STRING?UART
-            CODE    42C9H     0014H     UNIT         ?PR?_UART_DEC?UART
-            CODE    42DDH     0014H     UNIT         ?PR?SAVEDATA_RESTORE?SAVEDATA
-            CODE    42F1H     0014H     UNIT         ?PR?IST3932_BEGINIST?IST3932
-            CODE    4305H     0013H     UNIT         ?PR?_UART_SEND?UART
-            CODE    4318H     0013H     UNIT         ?PR?_IAP_PROGRAMBYTE?IAP
-            CODE    432BH     0013H     UNIT         ?PR?SPI_INIT?SPI
-            CODE    433EH     0013H     UNIT         ?PR?TIMER_INIT?TIMER
-            CODE    4351H     0013H     UNIT         ?PR?_NRF24L01_SPI_WRITE?NRF24L01
-            CODE    4364H     0013H     UNIT         ?PR?_IST3932_SETROW?IST3932
-            CODE    4377H     0013H     UNIT         ?PR?_IST3932_SETFRAMECONTROL?IST3932
-            CODE    438AH     0012H     UNIT         ?PR?_PWM_SETCHANNELSTATUS?PWM
-            CODE    439CH     0011H     UNIT         ?PR?_UART_RECV?UART
-            CODE    43ADH     0010H     UNIT         ?PR?_IAP_READBYTE?IAP
-            CODE    43BDH     0010H     UNIT         ?PR?PWM
-            CODE    43CDH     0010H     UNIT         ?PR?_WIICLASSICCONTROLLER_ISKEYDOWN?WIICLASSICCONTROLLER
-            CODE    43DDH     0010H     UNIT         ?PR?_WIICLASSICCONTROLLER_ISKEYUP?WIICLASSICCONTROLLER
-            CODE    43EDH     000FH     UNIT         ?PR?LCM12864_CLEAR?LCM12864
-            CODE    43FCH     000EH     UNIT         ?PR?_UART_HEX?UART
-            CODE    440AH     000DH     UNIT         ?PR?I2C_START?I2C
-            CODE    4417H     000DH     UNIT         ?PR?IAP_IDLE?IAP
-            CODE    4424H     000DH     UNIT         ?PR?_IAP_ERASESECTOR?IAP
-            CODE    4431H     000DH     UNIT         ?PR?_SPI_SENDANDRECEIVE?SPI
-            CODE    443EH     000DH     UNIT         ?PR?CTRINTERFACE_INIT?CTRINTERFACE
-            CODE    444BH     000DH     UNIT         ?PR?NRF24L01_INIT?NRF24L01
-            CODE    4458H     000DH     UNIT         ?PR?_NRF24L01_SPI_READ?NRF24L01
-            CODE    4465H     000DH     UNIT         ?PR?IST3932_POWER?IST3932
-            CODE    4472H     000DH     UNIT         ?PR?IST3932_SLEEP?IST3932
-            CODE    447FH     000DH     UNIT         ?PR?IST3932_OSC?IST3932
-            CODE    448CH     000DH     UNIT         ?PR?IST3932_DISPLAY?IST3932
-            CODE    4499H     000DH     UNIT         ?PR?IST3932_SETINTERLEAVE?IST3932
-            CODE    44A6H     000CH     UNIT         ?PR?I2C_DELAY?I2C
-            CODE    44B2H     000CH     UNIT         ?PR?I2C_PUTACK?I2C
-            CODE    44BEH     000CH     UNIT         ?PR?NRF24L01
-            CODE    44CAH     000CH     UNIT         ?PR?_IST3932_SETCONTRAST?IST3932
-            CODE    44D6H     000BH     UNIT         ?PR?IAP
-            CODE    44E1H     000BH     UNIT         ?PR?_WIICLASSICCONTROLLER_ISKEYHOLD?WIICLASSICCONTROLLER
-            CODE    44ECH     000BH     UNIT         ?PR?CONTROLLER_ISCONNECTED?CONTROLLER
-            CODE    44F7H     000BH     UNIT         ?PR?INIT?MODULEGENERIC
-            CODE    4502H     000BH     UNIT         ?PR?MODULEGENERIC?MODULEGENERIC
-            CODE    450DH     000AH     UNIT         ?PR?PWM_START?PWM
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 5
+            CODE    412FH     0022H     UNIT         ?PR?WIICLASSICCONTROLLER
+            CODE    4151H     001FH     UNIT         ?PR?I2C_INIT?I2C
+            CODE    4170H     001FH     UNIT         ?PR?MODULEKEYMAPPING
+            CODE    418FH     001EH     UNIT         ?PR?I2C
+            CODE    41ADH     001DH     UNIT         ?PR?UART_FLUSH?UART
+            CODE    41CAH     001DH     UNIT         ?PR?IST3932_DRIVERCONTROL?IST3932
+            CODE    41E7H     001CH     UNIT         ?PR?MODULETURBOSETTING
+            CODE    4203H     001BH     UNIT         ?CO?I2C
+            CODE    421EH     0019H     UNIT         ?PR?_DELAY?UTILITY
+            CODE    4237H     0018H     UNIT         ?PR?I2C_STOP?I2C
+            CODE    424FH     0018H     UNIT         ?PR?CONTROLLER_READ?CONTROLLER
+            CODE    4267H     0017H     UNIT         ?PR?UTILITY
+            CODE    427EH     0017H     UNIT         ?PR?_I2C_WRITE?I2C
+            CODE    4295H     0015H     UNIT         ?PR?_IST3932_SETDUTY?IST3932
+            CODE    42AAH     0015H     UNIT         ?PR?_STRLEN?STRLEN
+            CODE    42BFH     0014H     UNIT         ?PR?_DELAY10US?UTILITY
+            CODE    42D3H     0014H     UNIT         ?PR?_UART_STRING?UART
+            CODE    42E7H     0014H     UNIT         ?PR?_UART_DEC?UART
+            CODE    42FBH     0014H     UNIT         ?PR?SAVEDATA_RESTORE?SAVEDATA
+            CODE    430FH     0014H     UNIT         ?PR?IST3932_BEGINIST?IST3932
+            CODE    4323H     0013H     UNIT         ?PR?_UART_SEND?UART
+            CODE    4336H     0013H     UNIT         ?PR?_IAP_PROGRAMBYTE?IAP
+            CODE    4349H     0013H     UNIT         ?PR?SPI_INIT?SPI
+            CODE    435CH     0013H     UNIT         ?PR?TIMER_INIT?TIMER
+            CODE    436FH     0013H     UNIT         ?PR?_NRF24L01_SPI_WRITE?NRF24L01
+            CODE    4382H     0013H     UNIT         ?PR?_IST3932_SETROW?IST3932
+            CODE    4395H     0013H     UNIT         ?PR?_IST3932_SETFRAMECONTROL?IST3932
+            CODE    43A8H     0012H     UNIT         ?PR?_PWM_SETCHANNELSTATUS?PWM
+            CODE    43BAH     0011H     UNIT         ?PR?_UART_RECV?UART
+            CODE    43CBH     0010H     UNIT         ?PR?_IAP_READBYTE?IAP
+            CODE    43DBH     0010H     UNIT         ?PR?PWM
+            CODE    43EBH     0010H     UNIT         ?PR?_WIICLASSICCONTROLLER_ISKEYDOWN?WIICLASSICCONTROLLER
+            CODE    43FBH     0010H     UNIT         ?PR?_WIICLASSICCONTROLLER_ISKEYUP?WIICLASSICCONTROLLER
+            CODE    440BH     000FH     UNIT         ?PR?LCM12864_CLEAR?LCM12864
+            CODE    441AH     000EH     UNIT         ?PR?_UART_HEX?UART
+            CODE    4428H     000DH     UNIT         ?PR?I2C_START?I2C
+            CODE    4435H     000DH     UNIT         ?PR?IAP_IDLE?IAP
+            CODE    4442H     000DH     UNIT         ?PR?_IAP_ERASESECTOR?IAP
+            CODE    444FH     000DH     UNIT         ?PR?_SPI_SENDANDRECEIVE?SPI
+            CODE    445CH     000DH     UNIT         ?PR?CTRINTERFACE_INIT?CTRINTERFACE
+            CODE    4469H     000DH     UNIT         ?PR?NRF24L01_INIT?NRF24L01
+            CODE    4476H     000DH     UNIT         ?PR?_NRF24L01_SPI_READ?NRF24L01
+            CODE    4483H     000DH     UNIT         ?PR?IST3932_POWER?IST3932
+            CODE    4490H     000DH     UNIT         ?PR?IST3932_SLEEP?IST3932
+            CODE    449DH     000DH     UNIT         ?PR?IST3932_OSC?IST3932
+            CODE    44AAH     000DH     UNIT         ?PR?IST3932_DISPLAY?IST3932
+            CODE    44B7H     000DH     UNIT         ?PR?IST3932_SETINTERLEAVE?IST3932
+            CODE    44C4H     000CH     UNIT         ?PR?I2C_DELAY?I2C
+            CODE    44D0H     000CH     UNIT         ?PR?I2C_PUTACK?I2C
+            CODE    44DCH     000CH     UNIT         ?PR?NRF24L01
+            CODE    44E8H     000CH     UNIT         ?PR?_IST3932_SETCONTRAST?IST3932
+            CODE    44F4H     000BH     UNIT         ?PR?IAP
+            CODE    44FFH     000BH     UNIT         ?PR?_WIICLASSICCONTROLLER_ISKEYHOLD?WIICLASSICCONTROLLER
+            CODE    450AH     000BH     UNIT         ?PR?CONTROLLER_ISCONNECTED?CONTROLLER
+            CODE    4515H     000BH     UNIT         ?PR?INIT?MODULEGENERIC
+            CODE    4520H     000BH     UNIT         ?PR?MODULEGENERIC?MODULEGENERIC
+            CODE    452BH     000AH     UNIT         ?PR?PWM_START?PWM
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 5
 
 
-            CODE    4517H     000AH     UNIT         ?PR?PWM_STOP?PWM
-            CODE    4521H     000AH     UNIT         ?PR?_LCM12864_FILLRECT?LCM12864
-            CODE    452BH     000AH     UNIT         ?PR?MODULEANALOGMAPPING
-            CODE    4535H     0009H     UNIT         ?PR?_TIMER_SETINTERVAL?TIMER
-            CODE    453EH     0009H     UNIT         ?PR?WIICLASSICCONTROLLER_READ?WIICLASSICCONTROLLER
-            CODE    4547H     0009H     UNIT         ?PR?LCM12864_INIT?LCM12864
-            CODE    4550H     0009H     UNIT         ?PR?_IST3932_SETBIAS?IST3932
-            CODE    4559H     0009H     UNIT         ?PR?_IST3932_SETCOL?IST3932
-            CODE    4562H     0008H     UNIT         ?PR?WIICLASSICCONTROLLER_GETRANALOGY?WIICLASSICCONTROLLER
-            CODE    456AH     0008H     UNIT         ?PR?SAVEDATA_DUMP?SAVEDATA
-            CODE    4572H     0008H     UNIT         ?CO?SAVEDATA
-            CODE    457AH     0008H     UNIT         ?CO?NRF24L01
-            CODE    4582H     0008H     UNIT         ?CO?CONTROLLER
-            CODE    458AH     0007H     UNIT         ?PR?_TIMER_SETCALLBACK?TIMER
-            CODE    4591H     0007H     UNIT         ?PR?WIICLASSICCONTROLLER_GETPTR?WIICLASSICCONTROLLER
-            CODE    4598H     0007H     UNIT         ?PR?_LCM12864_SENDCOMMAND?LCM12864
-            CODE    459FH     0007H     UNIT         ?PR?_LCM12864_SENDDATA?LCM12864
-            CODE    45A6H     0007H     UNIT         ?PR?_LCM12864_DRAWPIXEL?LCM12864
-            CODE    45ADH     0006H     UNIT         ?PR?WIICLASSICCONTROLLER_GETLANALOGX?WIICLASSICCONTROLLER
-            CODE    45B3H     0006H     UNIT         ?PR?WIICLASSICCONTROLLER_GETLANALOGY?WIICLASSICCONTROLLER
-            CODE    45B9H     0005H     UNIT         ?PR?LCM12864_BACKLIGHT?LCM12864
-            CODE    45BEH     0005H     UNIT         ?PR?IST3932_SOFTRESET?IST3932
-            CODE    45C3H     0005H     UNIT         ?PR?IST3932_NOP?IST3932
-            CODE    45C8H     0005H     UNIT         ?PR?IST3932_ENDIST?IST3932
-            CODE    45CDH     0004H     UNIT         ?PR?SOFTRESET?UTILITY
-            CODE    45D1H     0004H     UNIT         ?PR?TIMER_INTERRUPT?CTRINTERFACE
-            CODE    45D5H     0004H     UNIT         ?PR?_NRF24L01_TESTREG?NRF24L01
-            CODE    45D9H     0003H     UNIT         ?PR?TIMER_START?TIMER
-            CODE    45DCH     0003H     UNIT         ?PR?TIMER_STOP?TIMER
-            CODE    45DFH     0003H     UNIT         ?PR?LCM12864_REFRESH?LCM12864
-            CODE    45E2H     0003H     UNIT         ?PR?TIMER_INTERRUPT?MODULECOUNTDOWN
-            CODE    45E5H     0002H     UNIT         ?CO?MODULEKEYMAPPING
-            CODE    45E7H     0002H     UNIT         ?CO?MODULEANALOGMAPPING
-            CODE    45E9H     0001H     UNIT         ?PR?_DECRYPT?WIICLASSICCONTROLLER
-            CODE    45EAH     0001H     UNIT         ?PR?INIT?MODULECONNECT
+            CODE    4535H     000AH     UNIT         ?PR?PWM_STOP?PWM
+            CODE    453FH     000AH     UNIT         ?PR?_LCM12864_FILLRECT?LCM12864
+            CODE    4549H     000AH     UNIT         ?PR?MODULEANALOGMAPPING
+            CODE    4553H     0009H     UNIT         ?PR?_TIMER_SETINTERVAL?TIMER
+            CODE    455CH     0009H     UNIT         ?PR?WIICLASSICCONTROLLER_READ?WIICLASSICCONTROLLER
+            CODE    4565H     0009H     UNIT         ?PR?LCM12864_INIT?LCM12864
+            CODE    456EH     0009H     UNIT         ?PR?_IST3932_SETBIAS?IST3932
+            CODE    4577H     0009H     UNIT         ?PR?_IST3932_SETCOL?IST3932
+            CODE    4580H     0008H     UNIT         ?PR?WIICLASSICCONTROLLER_GETRANALOGY?WIICLASSICCONTROLLER
+            CODE    4588H     0008H     UNIT         ?PR?SAVEDATA_DUMP?SAVEDATA
+            CODE    4590H     0008H     UNIT         ?CO?SAVEDATA
+            CODE    4598H     0008H     UNIT         ?CO?NRF24L01
+            CODE    45A0H     0008H     UNIT         ?CO?CONTROLLER
+            CODE    45A8H     0007H     UNIT         ?PR?_TIMER_SETCALLBACK?TIMER
+            CODE    45AFH     0007H     UNIT         ?PR?WIICLASSICCONTROLLER_GETPTR?WIICLASSICCONTROLLER
+            CODE    45B6H     0007H     UNIT         ?PR?_LCM12864_SENDCOMMAND?LCM12864
+            CODE    45BDH     0007H     UNIT         ?PR?_LCM12864_SENDDATA?LCM12864
+            CODE    45C4H     0007H     UNIT         ?PR?_LCM12864_DRAWPIXEL?LCM12864
+            CODE    45CBH     0006H     UNIT         ?PR?WIICLASSICCONTROLLER_GETLANALOGX?WIICLASSICCONTROLLER
+            CODE    45D1H     0006H     UNIT         ?PR?WIICLASSICCONTROLLER_GETLANALOGY?WIICLASSICCONTROLLER
+            CODE    45D7H     0005H     UNIT         ?PR?LCM12864_BACKLIGHT?LCM12864
+            CODE    45DCH     0005H     UNIT         ?PR?IST3932_SOFTRESET?IST3932
+            CODE    45E1H     0005H     UNIT         ?PR?IST3932_NOP?IST3932
+            CODE    45E6H     0005H     UNIT         ?PR?IST3932_ENDIST?IST3932
+            CODE    45EBH     0004H     UNIT         ?PR?SOFTRESET?UTILITY
+            CODE    45EFH     0004H     UNIT         ?PR?TIMER_INTERRUPT?CTRINTERFACE
+            CODE    45F3H     0004H     UNIT         ?PR?_NRF24L01_TESTREG?NRF24L01
+            CODE    45F7H     0003H     UNIT         ?PR?TIMER_START?TIMER
+            CODE    45FAH     0003H     UNIT         ?PR?TIMER_STOP?TIMER
+            CODE    45FDH     0003H     UNIT         ?PR?LCM12864_REFRESH?LCM12864
+            CODE    4600H     0003H     UNIT         ?PR?TIMER_INTERRUPT?MODULECOUNTDOWN
+            CODE    4603H     0002H     UNIT         ?CO?MODULEKEYMAPPING
+            CODE    4605H     0002H     UNIT         ?CO?MODULEANALOGMAPPING
+            CODE    4607H     0001H     UNIT         ?PR?_DECRYPT?WIICLASSICCONTROLLER
+            CODE    4608H     0001H     UNIT         ?PR?INIT?MODULECONNECT
 
 
 
@@ -299,7 +299,7 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
   +--> ?PR?INIT?MAIN
   +--> ?PR?UART_INIT?UART
   +--> ?PR?I2C_INIT?I2C
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 6
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 6
 
 
   +--> ?PR?PWM_INIT?PWM
@@ -359,7 +359,7 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
 ?PR?_IST3932_SETDUTY?IST3932                     -----    -----      -----    -----
   +--> ?PR?_LCM12864_SENDCOMMAND?LCM12864
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 7
 
 
 ?PR?IST3932_DRIVERCONTROL?IST3932                0020H.0  0000H.4    -----    -----
@@ -419,7 +419,7 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
   +--> ?PR?I2C_START?I2C
   +--> ?PR?I2C_GETACK?I2C
   +--> ?PR?I2C_STOP?I2C
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 8
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 8
 
 
   +--> ?PR?I2C
@@ -437,28 +437,28 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
 ?PR?I2C_STOP?I2C                                 -----    -----      -----    -----
   +--> ?PR?I2C_DELAY?I2C
 
-?PR?_I2C_CHECKSLAVEVALIDITY?I2C                  -----    -----      002BH    0001H
+?PR?_I2C_CHECKSLAVEVALIDITY?I2C                  -----    -----      002BH    0002H
   +--> ?PR?I2C
   +--> ?PR?_UART_HEX?UART
   +--> ?CO?I2C
   +--> ?PR?_UART_STRING?UART
 
-?PR?_UART_HEX?UART                               -----    -----      0031H    0004H
+?PR?_UART_HEX?UART                               -----    -----      0032H    0004H
   +--> ?PR?_HEX2STRING?UTILITY
   +--> ?PR?_UART_STRING?UART
 
 ?PR?_HEX2STRING?UTILITY                          -----    -----      -----    -----
   +--> ?PR?UTILITY
 
-?PR?_UART_STRING?UART                            -----    -----      0035H    0003H
+?PR?_UART_STRING?UART                            -----    -----      0036H    0003H
   +--> ?PR?_STRLEN?STRLEN
   +--> ?PR?_UART_SENDBUF?UART
 
-?PR?_UART_SENDBUF?UART                           -----    -----      0038H    0005H
+?PR?_UART_SENDBUF?UART                           -----    -----      0039H    0005H
   +--> ?PR?UART
   +--> ?PR?UART_FLUSH?UART
 
-?PR?WIICLASSICCONTROLLER_INIT?WIICLAS...         -----    -----      002BH    0006H
+?PR?WIICLASSICCONTROLLER_INIT?WIICLAS...         -----    -----      002BH    0007H
   +--> ?CO?WIICLASSICCONTROLLER
   +--> ?PR?_UART_STRING?UART
   +--> ?PR?WIICLASSICCONTROLLER
@@ -479,7 +479,7 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
   +--> ?PR?I2C_READ?I2C
   +--> ?PR?I2C_PUTACK?I2C
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 9
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 9
 
 
 ?PR?I2C_READ?I2C                                 -----    -----      -----    -----
@@ -488,7 +488,7 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
 ?PR?I2C_PUTACK?I2C                               0020H.0  0000H.1    -----    -----
   +--> ?PR?I2C_DELAY?I2C
 
-?PR?NRF24L01_CHECK?NRF24L01                      -----    -----      002BH    0005H
+?PR?NRF24L01_CHECK?NRF24L01                      -----    -----      002BH    0006H
   +--> ?PR?NRF24L01
   +--> ?PR?_NRF24L01_SPI_WRITE_BUF?NRF24L01
   +--> ?PR?_NRF24L01_SPI_READ_BUF?NRF24L01
@@ -499,7 +499,7 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
 ?PR?NRF24L01                                     -----    -----      -----    -----
   +--> ?CO?NRF24L01
 
-?PR?_NRF24L01_SPI_WRITE_BUF?NRF24L01             -----    -----      0030H    0005H
+?PR?_NRF24L01_SPI_WRITE_BUF?NRF24L01             -----    -----      0031H    0005H
   +--> ?PR?_SPI_SENDANDRECEIVE?SPI
 
 ?PR?_NRF24L01_SPI_READ_BUF?NRF24L01              -----    -----      003BH    0005H
@@ -539,7 +539,7 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
 
 ?PR?LCM12864                                     -----    -----      -----    -----
   +--> ?CO?LCM12864
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 10
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 10
 
 
 
@@ -599,7 +599,7 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
   +--> ?PR?WIICLASSICCONTROLLER_GETPTR?WIICL...
   +--> ?PR?_NRF24L01_RECV?NRF24L01
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 11
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 11
 
 
 ?PR?WIICLASSICCONTROLLER_READ?WIICLAS...         -----    -----      -----    -----
@@ -659,7 +659,7 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
   +--> ?PR?_LCM12864_DRAWSTRINGIDX?LCM12864
   +--> ?PR?LCM12864_REFRESH?LCM12864
   +--> ?PR?CONTROLLER_READ?CONTROLLER
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 12
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 12
 
 
   +--> ?PR?_WIICLASSICCONTROLLER_ISKEYDOWN?W...
@@ -719,7 +719,7 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
 
 ?PR?MODULEANALOGCALIBRATION?MODULEANA...         -----    -----      0022H    0019H
   +--> ?PR?INIT?MODULEANALOGCALIBRATION
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 13
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 13
 
 
   +--> ?PR?_PWM_SETCHANNELSTATUS?PWM
@@ -769,17 +769,22 @@ SEGMENT                                             BIT_GROUP          DATA_GROU
 
 
 
+UNRESOLVED EXTERNAL SYMBOLS:
+   MODULEDEVICESETTING
+
+
+
 IGNORED SEGMENTS:
    ?DT?MAIN
    ?DT?MODULECOUNTDOWN
 
 
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 14
+
+
 
 IGNORED SYMBOLS:
    CURRENTMODULE
-
-
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 14
 
 
 
@@ -801,20 +806,20 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  C:45CDH         PUBLIC        SoftReset
+  C:45EBH         PUBLIC        SoftReset
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:332CH         PUBLIC        _Dec2String
-  C:42A1H         PUBLIC        _Delay10us
+  C:3333H         PUBLIC        _Dec2String
+  C:42BFH         PUBLIC        _Delay10us
   D:00C7H         PUBLIC        IAP_CONTR
-  C:3E15H         PUBLIC        _Hex2String
-  C:4200H         PUBLIC        _Delay
+  C:3E33H         PUBLIC        _Hex2String
+  C:421EH         PUBLIC        _Delay
   D:00D0H         PUBLIC        PSW
-  C:4249H         SYMBOL        Com001A
-  C:4249H         SYMBOL        L?0027
-  C:424AH         SYMBOL        L?0028
-  C:424CH         SYMBOL        L?0029
-  C:4253H         SYMBOL        L?0030
+  C:4267H         SYMBOL        Com001A
+  C:4267H         SYMBOL        L?0027
+  C:4268H         SYMBOL        L?0028
+  C:426AH         SYMBOL        L?0029
+  C:4271H         SYMBOL        L?0030
   -------         PROC          COM001A
   -------         ENDPROC       COM001A
   -------         PROC          _DELAY10US
@@ -822,36 +827,36 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   -------         DO            
   D:002BH         SYMBOL        i
   -------         ENDDO         
-  C:42A1H         LINE#         6
-  C:42A1H         LINE#         7
-  C:42A7H         LINE#         8
-  C:42AAH         LINE#         9
-  C:42ABH         LINE#         10
-  C:42ACH         LINE#         11
-  C:42B4H         LINE#         13
+  C:42BFH         LINE#         6
+  C:42BFH         LINE#         7
+  C:42C5H         LINE#         8
+  C:42C8H         LINE#         9
+  C:42C9H         LINE#         10
+  C:42CAH         LINE#         11
+  C:42D2H         LINE#         13
   -------         ENDPROC       _DELAY10US
   -------         PROC          _DELAY
   D:0006H         SYMBOL        ms
   -------         DO            
   D:0041H         SYMBOL        i
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 15
+
+
   D:0042H         SYMBOL        j
   -------         ENDDO         
-  C:4200H         LINE#         15
-  C:4200H         LINE#         16
-  C:420AH         LINE#         17
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 15
-
-
-  C:4210H         LINE#         18
-  C:4210H         LINE#         19
-  C:4213H         LINE#         20
-  C:4216H         LINE#         21
-  C:4218H         LINE#         22
+  C:421EH         LINE#         15
+  C:421EH         LINE#         16
+  C:4228H         LINE#         17
+  C:422EH         LINE#         18
+  C:422EH         LINE#         19
+  C:4231H         LINE#         20
+  C:4234H         LINE#         21
+  C:4236H         LINE#         22
   -------         ENDPROC       _DELAY
   -------         PROC          SOFTRESET
-  C:45CDH         LINE#         24
-  C:45CDH         LINE#         25
-  C:45D0H         LINE#         26
+  C:45EBH         LINE#         24
+  C:45EBH         LINE#         25
+  C:45EEH         LINE#         26
   -------         ENDPROC       SOFTRESET
   -------         PROC          _DEC2STRING
   D:0071H         SYMBOL        dec
@@ -861,27 +866,27 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:0007H         SYMBOL        _1
   D:0006H         SYMBOL        _0
   -------         ENDDO         
-  C:332CH         LINE#         28
-  C:3334H         LINE#         29
-  C:333BH         LINE#         30
-  C:3350H         LINE#         31
-  C:3365H         LINE#         32
-  C:3368H         LINE#         33
-  C:336FH         LINE#         34
-  C:3379H         LINE#         35
-  C:3382H         LINE#         36
-  C:3389H         LINE#         37
-  C:338CH         LINE#         38
-  C:338FH         LINE#         39
-  C:3395H         LINE#         40
-  C:339BH         LINE#         41
-  C:339BH         LINE#         42
-  C:339FH         LINE#         43
-  C:339FH         LINE#         44
-  C:33A5H         LINE#         45
-  C:33AFH         LINE#         46
-  C:33B1H         LINE#         47
-  C:33B1H         LINE#         48
+  C:3333H         LINE#         28
+  C:333BH         LINE#         29
+  C:3342H         LINE#         30
+  C:3357H         LINE#         31
+  C:336CH         LINE#         32
+  C:336FH         LINE#         33
+  C:3376H         LINE#         34
+  C:3380H         LINE#         35
+  C:3389H         LINE#         36
+  C:3390H         LINE#         37
+  C:3393H         LINE#         38
+  C:3396H         LINE#         39
+  C:339CH         LINE#         40
+  C:33A2H         LINE#         41
+  C:33A2H         LINE#         42
+  C:33A6H         LINE#         43
+  C:33A6H         LINE#         44
+  C:33ACH         LINE#         45
+  C:33B6H         LINE#         46
+  C:33B8H         LINE#         47
+  C:33B8H         LINE#         48
   -------         ENDPROC       _DEC2STRING
   -------         PROC          _HEX2STRING
   D:0007H         SYMBOL        hex
@@ -890,18 +895,18 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:0006H         SYMBOL        hi
   D:0007H         SYMBOL        lo
   -------         ENDDO         
-  C:3E15H         LINE#         50
-  C:3E15H         LINE#         51
-  C:3E1AH         LINE#         52
-  C:3E1EH         LINE#         53
-  C:3E31H         LINE#         54
-  C:3E44H         LINE#         55
-  C:3E44H         LINE#         56
-  C:3E47H         LINE#         57
+  C:3E33H         LINE#         50
+  C:3E33H         LINE#         51
+  C:3E38H         LINE#         52
+  C:3E3CH         LINE#         53
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 16
+
+
+  C:3E4FH         LINE#         54
+  C:3E62H         LINE#         55
+  C:3E62H         LINE#         56
+  C:3E65H         LINE#         57
   -------         ENDPROC       _HEX2STRING
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 16
-
-
   -------         ENDMOD        UTILITY
 
   -------         MODULE        UART
@@ -911,29 +916,29 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00A0H         PUBLIC        P2
   D:0075H         SYMBOL        recvP
   D:00B0H         PUBLIC        P3
-  C:418FH         SYMBOL        Uart_Flush
+  C:41ADH         SYMBOL        Uart_Flush
   D:00C0H         PUBLIC        P4
   D:00C8H         PUBLIC        P5
   B:00A8H.7       PUBLIC        EA
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
-  C:4305H         PUBLIC        _Uart_Send
-  C:42C9H         PUBLIC        _Uart_Dec
+  C:4323H         PUBLIC        _Uart_Send
+  C:42E7H         PUBLIC        _Uart_Dec
   D:00A2H         PUBLIC        P_SW1
   D:00A8H         PUBLIC        IE
-  C:439CH         PUBLIC        _Uart_Recv
-  C:405FH         PUBLIC        Uart_Init
+  C:43BAH         PUBLIC        _Uart_Recv
+  C:407DH         PUBLIC        Uart_Init
   B:00A8H.4       PUBLIC        ES
   D:00B8H         PUBLIC        IP
   B:0098H.0       PUBLIC        RI
   D:0076H         SYMBOL        sendBufP
   B:0098H.1       PUBLIC        TI
-  C:3FEFH         SYMBOL        Uart
+  C:400DH         SYMBOL        Uart
   D:0077H         SYMBOL        recvBufP
   D:00D8H         PUBLIC        CCON
-  C:43FCH         PUBLIC        _Uart_Hex
-  C:3A0CH         PUBLIC        _Uart_SendBuf
-  C:367EH         PUBLIC        _Uart_RecvBuf
+  C:441AH         PUBLIC        _Uart_Hex
+  C:3A22H         PUBLIC        _Uart_SendBuf
+  C:368DH         PUBLIC        _Uart_RecvBuf
   D:0099H         PUBLIC        SBUF
   D:0087H         PUBLIC        PCON
   D:0098H         PUBLIC        SCON
@@ -947,91 +952,91 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   X:0520H         SYMBOL        recvBuf
   D:008BH         PUBLIC        TL1
   B:0088H.6       PUBLIC        TR1
-  C:42B5H         PUBLIC        _Uart_String
+  C:42D3H         PUBLIC        _Uart_String
   D:00D0H         PUBLIC        PSW
   D:0078H         SYMBOL        sendP
-  C:3C82H         SYMBOL        Com001B
-  C:3C82H         SYMBOL        L?0028
-  C:3C96H         SYMBOL        L?0029
-  C:3CA6H         SYMBOL        L?0030
-  C:3CB5H         SYMBOL        L?0031
-  C:3CBAH         SYMBOL        L?0032
+  C:3CA0H         SYMBOL        Com001B
+  C:3CA0H         SYMBOL        L?0028
+  C:3CB4H         SYMBOL        L?0029
+  C:3CC4H         SYMBOL        L?0030
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 17
+
+
+  C:3CD3H         SYMBOL        L?0031
+  C:3CD8H         SYMBOL        L?0032
   -------         PROC          COM001B
   -------         ENDPROC       COM001B
   -------         PROC          UART
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 17
-
-
-  C:3FEFH         LINE#         14
-  C:3FFAH         LINE#         15
-  C:3FFDH         LINE#         16
-  C:3FFFH         LINE#         19
-  C:4005H         LINE#         20
-  C:4005H         LINE#         21
-  C:4008H         LINE#         22
-  C:400AH         LINE#         23
-  C:400CH         LINE#         24
-  C:400CH         LINE#         25
+  C:400DH         LINE#         14
+  C:4018H         LINE#         15
+  C:401BH         LINE#         16
+  C:401DH         LINE#         19
+  C:4023H         LINE#         20
+  C:4023H         LINE#         21
+  C:4026H         LINE#         22
+  C:4028H         LINE#         23
+  C:402AH         LINE#         24
+  C:402AH         LINE#         25
   -------         ENDPROC       UART
   -------         PROC          UART_FLUSH
-  C:418FH         LINE#         27
-  C:418FH         LINE#         28
-  C:4195H         LINE#         29
-  C:4198H         LINE#         30
-  C:419AH         LINE#         31
-  C:41ABH         LINE#         32
-  C:41ABH         LINE#         33
+  C:41ADH         LINE#         27
+  C:41ADH         LINE#         28
+  C:41B3H         LINE#         29
+  C:41B6H         LINE#         30
+  C:41B8H         LINE#         31
+  C:41C9H         LINE#         32
+  C:41C9H         LINE#         33
   -------         ENDPROC       UART_FLUSH
   -------         PROC          UART_INIT
-  C:405FH         LINE#         36
-  C:405FH         LINE#         37
-  C:4062H         LINE#         38
-  C:4065H         LINE#         39
-  C:4068H         LINE#         40
-  C:406BH         LINE#         41
-  C:406EH         LINE#         42
-  C:4071H         LINE#         43
-  C:4074H         LINE#         44
-  C:4077H         LINE#         45
-  C:407AH         LINE#         46
-  C:407CH         LINE#         47
-  C:407EH         LINE#         48
-  C:4080H         LINE#         49
-  C:4082H         LINE#         50
+  C:407DH         LINE#         36
+  C:407DH         LINE#         37
+  C:4080H         LINE#         38
+  C:4083H         LINE#         39
+  C:4086H         LINE#         40
+  C:4089H         LINE#         41
+  C:408CH         LINE#         42
+  C:408FH         LINE#         43
+  C:4092H         LINE#         44
+  C:4095H         LINE#         45
+  C:4098H         LINE#         46
+  C:409AH         LINE#         47
+  C:409CH         LINE#         48
+  C:409EH         LINE#         49
+  C:40A0H         LINE#         50
   -------         ENDPROC       UART_INIT
   -------         PROC          _UART_SEND
   D:0007H         SYMBOL        value
-  C:4305H         LINE#         52
-  C:4305H         LINE#         53
-  C:4315H         LINE#         54
+  C:4323H         LINE#         52
+  C:4323H         LINE#         53
+  C:4333H         LINE#         54
   -------         ENDPROC       _UART_SEND
   -------         PROC          _UART_SENDBUF
-  D:0038H         SYMBOL        p
-  D:003BH         SYMBOL        len
+  D:0039H         SYMBOL        p
+  D:003CH         SYMBOL        len
   -------         DO            
-  D:003CH         SYMBOL        remains
+  D:003DH         SYMBOL        remains
   -------         ENDDO         
-  C:3A0CH         LINE#         57
-  C:3A14H         LINE#         58
-  C:3A1AH         LINE#         59
-  C:3A1FH         LINE#         60
-  C:3A28H         LINE#         61
-  C:3A28H         LINE#         62
-  C:3A36H         LINE#         63
-  C:3A56H         LINE#         64
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 18
+  C:3A22H         LINE#         57
+  C:3A2AH         LINE#         58
+  C:3A30H         LINE#         59
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 18
 
 
-  C:3A56H         LINE#         65
-  C:3A5CH         LINE#         66
+  C:3A35H         LINE#         60
+  C:3A3EH         LINE#         61
+  C:3A3EH         LINE#         62
+  C:3A4CH         LINE#         63
+  C:3A6CH         LINE#         64
+  C:3A6CH         LINE#         65
+  C:3A72H         LINE#         66
   -------         ENDPROC       _UART_SENDBUF
   -------         PROC          _UART_RECV
   D:0001H         SYMBOL        value
-  C:439CH         LINE#         69
-  C:439CH         LINE#         70
-  C:43A2H         LINE#         71
-  C:43A8H         LINE#         73
-  C:43ACH         LINE#         74
+  C:43BAH         LINE#         69
+  C:43BAH         LINE#         70
+  C:43C0H         LINE#         71
+  C:43C6H         LINE#         73
+  C:43CAH         LINE#         74
   -------         ENDPROC       _UART_RECV
   -------         PROC          _UART_RECVBUF
   D:005EH         SYMBOL        p
@@ -1039,25 +1044,25 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   -------         DO            
   D:0064H         SYMBOL        remains
   -------         ENDDO         
-  C:367EH         LINE#         76
-  C:3684H         LINE#         77
-  C:368BH         LINE#         78
-  C:3691H         LINE#         79
-  C:369EH         LINE#         80
-  C:36A1H         LINE#         81
-  C:36A9H         LINE#         82
-  C:36AFH         LINE#         83
-  C:36B5H         LINE#         84
-  C:36D7H         LINE#         85
-  C:36DAH         LINE#         86
-  C:36DCH         LINE#         87
-  C:36E3H         LINE#         88
-  C:36E3H         LINE#         89
+  C:368DH         LINE#         76
+  C:3693H         LINE#         77
+  C:369AH         LINE#         78
+  C:36A0H         LINE#         79
+  C:36ADH         LINE#         80
+  C:36B0H         LINE#         81
+  C:36B8H         LINE#         82
+  C:36BEH         LINE#         83
+  C:36C4H         LINE#         84
+  C:36E6H         LINE#         85
+  C:36E9H         LINE#         86
+  C:36EBH         LINE#         87
+  C:36F2H         LINE#         88
+  C:36F2H         LINE#         89
   -------         ENDPROC       _UART_RECVBUF
   -------         PROC          _UART_STRING
-  D:0035H         SYMBOL        str
-  C:42B5H         LINE#         91
-  C:42BBH         LINE#         92
+  D:0036H         SYMBOL        str
+  C:42D3H         LINE#         91
+  C:42D9H         LINE#         92
   -------         ENDPROC       _UART_STRING
   -------         PROC          _UART_DEC
   D:0007H         SYMBOL        val
@@ -1065,24 +1070,24 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:001AH         SYMBOL        i
   D:001BH         SYMBOL        strBuf
   -------         ENDDO         
-  C:42C9H         LINE#         95
-  C:42C9H         LINE#         96
-  C:42CCH         LINE#         98
-  C:42D4H         LINE#         99
+  C:42E7H         LINE#         95
+  C:42E7H         LINE#         96
+  C:42EAH         LINE#         98
+  C:42F2H         LINE#         99
   -------         ENDPROC       _UART_DEC
   -------         PROC          _UART_HEX
   D:0007H         SYMBOL        val
   -------         DO            
-  D:0031H         SYMBOL        i
-  D:0032H         SYMBOL        strBuf
+  D:0032H         SYMBOL        i
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 19
+
+
+  D:0033H         SYMBOL        strBuf
   -------         ENDDO         
-  C:43FCH         LINE#         102
-  C:43FCH         LINE#         103
-  C:43FFH         LINE#         105
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 19
-
-
-  C:4407H         LINE#         106
+  C:441AH         LINE#         102
+  C:441AH         LINE#         103
+  C:441DH         LINE#         105
+  C:4425H         LINE#         106
   -------         ENDPROC       _UART_HEX
   -------         ENDMOD        UART
 
@@ -1101,207 +1106,207 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   X:0641H         SYMBOL        I2CDevices
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:44ADH         SYMBOL        I2C_Delay
+  C:44CBH         SYMBOL        I2C_Delay
   D:00B8H         PUBLIC        IP
-  C:40CBH         PUBLIC        I2C_Read
+  C:40E9H         PUBLIC        I2C_Read
   D:00D8H         PUBLIC        CCON
-  C:4260H         PUBLIC        _I2C_Write
-  C:3B7BH         PUBLIC        _I2C_EnumerateAllDevices
-  C:440AH         PUBLIC        I2C_Start
-  C:33B2H         PUBLIC        _I2C_Gets
+  C:427EH         PUBLIC        _I2C_Write
+  C:3B99H         PUBLIC        _I2C_EnumerateAllDevices
+  C:4428H         PUBLIC        I2C_Start
+  C:33B9H         PUBLIC        _I2C_Gets
   D:0098H         PUBLIC        SCON
-  C:4133H         PUBLIC        I2C_Init
+  C:4151H         PUBLIC        I2C_Init
   D:0088H         PUBLIC        TCON
-  C:4219H         PUBLIC        I2C_Stop
-  C:3743H         PUBLIC        _I2C_CheckSlaveValidity
-  C:3528H         PUBLIC        _I2C_Puts
-  C:40F5H         PUBLIC        I2C_GetAck
-  C:44B2H         PUBLIC        I2C_PutAck
+  C:4237H         PUBLIC        I2C_Stop
+  C:36F3H         PUBLIC        _I2C_CheckSlaveValidity
+  C:3537H         PUBLIC        _I2C_Puts
+  C:4113H         PUBLIC        I2C_GetAck
+  C:44D0H         PUBLIC        I2C_PutAck
   B:00B0H.2       PUBLIC        I2C_SDA
   D:00D0H         PUBLIC        PSW
-  C:4171H         SYMBOL        Com0051
-  C:4171H         SYMBOL        L?0082
-  C:4173H         SYMBOL        L?0083
-  C:417AH         SYMBOL        L?0084
-  C:4183H         SYMBOL        L?0089
+  C:418FH         SYMBOL        Com0051
+  C:418FH         SYMBOL        L?0082
+  C:4191H         SYMBOL        L?0083
+  C:4198H         SYMBOL        L?0084
+  C:41A1H         SYMBOL        L?0089
   -------         PROC          COM0051
   -------         ENDPROC       COM0051
-  C:44A8H         SYMBOL        L?0086
+  C:44C6H         SYMBOL        L?0086
   -------         PROC          L?0085
   -------         ENDPROC       L?0085
-  C:44A8H         SYMBOL        L?0086
+  C:44C6H         SYMBOL        L?0086
   -------         PROC          I2C_DELAY
   -------         DO            
   D:0007H         SYMBOL        I2C_Delay_t
   -------         ENDDO         
-  C:44ADH         LINE#         56
-  C:44ADH         LINE#         57
-  C:44AFH         LINE#         58
-  C:44B1H         LINE#         59
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 20
+
+
+  C:44CBH         LINE#         56
+  C:44CBH         LINE#         57
+  C:44CDH         LINE#         58
+  C:44CFH         LINE#         59
   -------         ENDPROC       I2C_DELAY
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 20
-
-
   -------         PROC          I2C_INIT
-  C:4133H         LINE#         66
-  C:4133H         LINE#         67
-  C:4136H         LINE#         68
-  C:4139H         LINE#         70
-  C:4148H         LINE#         72
-  C:414AH         LINE#         73
-  C:414DH         LINE#         74
-  C:414FH         LINE#         75
+  C:4151H         LINE#         66
+  C:4151H         LINE#         67
+  C:4154H         LINE#         68
+  C:4157H         LINE#         70
+  C:4166H         LINE#         72
+  C:4168H         LINE#         73
+  C:416BH         LINE#         74
+  C:416DH         LINE#         75
   -------         ENDPROC       I2C_INIT
   -------         PROC          I2C_START
-  C:440AH         LINE#         87
-  C:440AH         LINE#         88
-  C:440AH         LINE#         89
-  C:440AH         LINE#         90
-  C:440AH         LINE#         91
-  C:440DH         LINE#         92
-  C:440FH         LINE#         93
-  C:4412H         LINE#         94
-  C:4414H         LINE#         95
+  C:4428H         LINE#         87
+  C:4428H         LINE#         88
+  C:4428H         LINE#         89
+  C:4428H         LINE#         90
+  C:4428H         LINE#         91
+  C:442BH         LINE#         92
+  C:442DH         LINE#         93
+  C:4430H         LINE#         94
+  C:4432H         LINE#         95
   -------         ENDPROC       I2C_START
   -------         PROC          _I2C_WRITE
   D:0006H         SYMBOL        dat
   -------         DO            
   D:0005H         SYMBOL        t
   -------         ENDDO         
-  C:4260H         LINE#         104
-  C:4262H         LINE#         105
-  C:4264H         LINE#         106
-  C:4264H         LINE#         107
-  C:4268H         LINE#         108
-  C:4268H         LINE#         109
-  C:4268H         LINE#         110
-  C:426BH         LINE#         111
-  C:426DH         LINE#         112
-  C:4270H         LINE#         113
-  C:4274H         LINE#         114
-  C:4276H         LINE#         115
+  C:427EH         LINE#         104
+  C:4280H         LINE#         105
+  C:4282H         LINE#         106
+  C:4282H         LINE#         107
+  C:4286H         LINE#         108
+  C:4286H         LINE#         109
+  C:4286H         LINE#         110
+  C:4289H         LINE#         111
+  C:428BH         LINE#         112
+  C:428EH         LINE#         113
+  C:4292H         LINE#         114
+  C:4294H         LINE#         115
   -------         ENDPROC       _I2C_WRITE
   -------         PROC          I2C_READ
   -------         DO            
   D:0006H         SYMBOL        dat
   D:0005H         SYMBOL        t
   -------         ENDDO         
-  C:40CBH         LINE#         122
-  C:40CBH         LINE#         124
-  C:40CDH         LINE#         125
-  C:40CFH         LINE#         126
-  C:40D2H         LINE#         127
-  C:40D2H         LINE#         128
-  C:40D4H         LINE#         129
-  C:40D7H         LINE#         130
-  C:40DAH         LINE#         131
-  C:40DEH         LINE#         132
-  C:40E4H         LINE#         133
-  C:40E6H         LINE#         134
-  C:40E9H         LINE#         135
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 21
+  C:40E9H         LINE#         122
+  C:40E9H         LINE#         124
+  C:40EBH         LINE#         125
+  C:40EDH         LINE#         126
+  C:40F0H         LINE#         127
+  C:40F0H         LINE#         128
+  C:40F2H         LINE#         129
+  C:40F5H         LINE#         130
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 21
 
 
-  C:40EBH         LINE#         136
-  C:40EDH         LINE#         137
+  C:40F8H         LINE#         131
+  C:40FCH         LINE#         132
+  C:4102H         LINE#         133
+  C:4104H         LINE#         134
+  C:4107H         LINE#         135
+  C:4109H         LINE#         136
+  C:410BH         LINE#         137
   -------         ENDPROC       I2C_READ
-  C:40F1H         SYMBOL        L?0088
+  C:410FH         SYMBOL        L?0088
   -------         PROC          L?0087
   -------         ENDPROC       L?0087
-  C:40F1H         SYMBOL        L?0088
+  C:410FH         SYMBOL        L?0088
   -------         PROC          I2C_GETACK
   -------         DO            
   D:0004H         SYMBOL        timeout
   -------         ENDDO         
-  C:40F5H         LINE#         150
-  C:40F5H         LINE#         151
-  C:40F9H         LINE#         152
-  C:40F9H         LINE#         153
-  C:40F9H         LINE#         154
-  C:40F9H         LINE#         155
-  C:40FCH         LINE#         156
-  C:40FFH         LINE#         157
-  C:4104H         LINE#         158
-  C:4108H         LINE#         159
-  C:410AH         LINE#         160
-  C:410AH         LINE#         161
-  C:410AH         LINE#         162
-  C:410CH         LINE#         163
-  C:410FH         LINE#         164
-  C:4110H         LINE#         165
+  C:4113H         LINE#         150
+  C:4113H         LINE#         151
+  C:4117H         LINE#         152
+  C:4117H         LINE#         153
+  C:4117H         LINE#         154
+  C:4117H         LINE#         155
+  C:411AH         LINE#         156
+  C:411DH         LINE#         157
+  C:4122H         LINE#         158
+  C:4126H         LINE#         159
+  C:4128H         LINE#         160
+  C:4128H         LINE#         161
+  C:4128H         LINE#         162
+  C:412AH         LINE#         163
+  C:412DH         LINE#         164
+  C:412EH         LINE#         165
   -------         ENDPROC       I2C_GETACK
   -------         PROC          I2C_PUTACK
   B:0020H.0       SYMBOL        ack
-  C:44B2H         LINE#         177
-  C:44B2H         LINE#         178
-  C:44B6H         LINE#         179
-  C:44B6H         LINE#         180
-  C:44B6H         LINE#         181
-  C:44B9H         LINE#         182
-  C:44BBH         LINE#         183
+  C:44D0H         LINE#         177
+  C:44D0H         LINE#         178
+  C:44D4H         LINE#         179
+  C:44D4H         LINE#         180
+  C:44D4H         LINE#         181
+  C:44D7H         LINE#         182
+  C:44D9H         LINE#         183
   -------         ENDPROC       I2C_PUTACK
   -------         PROC          I2C_STOP
   -------         DO            
   D:0004H         SYMBOL        t
   -------         ENDDO         
-  C:4219H         LINE#         194
-  C:4219H         LINE#         195
-  C:421DH         LINE#         196
-  C:421FH         LINE#         197
-  C:421FH         LINE#         198
-  C:421FH         LINE#         199
-  C:4222H         LINE#         200
-  C:4224H         LINE#         201
-  C:4227H         LINE#         202
-  C:4230H         LINE#         203
+  C:4237H         LINE#         194
+  C:4237H         LINE#         195
+  C:423BH         LINE#         196
+  C:423DH         LINE#         197
+  C:423DH         LINE#         198
+  C:423DH         LINE#         199
+  C:4240H         LINE#         200
+  C:4242H         LINE#         201
+  C:4245H         LINE#         202
+  C:424EH         LINE#         203
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 22
+
+
   -------         ENDPROC       I2C_STOP
   -------         PROC          _I2C_ENUMERATEALLDEVICES
   D:0007H         SYMBOL        start
   D:002BH         SYMBOL        end
   -------         DO            
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 22
-
-
   D:002CH         SYMBOL        i
   -------         DO            
   B:0020H.0       SYMBOL        result
   -------         ENDDO         
   -------         ENDDO         
-  C:3B7BH         LINE#         214
-  C:3B7DH         LINE#         215
-  C:3B7FH         LINE#         216
-  C:3B82H         LINE#         217
-  C:3B89H         LINE#         219
-  C:3B8CH         LINE#         220
-  C:3B90H         LINE#         221
-  C:3B95H         LINE#         222
-  C:3B98H         LINE#         223
-  C:3B9BH         LINE#         224
-  C:3BA9H         LINE#         225
-  C:3BABH         LINE#         226
-  C:3BBAH         LINE#         227
-  C:3BBAH         LINE#         228
-  C:3BBEH         LINE#         229
+  C:3B99H         LINE#         214
+  C:3B9BH         LINE#         215
+  C:3B9DH         LINE#         216
+  C:3BA0H         LINE#         217
+  C:3BA7H         LINE#         219
+  C:3BAAH         LINE#         220
+  C:3BAEH         LINE#         221
+  C:3BB3H         LINE#         222
+  C:3BB6H         LINE#         223
+  C:3BB9H         LINE#         224
+  C:3BC7H         LINE#         225
+  C:3BC9H         LINE#         226
+  C:3BD8H         LINE#         227
+  C:3BD8H         LINE#         228
+  C:3BDCH         LINE#         229
   -------         ENDPROC       _I2C_ENUMERATEALLDEVICES
   -------         PROC          _I2C_CHECKSLAVEVALIDITY
   D:002BH         SYMBOL        addr
   -------         DO            
-  D:0005H         SYMBOL        i
+  D:002CH         SYMBOL        i
   -------         ENDDO         
-  C:3743H         LINE#         242
-  C:3745H         LINE#         244
-  C:3747H         LINE#         245
-  C:3751H         LINE#         246
-  C:375AH         LINE#         247
-  C:375EH         LINE#         248
-  C:3767H         LINE#         249
-  C:378FH         LINE#         250
-  C:3796H         LINE#         251
-  C:3798H         LINE#         252
-  C:3798H         LINE#         253
-  C:379FH         LINE#         254
-  C:37A0H         LINE#         255
-  C:37A0H         LINE#         256
+  C:36F3H         LINE#         242
+  C:36F5H         LINE#         244
+  C:36F8H         LINE#         245
+  C:3703H         LINE#         246
+  C:370CH         LINE#         247
+  C:3715H         LINE#         248
+  C:371EH         LINE#         249
+  C:3746H         LINE#         250
+  C:374DH         LINE#         251
+  C:374FH         LINE#         252
+  C:374FH         LINE#         253
+  C:3756H         LINE#         254
+  C:3757H         LINE#         255
+  C:3757H         LINE#         256
   -------         ENDPROC       _I2C_CHECKSLAVEVALIDITY
   -------         PROC          _I2C_PUTS
   D:0007H         SYMBOL        SlaveAddr
@@ -1313,46 +1318,46 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:0002H         SYMBOL        i
   D:004AH         SYMBOL        a
   -------         ENDDO         
-  C:3528H         LINE#         275
-  C:3528H         LINE#         280
-  C:3530H         LINE#         282
-  C:3535H         LINE#         284
-  C:353DH         LINE#         286
-  C:3545H         LINE#         287
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 23
+  C:3537H         LINE#         275
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 23
 
 
-  C:3545H         LINE#         288
-  C:3545H         LINE#         289
-  C:3545H         LINE#         290
-  C:3548H         LINE#         291
-  C:354AH         LINE#         292
-  C:354AH         LINE#         293
-  C:354DH         LINE#         294
-  C:3550H         LINE#         295
-  C:3550H         LINE#         296
-  C:3550H         LINE#         297
-  C:3550H         LINE#         298
-  C:3550H         LINE#         300
-  C:3551H         LINE#         301
-  C:3554H         LINE#         302
-  C:355BH         LINE#         303
-  C:355DH         LINE#         304
-  C:3562H         LINE#         305
-  C:3565H         LINE#         306
-  C:3568H         LINE#         307
-  C:3568H         LINE#         308
-  C:356BH         LINE#         310
-  C:356BH         LINE#         311
-  C:357CH         LINE#         312
-  C:3581H         LINE#         313
-  C:358EH         LINE#         315
-  C:3591H         LINE#         316
-  C:3597H         LINE#         317
-  C:3599H         LINE#         318
-  C:3599H         LINE#         319
-  C:359BH         LINE#         320
-  C:359BH         LINE#         321
+  C:3537H         LINE#         280
+  C:353FH         LINE#         282
+  C:3544H         LINE#         284
+  C:354CH         LINE#         286
+  C:3554H         LINE#         287
+  C:3554H         LINE#         288
+  C:3554H         LINE#         289
+  C:3554H         LINE#         290
+  C:3557H         LINE#         291
+  C:3559H         LINE#         292
+  C:3559H         LINE#         293
+  C:355CH         LINE#         294
+  C:355FH         LINE#         295
+  C:355FH         LINE#         296
+  C:355FH         LINE#         297
+  C:355FH         LINE#         298
+  C:355FH         LINE#         300
+  C:3560H         LINE#         301
+  C:3563H         LINE#         302
+  C:356AH         LINE#         303
+  C:356CH         LINE#         304
+  C:3571H         LINE#         305
+  C:3574H         LINE#         306
+  C:3577H         LINE#         307
+  C:3577H         LINE#         308
+  C:357AH         LINE#         310
+  C:357AH         LINE#         311
+  C:358BH         LINE#         312
+  C:3590H         LINE#         313
+  C:359DH         LINE#         315
+  C:35A0H         LINE#         316
+  C:35A6H         LINE#         317
+  C:35A8H         LINE#         318
+  C:35A8H         LINE#         319
+  C:35AAH         LINE#         320
+  C:35AAH         LINE#         321
   -------         ENDPROC       _I2C_PUTS
   -------         PROC          _I2C_GETS
   D:0007H         SYMBOL        SlaveAddr
@@ -1364,47 +1369,47 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:0002H         SYMBOL        i
   D:004AH         SYMBOL        a
   -------         ENDDO         
-  C:33B2H         LINE#         339
-  C:33B2H         LINE#         344
-  C:33BAH         LINE#         346
-  C:33BFH         LINE#         348
-  C:33C7H         LINE#         350
-  C:33CAH         LINE#         352
-  C:33CDH         LINE#         353
-  C:33D0H         LINE#         354
-  C:33D2H         LINE#         355
-  C:33D5H         LINE#         356
-  C:33D8H         LINE#         357
-  C:33D8H         LINE#         359
-  C:33D9H         LINE#         360
-  C:33DCH         LINE#         361
-  C:33E3H         LINE#         362
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 24
+  C:33B9H         LINE#         339
+  C:33B9H         LINE#         344
+  C:33C1H         LINE#         346
+  C:33C6H         LINE#         348
+  C:33CEH         LINE#         350
+  C:33D1H         LINE#         352
+  C:33D4H         LINE#         353
+  C:33D7H         LINE#         354
+  C:33D9H         LINE#         355
+  C:33DCH         LINE#         356
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 24
 
 
-  C:33E5H         LINE#         363
-  C:33EAH         LINE#         364
-  C:33EAH         LINE#         365
-  C:33ECH         LINE#         366
-  C:33ECH         LINE#         367
-  C:33EFH         LINE#         368
-  C:33EFH         LINE#         371
-  C:33F2H         LINE#         373
-  C:33F5H         LINE#         374
-  C:33FAH         LINE#         375
-  C:33FDH         LINE#         376
-  C:3400H         LINE#         377
-  C:3400H         LINE#         379
-  C:3400H         LINE#         380
-  C:3415H         LINE#         381
-  C:3422H         LINE#         382
-  C:3427H         LINE#         383
-  C:3429H         LINE#         384
-  C:3429H         LINE#         385
-  C:342EH         LINE#         386
-  C:3430H         LINE#         388
-  C:3433H         LINE#         389
-  C:3435H         LINE#         390
+  C:33DFH         LINE#         357
+  C:33DFH         LINE#         359
+  C:33E0H         LINE#         360
+  C:33E3H         LINE#         361
+  C:33EAH         LINE#         362
+  C:33ECH         LINE#         363
+  C:33F1H         LINE#         364
+  C:33F1H         LINE#         365
+  C:33F3H         LINE#         366
+  C:33F3H         LINE#         367
+  C:33F6H         LINE#         368
+  C:33F6H         LINE#         371
+  C:33F9H         LINE#         373
+  C:33FCH         LINE#         374
+  C:3401H         LINE#         375
+  C:3404H         LINE#         376
+  C:3407H         LINE#         377
+  C:3407H         LINE#         379
+  C:3407H         LINE#         380
+  C:341CH         LINE#         381
+  C:3429H         LINE#         382
+  C:342EH         LINE#         383
+  C:3430H         LINE#         384
+  C:3430H         LINE#         385
+  C:3435H         LINE#         386
+  C:3437H         LINE#         388
+  C:343AH         LINE#         389
+  C:343CH         LINE#         390
   -------         ENDPROC       _I2C_GETS
   -------         ENDMOD        I2C
 
@@ -1422,86 +1427,86 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00C5H         PUBLIC        IAP_CMD
   D:00B8H         PUBLIC        IP
   D:00C3H         PUBLIC        IAP_ADDRH
-  C:4424H         PUBLIC        _IAP_EraseSector
+  C:4442H         PUBLIC        _IAP_EraseSector
   D:00D8H         PUBLIC        CCON
   D:00C4H         PUBLIC        IAP_ADDRL
-  C:4318H         PUBLIC        _IAP_ProgramByte
+  C:4336H         PUBLIC        _IAP_ProgramByte
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:4417H         PUBLIC        IAP_Idle
+  C:4435H         PUBLIC        IAP_Idle
   D:00C7H         PUBLIC        IAP_CONTR
-  C:43ADH         PUBLIC        _IAP_ReadByte
+  C:43CBH         PUBLIC        _IAP_ReadByte
   D:00C2H         PUBLIC        IAP_DATA
   D:00C6H         PUBLIC        IAP_TRIG
   D:00D0H         PUBLIC        PSW
-  C:44D6H         SYMBOL        Com0005
-  C:44D6H         SYMBOL        L?0006
-  C:44DAH         SYMBOL        L?0007
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 25
+
+
+  C:44F4H         SYMBOL        Com0005
+  C:44F4H         SYMBOL        L?0006
+  C:44F8H         SYMBOL        L?0007
   -------         PROC          COM0005
   -------         ENDPROC       COM0005
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 25
-
-
   -------         PROC          IAP_IDLE
-  C:4417H         LINE#         30
-  C:4417H         LINE#         31
-  C:441AH         LINE#         32
-  C:441CH         LINE#         33
-  C:441EH         LINE#         34
-  C:4421H         LINE#         35
-  C:4423H         LINE#         36
+  C:4435H         LINE#         30
+  C:4435H         LINE#         31
+  C:4438H         LINE#         32
+  C:443AH         LINE#         33
+  C:443CH         LINE#         34
+  C:443FH         LINE#         35
+  C:4441H         LINE#         36
   -------         ENDPROC       IAP_IDLE
   -------         PROC          _IAP_READBYTE
   D:0006H         SYMBOL        addr
   -------         DO            
   D:0007H         SYMBOL        dat
   -------         ENDDO         
-  C:43ADH         LINE#         41
-  C:43ADH         LINE#         43
-  C:43B0H         LINE#         44
-  C:43B3H         LINE#         45
-  C:43B3H         LINE#         46
-  C:43B3H         LINE#         47
-  C:43B3H         LINE#         48
-  C:43B6H         LINE#         49
-  C:43B7H         LINE#         50
-  C:43B9H         LINE#         51
-  C:43BCH         LINE#         52
-  C:43BCH         LINE#         53
+  C:43CBH         LINE#         41
+  C:43CBH         LINE#         43
+  C:43CEH         LINE#         44
+  C:43D1H         LINE#         45
+  C:43D1H         LINE#         46
+  C:43D1H         LINE#         47
+  C:43D1H         LINE#         48
+  C:43D4H         LINE#         49
+  C:43D5H         LINE#         50
+  C:43D7H         LINE#         51
+  C:43DAH         LINE#         52
+  C:43DAH         LINE#         53
   -------         ENDPROC       _IAP_READBYTE
   -------         PROC          _IAP_PROGRAMBYTE
   D:0006H         SYMBOL        addr
   D:0005H         SYMBOL        dat
-  C:4318H         LINE#         58
-  C:4318H         LINE#         59
-  C:431BH         LINE#         60
-  C:431EH         LINE#         61
-  C:4320H         LINE#         62
-  C:4322H         LINE#         63
-  C:4324H         LINE#         64
-  C:4324H         LINE#         65
-  C:4327H         LINE#         66
-  C:4328H         LINE#         67
+  C:4336H         LINE#         58
+  C:4336H         LINE#         59
+  C:4339H         LINE#         60
+  C:433CH         LINE#         61
+  C:433EH         LINE#         62
+  C:4340H         LINE#         63
+  C:4342H         LINE#         64
+  C:4342H         LINE#         65
+  C:4345H         LINE#         66
+  C:4346H         LINE#         67
   -------         ENDPROC       _IAP_PROGRAMBYTE
   -------         PROC          _IAP_ERASESECTOR
   D:0006H         SYMBOL        addr
-  C:4424H         LINE#         73
-  C:4424H         LINE#         74
-  C:4427H         LINE#         75
-  C:442AH         LINE#         76
-  C:442AH         LINE#         77
-  C:442AH         LINE#         78
-  C:442AH         LINE#         79
-  C:442DH         LINE#         80
-  C:442EH         LINE#         81
+  C:4442H         LINE#         73
+  C:4442H         LINE#         74
+  C:4445H         LINE#         75
+  C:4448H         LINE#         76
+  C:4448H         LINE#         77
+  C:4448H         LINE#         78
+  C:4448H         LINE#         79
+  C:444BH         LINE#         80
+  C:444CH         LINE#         81
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 26
+
+
   -------         ENDPROC       _IAP_ERASESECTOR
   -------         ENDMOD        IAP
 
   -------         MODULE        PWM
   C:0000H         SYMBOL        _ICE_DUMMY_
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 26
-
-
   D:0096H         PUBLIC        P2M0
   D:0080H         PUBLIC        P0
   D:00B2H         PUBLIC        P3M0
@@ -1519,73 +1524,73 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  C:3CC1H         PUBLIC        _PWM_SetDuty
+  C:3CDFH         PUBLIC        _PWM_SetDuty
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00F1H         PUBLIC        PWMCFG
-  C:438AH         PUBLIC        _PWM_SetChannelStatus
-  C:40A7H         SYMBOL        addr_PWM_T1
-  C:40B3H         SYMBOL        addr_PWM_T2
-  C:450DH         PUBLIC        PWM_Start
-  C:40BFH         SYMBOL        addr_PWM_CR
-  C:4083H         PUBLIC        PWM_Init
+  C:43A8H         PUBLIC        _PWM_SetChannelStatus
+  C:40C5H         SYMBOL        addr_PWM_T1
+  C:40D1H         SYMBOL        addr_PWM_T2
+  C:452BH         PUBLIC        PWM_Start
+  C:40DDH         SYMBOL        addr_PWM_CR
+  C:40A1H         PUBLIC        PWM_Init
   D:00D0H         PUBLIC        PSW
-  C:4517H         PUBLIC        PWM_Stop
-  C:43BDH         SYMBOL        Com0006
-  C:43BDH         SYMBOL        L?0007
+  C:4535H         PUBLIC        PWM_Stop
+  C:43DBH         SYMBOL        Com0006
+  C:43DBH         SYMBOL        L?0007
   -------         PROC          COM0006
   -------         ENDPROC       COM0006
   -------         PROC          PWM_INIT
-  C:4083H         LINE#         10
-  C:4083H         LINE#         11
-  C:4086H         LINE#         12
-  C:4089H         LINE#         13
-  C:408CH         LINE#         14
-  C:408FH         LINE#         15
-  C:4092H         LINE#         16
-  C:4095H         LINE#         17
-  C:4097H         LINE#         18
-  C:409BH         LINE#         19
-  C:40A3H         LINE#         20
-  C:40A6H         LINE#         21
+  C:40A1H         LINE#         10
+  C:40A1H         LINE#         11
+  C:40A4H         LINE#         12
+  C:40A7H         LINE#         13
+  C:40AAH         LINE#         14
+  C:40ADH         LINE#         15
+  C:40B0H         LINE#         16
+  C:40B3H         LINE#         17
+  C:40B5H         LINE#         18
+  C:40B9H         LINE#         19
+  C:40C1H         LINE#         20
+  C:40C4H         LINE#         21
   -------         ENDPROC       PWM_INIT
   -------         PROC          PWM_START
-  C:450DH         LINE#         23
-  C:450DH         LINE#         24
-  C:4510H         LINE#         25
-  C:4513H         LINE#         26
-  C:4516H         LINE#         27
+  C:452BH         LINE#         23
+  C:452BH         LINE#         24
+  C:452EH         LINE#         25
+  C:4531H         LINE#         26
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 27
+
+
+  C:4534H         LINE#         27
   -------         ENDPROC       PWM_START
   -------         PROC          PWM_STOP
-  C:4517H         LINE#         29
-  C:4517H         LINE#         30
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 27
-
-
-  C:451AH         LINE#         31
-  C:451DH         LINE#         32
-  C:4520H         LINE#         33
+  C:4535H         LINE#         29
+  C:4535H         LINE#         30
+  C:4538H         LINE#         31
+  C:453BH         LINE#         32
+  C:453EH         LINE#         33
   -------         ENDPROC       PWM_STOP
   -------         PROC          _PWM_SETCHANNELSTATUS
   D:0007H         SYMBOL        channel
-  C:438AH         LINE#         35
-  C:438AH         LINE#         36
-  C:438DH         LINE#         37
-  C:4390H         LINE#         38
-  C:4396H         LINE#         39
-  C:4398H         LINE#         40
-  C:439BH         LINE#         41
+  C:43A8H         LINE#         35
+  C:43A8H         LINE#         36
+  C:43ABH         LINE#         37
+  C:43AEH         LINE#         38
+  C:43B4H         LINE#         39
+  C:43B6H         LINE#         40
+  C:43B9H         LINE#         41
   -------         ENDPROC       _PWM_SETCHANNELSTATUS
   -------         PROC          _PWM_SETDUTY
   D:0007H         SYMBOL        channel
   D:0005H         SYMBOL        duty
-  C:3CC1H         LINE#         43
-  C:3CC1H         LINE#         44
-  C:3CC4H         LINE#         45
-  C:3CD2H         LINE#         46
-  C:3CE1H         LINE#         47
-  C:3CFBH         LINE#         48
-  C:3CFEH         LINE#         49
+  C:3CDFH         LINE#         43
+  C:3CDFH         LINE#         44
+  C:3CE2H         LINE#         45
+  C:3CF0H         LINE#         46
+  C:3CFFH         LINE#         47
+  C:3D19H         LINE#         48
+  C:3D1CH         LINE#         49
   -------         ENDPROC       _PWM_SETDUTY
   -------         ENDMOD        PWM
 
@@ -1608,32 +1613,32 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00D8H         PUBLIC        CCON
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:4431H         PUBLIC        _SPI_SendAndReceive
+  C:444FH         PUBLIC        _SPI_SendAndReceive
   D:00CDH         PUBLIC        SPSTAT
-  C:432BH         PUBLIC        SPI_Init
+  C:4349H         PUBLIC        SPI_Init
   D:00D0H         PUBLIC        PSW
   D:00CFH         PUBLIC        SPDAT
   -------         PROC          SPI_INIT
-  C:432BH         LINE#         15
-  C:432BH         LINE#         17
-  C:432EH         LINE#         19
-  C:4331H         LINE#         20
-  C:4334H         LINE#         22
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 28
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 28
 
 
-  C:4337H         LINE#         23
-  C:433AH         LINE#         24
-  C:433DH         LINE#         26
+  C:4349H         LINE#         15
+  C:4349H         LINE#         17
+  C:434CH         LINE#         19
+  C:434FH         LINE#         20
+  C:4352H         LINE#         22
+  C:4355H         LINE#         23
+  C:4358H         LINE#         24
+  C:435BH         LINE#         26
   -------         ENDPROC       SPI_INIT
   -------         PROC          _SPI_SENDANDRECEIVE
   D:0007H         SYMBOL        value
-  C:4431H         LINE#         28
-  C:4431H         LINE#         30
-  C:4433H         LINE#         31
-  C:4438H         LINE#         32
-  C:443BH         LINE#         33
-  C:443DH         LINE#         45
+  C:444FH         LINE#         28
+  C:444FH         LINE#         30
+  C:4451H         LINE#         31
+  C:4456H         LINE#         32
+  C:4459H         LINE#         33
+  C:445BH         LINE#         45
   -------         ENDPROC       _SPI_SENDANDRECEIVE
   -------         ENDMOD        SPI
 
@@ -1648,11 +1653,11 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   B:00A8H.7       PUBLIC        EA
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
-  C:45DCH         PUBLIC        Timer_Stop
+  C:45FAH         PUBLIC        Timer_Stop
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  C:458AH         PUBLIC        _Timer_SetCallback
+  C:45A8H         PUBLIC        _Timer_SetCallback
   D:0098H         PUBLIC        SCON
   D:0089H         PUBLIC        TMOD
   D:0088H         PUBLIC        TCON
@@ -1664,59 +1669,59 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:008CH         PUBLIC        TH0
   D:008AH         PUBLIC        TL0
   B:0088H.4       PUBLIC        TR0
-  C:4535H         PUBLIC        _Timer_SetInterval
+  C:4553H         PUBLIC        _Timer_SetInterval
   D:006AH         SYMBOL        countdown
-  C:3D3BH         SYMBOL        Timer0_Interrupt
-  C:45D9H         PUBLIC        Timer_Start
-  C:433EH         PUBLIC        Timer_Init
+  C:3D59H         SYMBOL        Timer0_Interrupt
+  C:45F7H         PUBLIC        Timer_Start
+  C:435CH         PUBLIC        Timer_Init
   D:00D0H         PUBLIC        PSW
   -------         PROC          TIMER0_INTERRUPT
-  C:3D3BH         LINE#         9
-  C:3D48H         LINE#         10
-  C:3D50H         LINE#         11
-  C:3D56H         LINE#         12
-  C:3D5CH         LINE#         13
-  C:3D64H         LINE#         14
-  C:3D6BH         LINE#         15
-  C:3D6BH         LINE#         16
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 29
+  C:3D59H         LINE#         9
+  C:3D66H         LINE#         10
+  C:3D6EH         LINE#         11
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 29
 
 
-  C:3D6BH         LINE#         17
+  C:3D74H         LINE#         12
+  C:3D7AH         LINE#         13
+  C:3D82H         LINE#         14
+  C:3D89H         LINE#         15
+  C:3D89H         LINE#         16
+  C:3D89H         LINE#         17
   -------         ENDPROC       TIMER0_INTERRUPT
   -------         PROC          TIMER_INIT
-  C:433EH         LINE#         20
-  C:433EH         LINE#         21
-  C:4341H         LINE#         22
-  C:4344H         LINE#         23
-  C:4347H         LINE#         24
-  C:434AH         LINE#         25
-  C:434CH         LINE#         26
-  C:434EH         LINE#         28
-  C:4350H         LINE#         29
+  C:435CH         LINE#         20
+  C:435CH         LINE#         21
+  C:435FH         LINE#         22
+  C:4362H         LINE#         23
+  C:4365H         LINE#         24
+  C:4368H         LINE#         25
+  C:436AH         LINE#         26
+  C:436CH         LINE#         28
+  C:436EH         LINE#         29
   -------         ENDPROC       TIMER_INIT
   -------         PROC          _TIMER_SETINTERVAL
   D:0006H         SYMBOL        ms
-  C:4535H         LINE#         31
-  C:4535H         LINE#         32
-  C:4539H         LINE#         33
-  C:453DH         LINE#         34
+  C:4553H         LINE#         31
+  C:4553H         LINE#         32
+  C:4557H         LINE#         33
+  C:455BH         LINE#         34
   -------         ENDPROC       _TIMER_SETINTERVAL
   -------         PROC          _TIMER_SETCALLBACK
   D:0001H         SYMBOL        callback
-  C:458AH         LINE#         36
-  C:458AH         LINE#         37
-  C:4590H         LINE#         38
+  C:45A8H         LINE#         36
+  C:45A8H         LINE#         37
+  C:45AEH         LINE#         38
   -------         ENDPROC       _TIMER_SETCALLBACK
   -------         PROC          TIMER_START
-  C:45D9H         LINE#         40
-  C:45D9H         LINE#         41
-  C:45DBH         LINE#         42
+  C:45F7H         LINE#         40
+  C:45F7H         LINE#         41
+  C:45F9H         LINE#         42
   -------         ENDPROC       TIMER_START
   -------         PROC          TIMER_STOP
-  C:45DCH         LINE#         44
-  C:45DCH         LINE#         45
-  C:45DEH         LINE#         46
+  C:45FAH         LINE#         44
+  C:45FAH         LINE#         45
+  C:45FCH         LINE#         46
   -------         ENDPROC       TIMER_STOP
   -------         ENDMOD        TIMER
 
@@ -1724,7 +1729,7 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0080H         PUBLIC        P0
   D:0090H         PUBLIC        P1
-  C:43CDH         PUBLIC        _WiiClassicController_IsKeyDown
+  C:43EBH         PUBLIC        _WiiClassicController_IsKeyDown
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
   D:00C0H         PUBLIC        P4
@@ -1734,45 +1739,45 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00A8H         PUBLIC        IE
   C:2ECCH         PUBLIC        WiiClassicController_Init
   D:00B8H         PUBLIC        IP
-  C:45ADH         PUBLIC        WiiClassicController_GetLAnalogX
-  C:3031H         SYMBOL        WiiClassicController_GetData
-  C:45B3H         PUBLIC        WiiClassicController_GetLAnalogY
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 30
+
+
+  C:45CBH         PUBLIC        WiiClassicController_GetLAnalogX
+  C:3038H         SYMBOL        WiiClassicController_GetData
+  C:45D1H         PUBLIC        WiiClassicController_GetLAnalogY
   C:0003H         PUBLIC        WiiClassicController_GetRAnalogX
-  C:4562H         PUBLIC        WiiClassicController_GetRAnalogY
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 30
-
-
+  C:4580H         PUBLIC        WiiClassicController_GetRAnalogY
   D:00D8H         PUBLIC        CCON
-  C:43DDH         PUBLIC        _WiiClassicController_IsKeyUp
+  C:43FBH         PUBLIC        _WiiClassicController_IsKeyUp
   D:0010H         SYMBOL        prevButtons
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:4591H         PUBLIC        WiiClassicController_GetPtr
-  C:45E9H         SYMBOL        _Decrypt
-  C:44E1H         PUBLIC        _WiiClassicController_IsKeyHold
+  C:45AFH         PUBLIC        WiiClassicController_GetPtr
+  C:4607H         SYMBOL        _Decrypt
+  C:44FFH         PUBLIC        _WiiClassicController_IsKeyHold
   D:0012H         SYMBOL        wiiControllerData
   D:00D0H         PUBLIC        PSW
-  C:453EH         PUBLIC        WiiClassicController_Read
-  C:4111H         SYMBOL        Com001F
-  C:4111H         SYMBOL        L?0032
-  C:4117H         SYMBOL        L?0033
-  C:411EH         SYMBOL        L?0034
-  C:4121H         SYMBOL        L?0035
-  C:4128H         SYMBOL        L?0037
+  C:455CH         PUBLIC        WiiClassicController_Read
+  C:412FH         SYMBOL        Com001F
+  C:412FH         SYMBOL        L?0032
+  C:4135H         SYMBOL        L?0033
+  C:413CH         SYMBOL        L?0034
+  C:413FH         SYMBOL        L?0035
+  C:4146H         SYMBOL        L?0037
   -------         PROC          COM001F
   -------         ENDPROC       COM001F
   -------         PROC          _DECRYPT
   D:0007H         SYMBOL        x
-  C:45E9H         LINE#         25
-  C:45E9H         LINE#         26
-  C:45E9H         LINE#         28
+  C:4607H         LINE#         25
+  C:4607H         LINE#         26
+  C:4607H         LINE#         28
   -------         ENDPROC       _DECRYPT
-  C:2F78H         SYMBOL        L?0036
+  C:2F7FH         SYMBOL        L?0036
   -------         PROC          WIICLASSICCONTROLLER_INIT
   -------         DO            
   D:0007H         SYMBOL        result
   D:002BH         SYMBOL        buf
-  D:0005H         SYMBOL        i
+  D:0031H         SYMBOL        i
   -------         ENDDO         
   C:2ECCH         LINE#         30
   C:2ECCH         LINE#         35
@@ -1794,16 +1799,16 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:2F3BH         LINE#         58
   C:2F3EH         LINE#         60
   C:2F47H         LINE#         61
-  C:2F49H         LINE#         62
-  C:2F52H         LINE#         63
-  C:2F5BH         LINE#         64
-  C:2F5FH         LINE#         65
-  C:2F68H         LINE#         67
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 31
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 31
 
 
-  C:2F6FH         LINE#         69
-  C:2F78H         LINE#         70
+  C:2F4AH         LINE#         62
+  C:2F54H         LINE#         63
+  C:2F5DH         LINE#         64
+  C:2F66H         LINE#         65
+  C:2F6FH         LINE#         67
+  C:2F76H         LINE#         69
+  C:2F7FH         LINE#         70
   -------         ENDPROC       WIICLASSICCONTROLLER_INIT
   -------         PROC          WIICLASSICCONTROLLER_GETDATA
   -------         DO            
@@ -1811,69 +1816,69 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:0007H         SYMBOL        result
   D:0006H         SYMBOL        i
   -------         ENDDO         
-  C:3031H         LINE#         72
-  C:3031H         LINE#         77
-  C:3034H         LINE#         78
-  C:3049H         LINE#         79
-  C:304CH         LINE#         81
-  C:3052H         LINE#         83
-  C:3061H         LINE#         84
-  C:3064H         LINE#         86
-  C:3079H         LINE#         88
-  C:307FH         LINE#         89
-  C:3085H         LINE#         91
-  C:3093H         LINE#         92
-  C:309EH         LINE#         93
-  C:30A8H         LINE#         95
-  C:30AEH         LINE#         97
-  C:30BBH         LINE#         98
-  C:30C3H         LINE#         100
-  C:30C9H         LINE#         102
-  C:30CFH         LINE#         103
-  C:30D6H         LINE#         104
-  C:30DAH         LINE#         105
-  C:30E0H         LINE#         106
+  C:3038H         LINE#         72
+  C:3038H         LINE#         77
+  C:303BH         LINE#         78
+  C:3050H         LINE#         79
+  C:3053H         LINE#         81
+  C:3059H         LINE#         83
+  C:3068H         LINE#         84
+  C:306BH         LINE#         86
+  C:3080H         LINE#         88
+  C:3086H         LINE#         89
+  C:308CH         LINE#         91
+  C:309AH         LINE#         92
+  C:30A5H         LINE#         93
+  C:30AFH         LINE#         95
+  C:30B5H         LINE#         97
+  C:30C2H         LINE#         98
+  C:30CAH         LINE#         100
+  C:30D0H         LINE#         102
+  C:30D6H         LINE#         103
+  C:30DDH         LINE#         104
+  C:30E1H         LINE#         105
+  C:30E7H         LINE#         106
   -------         ENDPROC       WIICLASSICCONTROLLER_GETDATA
   -------         PROC          WIICLASSICCONTROLLER_READ
-  C:453EH         LINE#         108
-  C:453EH         LINE#         109
-  C:4544H         LINE#         110
+  C:455CH         LINE#         108
+  C:455CH         LINE#         109
+  C:4562H         LINE#         110
   -------         ENDPROC       WIICLASSICCONTROLLER_READ
   -------         PROC          WIICLASSICCONTROLLER_GETPTR
-  C:4591H         LINE#         113
-  C:4591H         LINE#         114
-  C:4597H         LINE#         115
+  C:45AFH         LINE#         113
+  C:45AFH         LINE#         114
+  C:45B5H         LINE#         115
   -------         ENDPROC       WIICLASSICCONTROLLER_GETPTR
   -------         PROC          _WIICLASSICCONTROLLER_ISKEYDOWN
   D:0006H         SYMBOL        key
-  C:43CDH         LINE#         117
-  C:43CDH         LINE#         118
-  C:43DCH         LINE#         119
+  C:43EBH         LINE#         117
+  C:43EBH         LINE#         118
+  C:43FAH         LINE#         119
   -------         ENDPROC       _WIICLASSICCONTROLLER_ISKEYDOWN
   -------         PROC          _WIICLASSICCONTROLLER_ISKEYHOLD
   D:0006H         SYMBOL        key
-  C:44E1H         LINE#         121
-  C:44E1H         LINE#         122
-  C:44EBH         LINE#         123
+  C:44FFH         LINE#         121
+  C:44FFH         LINE#         122
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 32
+
+
+  C:4509H         LINE#         123
   -------         ENDPROC       _WIICLASSICCONTROLLER_ISKEYHOLD
   -------         PROC          _WIICLASSICCONTROLLER_ISKEYUP
   D:0006H         SYMBOL        key
-  C:43DDH         LINE#         125
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 32
-
-
-  C:43DDH         LINE#         126
-  C:43ECH         LINE#         127
+  C:43FBH         LINE#         125
+  C:43FBH         LINE#         126
+  C:440AH         LINE#         127
   -------         ENDPROC       _WIICLASSICCONTROLLER_ISKEYUP
   -------         PROC          WIICLASSICCONTROLLER_GETLANALOGX
-  C:45ADH         LINE#         129
-  C:45ADH         LINE#         130
-  C:45B2H         LINE#         131
+  C:45CBH         LINE#         129
+  C:45CBH         LINE#         130
+  C:45D0H         LINE#         131
   -------         ENDPROC       WIICLASSICCONTROLLER_GETLANALOGX
   -------         PROC          WIICLASSICCONTROLLER_GETLANALOGY
-  C:45B3H         LINE#         133
-  C:45B3H         LINE#         134
-  C:45B8H         LINE#         135
+  C:45D1H         LINE#         133
+  C:45D1H         LINE#         134
+  C:45D6H         LINE#         135
   -------         ENDPROC       WIICLASSICCONTROLLER_GETLANALOGY
   -------         PROC          WIICLASSICCONTROLLER_GETRANALOGX
   C:0003H         LINE#         137
@@ -1881,9 +1886,9 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:000AH         LINE#         139
   -------         ENDPROC       WIICLASSICCONTROLLER_GETRANALOGX
   -------         PROC          WIICLASSICCONTROLLER_GETRANALOGY
-  C:4562H         LINE#         141
-  C:4562H         LINE#         142
-  C:4569H         LINE#         143
+  C:4580H         LINE#         141
+  C:4580H         LINE#         142
+  C:4587H         LINE#         143
   -------         ENDPROC       WIICLASSICCONTROLLER_GETRANALOGY
   -------         ENDMOD        WIICLASSICCONTROLLER
 
@@ -1907,21 +1912,21 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:013EH         PUBLIC        string23
   C:00FAH         PUBLIC        string14
   C:0076H         PUBLIC        string05
-  C:39B8H         PUBLIC        _LCM12864_GetStrLenFromIdx
+  C:39CEH         PUBLIC        _LCM12864_GetStrLenFromIdx
   D:0090H         PUBLIC        P1
   C:0398H         PUBLIC        string51
   C:0334H         PUBLIC        string42
   C:0208H         PUBLIC        string33
   C:0142H         PUBLIC        string24
   C:00FEH         PUBLIC        string15
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 33
+
+
   C:0080H         PUBLIC        string06
   D:00A0H         PUBLIC        P2
   C:03A4H         PUBLIC        string52
   C:0338H         PUBLIC        string43
   C:0266H         PUBLIC        string34
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 33
-
-
   C:0148H         PUBLIC        string25
   C:0104H         PUBLIC        string16
   C:008AH         PUBLIC        string07
@@ -1965,7 +1970,7 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:0166H         PUBLIC        string2A
   C:011EH         PUBLIC        string1B
   C:00D8H         PUBLIC        string0C
-  C:3D76H         SYMBOL        _LCM12864_GetIdxFromASCII
+  C:3D94H         SYMBOL        _LCM12864_GetIdxFromASCII
   C:0308H         PUBLIC        string3A
   C:016CH         PUBLIC        string2B
   C:0122H         PUBLIC        string1C
@@ -1974,14 +1979,14 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:0310H         PUBLIC        string3B
   C:0170H         PUBLIC        string2C
   C:0126H         PUBLIC        string1D
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 34
+
+
   C:00E2H         PUBLIC        string0E
   C:0360H         PUBLIC        string4B
   C:031AH         PUBLIC        string3C
   C:01D4H         PUBLIC        string2D
   C:012AH         PUBLIC        string1E
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 34
-
-
   C:00E6H         PUBLIC        string0F
   C:0364H         PUBLIC        string4C
   C:0320H         PUBLIC        string3D
@@ -1992,31 +1997,31 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:01ECH         PUBLIC        string2F
   C:0374H         PUBLIC        string4E
   C:0328H         PUBLIC        string3F
-  C:4598H         PUBLIC        _LCM12864_SendCommand
+  C:45B6H         PUBLIC        _LCM12864_SendCommand
   C:0380H         PUBLIC        string4F
-  C:45DFH         PUBLIC        LCM12864_Refresh
+  C:45FDH         PUBLIC        LCM12864_Refresh
   D:00B8H         PUBLIC        IP
   B:0090H.2       PUBLIC        LCM12864_LED
   D:00D8H         PUBLIC        CCON
   C:2E09H         PUBLIC        _LCM12864_DrawCircle
-  C:43EDH         PUBLIC        LCM12864_Clear
+  C:440BH         PUBLIC        LCM12864_Clear
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   X:0000H         PUBLIC        VRAM
   B:0090H.1       PUBLIC        LCM12864_CD
-  C:459FH         PUBLIC        _LCM12864_SendData
-  C:32A5H         PUBLIC        _LCM12864_DrawString
-  C:45B9H         PUBLIC        LCM12864_Backlight
-  C:3AF1H         PUBLIC        _LCM12864_DrawChar
-  C:45A6H         PUBLIC        _LCM12864_DrawPixel
-  C:4547H         PUBLIC        LCM12864_Init
+  C:45BDH         PUBLIC        _LCM12864_SendData
+  C:32ACH         PUBLIC        _LCM12864_DrawString
+  C:45D7H         PUBLIC        LCM12864_Backlight
+  C:3B0FH         PUBLIC        _LCM12864_DrawChar
+  C:45C4H         PUBLIC        _LCM12864_DrawPixel
+  C:4565H         PUBLIC        LCM12864_Init
   B:0090H.0       PUBLIC        LCM12864_CS
-  C:4521H         PUBLIC        _LCM12864_FillRect
+  C:453FH         PUBLIC        _LCM12864_FillRect
   C:2C76H         PUBLIC        _LCM12864_DrawLine
   C:05ACH         PUBLIC        fontIdx
   C:0686H         PUBLIC        fontText
   X:0400H         PUBLIC        tmpBuf
-  C:321AH         PUBLIC        _LCM12864_DrawStringIdx
+  C:3221H         PUBLIC        _LCM12864_DrawStringIdx
   D:00D0H         PUBLIC        PSW
   C:0026H         PUBLIC        string00
   C:00EAH         PUBLIC        string10
@@ -2024,63 +2029,63 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:0132H         PUBLIC        string20
   C:00EEH         PUBLIC        string11
   C:0048H         PUBLIC        string02
-  C:360FH         SYMBOL        Com0049
-  C:360FH         SYMBOL        L?0074
-  C:362CH         SYMBOL        L?0075
-  C:3645H         SYMBOL        L?0076
-  C:365EH         SYMBOL        L?0078
-  C:3672H         SYMBOL        L?0081
+  C:361EH         SYMBOL        Com0049
+  C:361EH         SYMBOL        L?0074
+  C:363BH         SYMBOL        L?0075
+  C:3654H         SYMBOL        L?0076
+  C:366DH         SYMBOL        L?0078
+  C:3681H         SYMBOL        L?0081
   -------         PROC          COM0049
   -------         ENDPROC       COM0049
   -------         PROC          _LCM12864_SENDCOMMAND
   D:0007H         SYMBOL        value
-  C:4598H         LINE#         27
-  C:4598H         LINE#         28
-  C:459AH         LINE#         29
-  C:459CH         LINE#         30
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 35
+
+
+  C:45B6H         LINE#         27
+  C:45B6H         LINE#         28
+  C:45B8H         LINE#         29
+  C:45BAH         LINE#         30
   -------         ENDPROC       _LCM12864_SENDCOMMAND
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 35
-
-
   -------         PROC          _LCM12864_SENDDATA
   D:0007H         SYMBOL        value
-  C:459FH         LINE#         33
-  C:459FH         LINE#         34
-  C:45A1H         LINE#         35
-  C:45A3H         LINE#         36
+  C:45BDH         LINE#         33
+  C:45BDH         LINE#         34
+  C:45BFH         LINE#         35
+  C:45C1H         LINE#         36
   -------         ENDPROC       _LCM12864_SENDDATA
   -------         PROC          LCM12864_INIT
-  C:4547H         LINE#         39
-  C:4547H         LINE#         40
-  C:454AH         LINE#         41
-  C:454DH         LINE#         46
+  C:4565H         LINE#         39
+  C:4565H         LINE#         40
+  C:4568H         LINE#         41
+  C:456BH         LINE#         46
   -------         ENDPROC       LCM12864_INIT
   -------         PROC          LCM12864_CLEAR
-  C:43EDH         LINE#         52
-  C:43EDH         LINE#         53
+  C:440BH         LINE#         52
+  C:440BH         LINE#         53
   -------         ENDPROC       LCM12864_CLEAR
   -------         PROC          LCM12864_REFRESH
-  C:45DFH         LINE#         56
-  C:45DFH         LINE#         60
+  C:45FDH         LINE#         56
+  C:45FDH         LINE#         60
   -------         ENDPROC       LCM12864_REFRESH
   -------         PROC          LCM12864_BACKLIGHT
   B:0020H.0       SYMBOL        isOn
-  C:45B9H         LINE#         69
-  C:45B9H         LINE#         70
-  C:45BDH         LINE#         71
+  C:45D7H         LINE#         69
+  C:45D7H         LINE#         70
+  C:45DBH         LINE#         71
   -------         ENDPROC       LCM12864_BACKLIGHT
   -------         PROC          _LCM12864_GETIDXFROMASCII
   D:0004H         SYMBOL        ascii
   -------         DO            
   D:0002H         SYMBOL        i
   -------         ENDDO         
-  C:3D76H         LINE#         74
-  C:3D7AH         LINE#         76
-  C:3D7DH         LINE#         77
-  C:3D99H         LINE#         78
-  C:3D99H         LINE#         79
-  C:3DA4H         LINE#         80
-  C:3DABH         LINE#         81
+  C:3D94H         LINE#         74
+  C:3D98H         LINE#         76
+  C:3D9BH         LINE#         77
+  C:3DB7H         LINE#         78
+  C:3DB7H         LINE#         79
+  C:3DC2H         LINE#         80
+  C:3DC9H         LINE#         81
   -------         ENDPROC       _LCM12864_GETIDXFROMASCII
   -------         PROC          _LCM12864_DRAWCHAR
   D:0048H         SYMBOL        fontSize
@@ -2088,47 +2093,47 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:004BH         SYMBOL        x
   D:004CH         SYMBOL        y
   B:0020H.1       SYMBOL        c
-  C:3AF1H         LINE#         83
-  C:3AF9H         LINE#         84
-  C:3B2AH         LINE#         88
+  C:3B0FH         LINE#         83
+  C:3B17H         LINE#         84
+  C:3B48H         LINE#         88
   -------         ENDPROC       _LCM12864_DRAWCHAR
-  C:331DH         SYMBOL        L?0080
+  C:3324H         SYMBOL        L?0080
   -------         PROC          _LCM12864_DRAWSTRING
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 36
+
+
   D:003BH         SYMBOL        fontSize
   D:003CH         SYMBOL        str
   D:003FH         SYMBOL        x
   D:0041H         SYMBOL        y
   B:0020H.0       SYMBOL        c
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 36
-
-
   -------         DO            
   D:0043H         SYMBOL        i
   -------         DO            
   D:0044H         SYMBOL        chr
   -------         ENDDO         
   -------         ENDDO         
-  C:32A5H         LINE#         94
-  C:32ADH         LINE#         95
-  C:32B0H         LINE#         96
-  C:32B0H         LINE#         97
-  C:32B7H         LINE#         98
-  C:32BCH         LINE#         100
-  C:32C7H         LINE#         101
-  C:32C7H         LINE#         102
-  C:32D1H         LINE#         103
-  C:32DEH         LINE#         104
-  C:32E2H         LINE#         105
-  C:32E4H         LINE#         106
-  C:32EBH         LINE#         107
-  C:32EDH         LINE#         108
-  C:32F7H         LINE#         109
-  C:32F7H         LINE#         110
-  C:3301H         LINE#         111
-  C:330FH         LINE#         112
-  C:331AH         LINE#         113
-  C:331AH         LINE#         114
-  C:331DH         LINE#         115
+  C:32ACH         LINE#         94
+  C:32B4H         LINE#         95
+  C:32B7H         LINE#         96
+  C:32B7H         LINE#         97
+  C:32BEH         LINE#         98
+  C:32C3H         LINE#         100
+  C:32CEH         LINE#         101
+  C:32CEH         LINE#         102
+  C:32D8H         LINE#         103
+  C:32E5H         LINE#         104
+  C:32E9H         LINE#         105
+  C:32EBH         LINE#         106
+  C:32F2H         LINE#         107
+  C:32F4H         LINE#         108
+  C:32FEH         LINE#         109
+  C:32FEH         LINE#         110
+  C:3308H         LINE#         111
+  C:3316H         LINE#         112
+  C:3321H         LINE#         113
+  C:3321H         LINE#         114
+  C:3324H         LINE#         115
   -------         ENDPROC       _LCM12864_DRAWSTRING
   -------         PROC          _LCM12864_DRAWSTRINGIDX
   D:003CH         SYMBOL        fontSize
@@ -2143,31 +2148,31 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:0046H         SYMBOL        _idx
   -------         ENDDO         
   -------         ENDDO         
-  C:321AH         LINE#         117
-  C:3220H         LINE#         118
-  C:3223H         LINE#         119
-  C:322DH         LINE#         120
-  C:324BH         LINE#         121
-  C:324FH         LINE#         122
-  C:3251H         LINE#         123
-  C:3276H         LINE#         124
-  C:3288H         LINE#         126
-  C:3295H         LINE#         127
-  C:3297H         LINE#         128
-  C:3299H         LINE#         129
-  C:32A2H         LINE#         130
-  C:32A2H         LINE#         131
-  C:32A4H         LINE#         132
+  C:3221H         LINE#         117
+  C:3227H         LINE#         118
+  C:322AH         LINE#         119
+  C:3234H         LINE#         120
+  C:3252H         LINE#         121
+  C:3256H         LINE#         122
+  C:3258H         LINE#         123
+  C:327DH         LINE#         124
+  C:328FH         LINE#         126
+  C:329CH         LINE#         127
+  C:329EH         LINE#         128
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 37
+
+
+  C:32A0H         LINE#         129
+  C:32A9H         LINE#         130
+  C:32A9H         LINE#         131
+  C:32ABH         LINE#         132
   -------         ENDPROC       _LCM12864_DRAWSTRINGIDX
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 37
-
-
   -------         PROC          _LCM12864_DRAWPIXEL
   D:0007H         SYMBOL        x
   D:0005H         SYMBOL        y
   B:0020H.5       SYMBOL        c
-  C:45A6H         LINE#         137
-  C:45A6H         LINE#         141
+  C:45C4H         LINE#         137
+  C:45C4H         LINE#         141
   -------         ENDPROC       _LCM12864_DRAWPIXEL
   C:2D37H         SYMBOL        L?0082
   -------         PROC          _LCM12864_DRAWLINE
@@ -2214,17 +2219,17 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:2D36H         LINE#         177
   C:2D36H         LINE#         178
   -------         ENDPROC       _LCM12864_DRAWLINE
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 38
+
+
   -------         PROC          _LCM12864_FILLRECT
   D:0007H         SYMBOL        x
   D:0005H         SYMBOL        y
   D:0003H         SYMBOL        w
   D:003FH         SYMBOL        h
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 38
-
-
   B:0020H.0       SYMBOL        c
-  C:4521H         LINE#         183
-  C:4521H         LINE#         187
+  C:453FH         LINE#         183
+  C:453FH         LINE#         187
   -------         ENDPROC       _LCM12864_FILLRECT
   C:2E91H         SYMBOL        L?0071
   C:2E9EH         SYMBOL        L?0072
@@ -2273,23 +2278,23 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:003FH         SYMBOL        cidx
   -------         ENDDO         
   -------         ENDDO         
-  C:39B8H         LINE#         221
-  C:39BCH         LINE#         222
-  C:39BFH         LINE#         223
-  C:39C4H         LINE#         224
-  C:39C9H         LINE#         225
-  C:39C9H         LINE#         226
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 39
+  C:39CEH         LINE#         221
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 39
 
 
-  C:39E5H         LINE#         227
-  C:39EDH         LINE#         228
-  C:39EFH         LINE#         229
-  C:39FCH         LINE#         230
-  C:3A00H         LINE#         232
-  C:3A05H         LINE#         233
-  C:3A07H         LINE#         234
-  C:3A0BH         LINE#         235
+  C:39D2H         LINE#         222
+  C:39D5H         LINE#         223
+  C:39DAH         LINE#         224
+  C:39DFH         LINE#         225
+  C:39DFH         LINE#         226
+  C:39FBH         LINE#         227
+  C:3A03H         LINE#         228
+  C:3A05H         LINE#         229
+  C:3A12H         LINE#         230
+  C:3A16H         LINE#         232
+  C:3A1BH         LINE#         233
+  C:3A1DH         LINE#         234
+  C:3A21H         LINE#         235
   -------         ENDPROC       _LCM12864_GETSTRLENFROMIDX
   -------         ENDMOD        LCM12864
 
@@ -2309,51 +2314,51 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  C:4035H         SYMBOL        freq
+  C:4053H         SYMBOL        freq
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:3F3DH         PUBLIC        CTRInterface_Prepare
-  C:45D1H         SYMBOL        Timer_Interrupt
+  C:3F5BH         PUBLIC        CTRInterface_Prepare
+  C:45EFH         SYMBOL        Timer_Interrupt
   D:0079H         SYMBOL        turboStatus
-  C:4015H         SYMBOL        map
+  C:4033H         SYMBOL        map
   C:20A8H         PUBLIC        CTRInterface_Update
   D:007BH         SYMBOL        isDown
-  C:443EH         PUBLIC        CTRInterface_Init
+  C:445CH         PUBLIC        CTRInterface_Init
   D:00D0H         PUBLIC        PSW
   D:0094H         PUBLIC        P0M0
-  C:3E48H         SYMBOL        Com0035
-  C:3E48H         SYMBOL        L?0054
-  C:3E54H         SYMBOL        L?0055
-  C:3E5DH         SYMBOL        L?0056
-  C:3E5FH         SYMBOL        L?0057
-  C:3E66H         SYMBOL        L?0058
-  C:3E72H         SYMBOL        L?0059
-  C:3E72H         SYMBOL        L?0060
+  C:3E66H         SYMBOL        Com0035
+  C:3E66H         SYMBOL        L?0054
+  C:3E72H         SYMBOL        L?0055
+  C:3E7BH         SYMBOL        L?0056
+  C:3E7DH         SYMBOL        L?0057
+  C:3E84H         SYMBOL        L?0058
+  C:3E90H         SYMBOL        L?0059
+  C:3E90H         SYMBOL        L?0060
   -------         PROC          COM0035
   -------         ENDPROC       COM0035
   -------         PROC          TIMER_INTERRUPT
-  C:45D1H         LINE#         32
-  C:45D1H         LINE#         33
-  C:45D4H         LINE#         34
+  C:45EFH         LINE#         32
+  C:45EFH         LINE#         33
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 40
+
+
+  C:45F2H         LINE#         34
   -------         ENDPROC       TIMER_INTERRUPT
   -------         PROC          CTRINTERFACE_INIT
-  C:443EH         LINE#         36
-  C:443EH         LINE#         37
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 40
-
-
-  C:4441H         LINE#         38
-  C:4444H         LINE#         39
-  C:4447H         LINE#         40
-  C:444AH         LINE#         41
+  C:445CH         LINE#         36
+  C:445CH         LINE#         37
+  C:445FH         LINE#         38
+  C:4462H         LINE#         39
+  C:4465H         LINE#         40
+  C:4468H         LINE#         41
   -------         ENDPROC       CTRINTERFACE_INIT
   -------         PROC          CTRINTERFACE_PREPARE
-  C:3F3DH         LINE#         43
-  C:3F3DH         LINE#         44
-  C:3F58H         LINE#         45
-  C:3F61H         LINE#         46
-  C:3F64H         LINE#         48
-  C:3F69H         LINE#         49
+  C:3F5BH         LINE#         43
+  C:3F5BH         LINE#         44
+  C:3F76H         LINE#         45
+  C:3F7FH         LINE#         46
+  C:3F82H         LINE#         48
+  C:3F87H         LINE#         49
   -------         ENDPROC       CTRINTERFACE_PREPARE
   C:2398H         SYMBOL        L?0051
   C:23B8H         SYMBOL        L?0052
@@ -2394,14 +2399,14 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:21E4H         LINE#         83
   C:21EFH         LINE#         84
   C:21F1H         LINE#         85
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 41
+
+
   C:21FCH         LINE#         86
   C:2207H         LINE#         87
   C:2212H         LINE#         88
   C:221DH         LINE#         89
   C:221DH         LINE#         90
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 41
-
-
   C:2223H         LINE#         91
   C:222EH         LINE#         92
   C:2239H         LINE#         93
@@ -2444,106 +2449,106 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
   D:00C0H         PUBLIC        P4
-  C:3CFFH         PUBLIC        SaveData_Init
+  C:3D1DH         PUBLIC        SaveData_Init
   D:00C8H         PUBLIC        P5
   D:00E8H         PUBLIC        P6
-  C:456AH         PUBLIC        SaveData_Dump
+  C:4588H         PUBLIC        SaveData_Dump
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   X:0620H         PUBLIC        saveData
   D:0098H         PUBLIC        SCON
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 42
+
+
   D:0088H         PUBLIC        TCON
-  C:42DDH         PUBLIC        SaveData_Restore
-  C:2F80H         PUBLIC        SaveData_Read
-  C:3E79H         PUBLIC        SaveData_Flush
+  C:42FBH         PUBLIC        SaveData_Restore
+  C:2F87H         PUBLIC        SaveData_Read
+  C:3E97H         PUBLIC        SaveData_Flush
   D:00D0H         PUBLIC        PSW
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 42
-
-
-  C:3EAAH         SYMBOL        Com001B
-  C:3EAAH         SYMBOL        L?0028
-  C:3EAAH         SYMBOL        L?0029
-  C:3EB6H         SYMBOL        L?0030
-  C:3EC3H         SYMBOL        L?0031
-  C:3EC3H         SYMBOL        L?0032
-  C:3ECAH         SYMBOL        L?0033
-  C:3ECAH         SYMBOL        L?0034
-  C:3ED1H         SYMBOL        L?0035
+  C:3EC8H         SYMBOL        Com001B
+  C:3EC8H         SYMBOL        L?0028
+  C:3EC8H         SYMBOL        L?0029
+  C:3ED4H         SYMBOL        L?0030
+  C:3EE1H         SYMBOL        L?0031
+  C:3EE1H         SYMBOL        L?0032
+  C:3EE8H         SYMBOL        L?0033
+  C:3EE8H         SYMBOL        L?0034
+  C:3EEFH         SYMBOL        L?0035
   -------         PROC          COM001B
   -------         ENDPROC       COM001B
   -------         PROC          SAVEDATA_INIT
   -------         DO            
   D:0005H         SYMBOL        i
   -------         ENDDO         
-  C:3CFFH         LINE#         14
-  C:3CFFH         LINE#         16
-  C:3D01H         LINE#         17
-  C:3D01H         LINE#         18
-  C:3D18H         LINE#         19
-  C:3D1CH         LINE#         20
-  C:3D25H         LINE#         21
-  C:3D31H         LINE#         22
-  C:3D37H         LINE#         23
-  C:3D3AH         LINE#         24
-  C:3D3AH         LINE#         25
+  C:3D1DH         LINE#         14
+  C:3D1DH         LINE#         16
+  C:3D1FH         LINE#         17
+  C:3D1FH         LINE#         18
+  C:3D36H         LINE#         19
+  C:3D3AH         LINE#         20
+  C:3D43H         LINE#         21
+  C:3D4FH         LINE#         22
+  C:3D55H         LINE#         23
+  C:3D58H         LINE#         24
+  C:3D58H         LINE#         25
   -------         ENDPROC       SAVEDATA_INIT
   -------         PROC          SAVEDATA_READ
   -------         DO            
   D:003CH         SYMBOL        i
   -------         ENDDO         
-  C:2F80H         LINE#         27
-  C:2F80H         LINE#         28
-  C:2F83H         LINE#         29
-  C:2F83H         LINE#         30
-  C:2F9FH         LINE#         31
-  C:2FA8H         LINE#         32
-  C:2FABH         LINE#         34
-  C:2FBCH         LINE#         35
-  C:2FCAH         LINE#         36
-  C:2FD1H         LINE#         38
-  C:2FD8H         LINE#         40
-  C:2FDDH         LINE#         41
-  C:2FE2H         LINE#         43
-  C:2FEDH         LINE#         44
-  C:2FF7H         LINE#         45
-  C:3004H         LINE#         46
-  C:300EH         LINE#         47
-  C:301CH         LINE#         48
-  C:3026H         LINE#         50
-  C:3029H         LINE#         51
-  C:302CH         LINE#         52
-  C:302DH         LINE#         53
-  C:3030H         LINE#         54
+  C:2F87H         LINE#         27
+  C:2F87H         LINE#         28
+  C:2F8AH         LINE#         29
+  C:2F8AH         LINE#         30
+  C:2FA6H         LINE#         31
+  C:2FAFH         LINE#         32
+  C:2FB2H         LINE#         34
+  C:2FC3H         LINE#         35
+  C:2FD1H         LINE#         36
+  C:2FD8H         LINE#         38
+  C:2FDFH         LINE#         40
+  C:2FE4H         LINE#         41
+  C:2FE9H         LINE#         43
+  C:2FF4H         LINE#         44
+  C:2FFEH         LINE#         45
+  C:300BH         LINE#         46
+  C:3015H         LINE#         47
+  C:3023H         LINE#         48
+  C:302DH         LINE#         50
+  C:3030H         LINE#         51
+  C:3033H         LINE#         52
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 43
+
+
+  C:3034H         LINE#         53
+  C:3037H         LINE#         54
   -------         ENDPROC       SAVEDATA_READ
   -------         PROC          SAVEDATA_FLUSH
   -------         DO            
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 43
-
-
   D:003BH         SYMBOL        i
   -------         ENDDO         
-  C:3E79H         LINE#         56
-  C:3E79H         LINE#         57
-  C:3E7CH         LINE#         58
-  C:3E82H         LINE#         59
-  C:3E89H         LINE#         60
-  C:3EA5H         LINE#         61
-  C:3EA9H         LINE#         62
+  C:3E97H         LINE#         56
+  C:3E97H         LINE#         57
+  C:3E9AH         LINE#         58
+  C:3EA0H         LINE#         59
+  C:3EA7H         LINE#         60
+  C:3EC3H         LINE#         61
+  C:3EC7H         LINE#         62
   -------         ENDPROC       SAVEDATA_FLUSH
   -------         PROC          SAVEDATA_DUMP
-  C:456AH         LINE#         64
-  C:456AH         LINE#         65
+  C:4588H         LINE#         64
+  C:4588H         LINE#         65
   -------         ENDPROC       SAVEDATA_DUMP
   -------         PROC          SAVEDATA_RESTORE
   -------         DO            
   D:001FH         SYMBOL        len
   -------         ENDDO         
-  C:42DDH         LINE#         68
-  C:42DDH         LINE#         69
-  C:42E0H         LINE#         70
-  C:42EEH         LINE#         71
+  C:42FBH         LINE#         68
+  C:42FBH         LINE#         69
+  C:42FEH         LINE#         70
+  C:430CH         LINE#         71
   -------         ENDPROC       SAVEDATA_RESTORE
   -------         ENDMOD        SAVEDATA
 
@@ -2559,58 +2564,58 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00C8H         PUBLIC        P5
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
-  C:390CH         PUBLIC        _nRF24L01_Send
+  C:3922H         PUBLIC        _nRF24L01_Send
   D:00A8H         PUBLIC        IE
-  C:3FC7H         PUBLIC        _nRF24L01_Recv
-  C:3DACH         PUBLIC        nRF24L01_RX_Mode
-  C:3C01H         PUBLIC        nRF24L01_TX_Mode
-  C:444BH         PUBLIC        nRF24L01_Init
-  C:457DH         SYMBOL        TX_ADDRESS
+  C:3FE5H         PUBLIC        _nRF24L01_Recv
+  C:3DCAH         PUBLIC        nRF24L01_RX_Mode
+  C:3C1FH         PUBLIC        nRF24L01_TX_Mode
+  C:4469H         PUBLIC        nRF24L01_Init
+  C:459BH         SYMBOL        TX_ADDRESS
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:45D5H         PUBLIC        _nRF24L01_TestReg
-  C:3EDBH         PUBLIC        _nRF24L01_SPI_Read_Buf
-  C:4458H         PUBLIC        _nRF24L01_SPI_Read
+  C:45F3H         PUBLIC        _nRF24L01_TestReg
+  C:3EF9H         PUBLIC        _nRF24L01_SPI_Read_Buf
+  C:4476H         PUBLIC        _nRF24L01_SPI_Read
   D:007FH         SYMBOL        sta
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 44
+
+
   B:00B0H.6       PUBLIC        NRF24L01_IRQ
-  C:3F6CH         PUBLIC        _nRF24L01_SPI_Write_Buf
-  C:4351H         PUBLIC        _nRF24L01_SPI_Write
-  C:3A5FH         PUBLIC        nRF24L01_Check
+  C:3F8AH         PUBLIC        _nRF24L01_SPI_Write_Buf
+  C:436FH         PUBLIC        _nRF24L01_SPI_Write
+  C:3A75H         PUBLIC        nRF24L01_Check
   B:00B0H.5       PUBLIC        NRF24L01_CE
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 44
-
-
   B:00B0H.4       PUBLIC        NRF24L01_CS
   D:00D0H         PUBLIC        PSW
-  C:44BEH         SYMBOL        Com001C
-  C:44BEH         SYMBOL        L?0029
-  C:44BEH         SYMBOL        L?0030
-  C:44C0H         SYMBOL        L?0031
+  C:44DCH         SYMBOL        Com001C
+  C:44DCH         SYMBOL        L?0029
+  C:44DCH         SYMBOL        L?0030
+  C:44DEH         SYMBOL        L?0031
   -------         PROC          COM001C
   -------         ENDPROC       COM001C
   -------         PROC          NRF24L01_INIT
-  C:444BH         LINE#         66
-  C:444BH         LINE#         67
-  C:444EH         LINE#         68
-  C:4451H         LINE#         70
-  C:4453H         LINE#         71
-  C:4455H         LINE#         72
-  C:4457H         LINE#         73
+  C:4469H         LINE#         66
+  C:4469H         LINE#         67
+  C:446CH         LINE#         68
+  C:446FH         LINE#         70
+  C:4471H         LINE#         71
+  C:4473H         LINE#         72
+  C:4475H         LINE#         73
   -------         ENDPROC       NRF24L01_INIT
   -------         PROC          _NRF24L01_SPI_READ
   D:0007H         SYMBOL        reg
   -------         DO            
   D:0007H         SYMBOL        reg_val
   -------         ENDDO         
-  C:4458H         LINE#         78
-  C:4458H         LINE#         80
-  C:445AH         LINE#         81
-  C:445DH         LINE#         82
-  C:4462H         LINE#         83
-  C:4464H         LINE#         84
-  C:4464H         LINE#         85
+  C:4476H         LINE#         78
+  C:4476H         LINE#         80
+  C:4478H         LINE#         81
+  C:447BH         LINE#         82
+  C:4480H         LINE#         83
+  C:4482H         LINE#         84
+  C:4482H         LINE#         85
   -------         ENDPROC       _NRF24L01_SPI_READ
   -------         PROC          _NRF24L01_SPI_WRITE
   D:0007H         SYMBOL        reg
@@ -2618,13 +2623,13 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   -------         DO            
   D:0005H         SYMBOL        status
   -------         ENDDO         
-  C:4351H         LINE#         90
-  C:4353H         LINE#         92
-  C:4355H         LINE#         93
-  C:435AH         LINE#         94
-  C:435FH         LINE#         95
-  C:4361H         LINE#         96
-  C:4363H         LINE#         97
+  C:436FH         LINE#         90
+  C:4371H         LINE#         92
+  C:4373H         LINE#         93
+  C:4378H         LINE#         94
+  C:437DH         LINE#         95
+  C:437FH         LINE#         96
+  C:4381H         LINE#         97
   -------         ENDPROC       _NRF24L01_SPI_WRITE
   -------         PROC          _NRF24L01_SPI_READ_BUF
   D:0007H         SYMBOL        reg
@@ -2634,134 +2639,134 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:0006H         SYMBOL        status
   D:0005H         SYMBOL        i
   -------         ENDDO         
-  C:3EDBH         LINE#         103
-  C:3EE1H         LINE#         105
-  C:3EE3H         LINE#         106
-  C:3EE8H         LINE#         107
-  C:3EF0H         LINE#         108
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 45
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 45
 
 
-  C:3F07H         LINE#         109
-  C:3F09H         LINE#         110
-  C:3F0BH         LINE#         111
+  C:3EF9H         LINE#         103
+  C:3EFFH         LINE#         105
+  C:3F01H         LINE#         106
+  C:3F06H         LINE#         107
+  C:3F0EH         LINE#         108
+  C:3F25H         LINE#         109
+  C:3F27H         LINE#         110
+  C:3F29H         LINE#         111
   -------         ENDPROC       _NRF24L01_SPI_READ_BUF
   -------         PROC          _NRF24L01_SPI_WRITE_BUF
   D:0007H         SYMBOL        reg
-  D:0031H         SYMBOL        pBuf
-  D:0034H         SYMBOL        size
+  D:0032H         SYMBOL        pBuf
+  D:0035H         SYMBOL        size
   -------         DO            
   D:0006H         SYMBOL        status
   D:0005H         SYMBOL        i
   -------         ENDDO         
-  C:3F6CH         LINE#         116
-  C:3F72H         LINE#         118
-  C:3F74H         LINE#         119
-  C:3F79H         LINE#         120
-  C:3F81H         LINE#         121
-  C:3F96H         LINE#         122
-  C:3F98H         LINE#         123
-  C:3F9AH         LINE#         124
+  C:3F8AH         LINE#         116
+  C:3F90H         LINE#         118
+  C:3F92H         LINE#         119
+  C:3F97H         LINE#         120
+  C:3F9FH         LINE#         121
+  C:3FB4H         LINE#         122
+  C:3FB6H         LINE#         123
+  C:3FB8H         LINE#         124
   -------         ENDPROC       _NRF24L01_SPI_WRITE_BUF
   -------         PROC          NRF24L01_CHECK
   -------         DO            
   D:002BH         SYMBOL        buf
-  D:0005H         SYMBOL        i
+  D:0030H         SYMBOL        i
   -------         ENDDO         
-  C:3A5FH         LINE#         129
-  C:3A5FH         LINE#         131
-  C:3A61H         LINE#         132
-  C:3A69H         LINE#         133
-  C:3A77H         LINE#         134
-  C:3A79H         LINE#         135
-  C:3A86H         LINE#         136
-  C:3A8FH         LINE#         137
-  C:3AA9H         LINE#         138
+  C:3A75H         LINE#         129
+  C:3A75H         LINE#         131
+  C:3A78H         LINE#         132
+  C:3A80H         LINE#         133
+  C:3A8EH         LINE#         134
+  C:3A91H         LINE#         135
+  C:3AA4H         LINE#         136
+  C:3AADH         LINE#         137
+  C:3AC7H         LINE#         138
   -------         ENDPROC       NRF24L01_CHECK
   -------         PROC          NRF24L01_TX_MODE
-  C:3C01H         LINE#         143
-  C:3C01H         LINE#         144
-  C:3C01H         LINE#         145
-  C:3C09H         LINE#         146
-  C:3C11H         LINE#         147
-  C:3C18H         LINE#         153
-  C:3C1FH         LINE#         154
-  C:3C26H         LINE#         155
-  C:3C2DH         LINE#         157
-  C:3C34H         LINE#         158
-  C:3C3BH         LINE#         159
-  C:3C3DH         LINE#         160
+  C:3C1FH         LINE#         143
+  C:3C1FH         LINE#         144
+  C:3C1FH         LINE#         145
+  C:3C27H         LINE#         146
+  C:3C2FH         LINE#         147
+  C:3C36H         LINE#         153
+  C:3C3DH         LINE#         154
+  C:3C44H         LINE#         155
+  C:3C4BH         LINE#         157
+  C:3C52H         LINE#         158
+  C:3C59H         LINE#         159
+  C:3C5BH         LINE#         160
   -------         ENDPROC       NRF24L01_TX_MODE
   -------         PROC          NRF24L01_RX_MODE
-  C:3DACH         LINE#         166
-  C:3DACH         LINE#         167
-  C:3DACH         LINE#         168
-  C:3DB4H         LINE#         169
-  C:3DBBH         LINE#         174
-  C:3DC2H         LINE#         175
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 46
+  C:3DCAH         LINE#         166
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 46
 
 
-  C:3DC9H         LINE#         177
-  C:3DD0H         LINE#         178
-  C:3DD7H         LINE#         179
-  C:3DDEH         LINE#         180
-  C:3DE0H         LINE#         181
+  C:3DCAH         LINE#         167
+  C:3DCAH         LINE#         168
+  C:3DD2H         LINE#         169
+  C:3DD9H         LINE#         174
+  C:3DE0H         LINE#         175
+  C:3DE7H         LINE#         177
+  C:3DEEH         LINE#         178
+  C:3DF5H         LINE#         179
+  C:3DFCH         LINE#         180
+  C:3DFEH         LINE#         181
   -------         ENDPROC       NRF24L01_RX_MODE
   -------         PROC          _NRF24L01_SEND
   D:007CH         SYMBOL        pBuf
   -------         DO            
   D:0004H         SYMBOL        ret
   -------         ENDDO         
-  C:390CH         LINE#         186
-  C:3912H         LINE#         188
-  C:3912H         LINE#         189
-  C:391AH         LINE#         190
-  C:3922H         LINE#         191
-  C:3930H         LINE#         192
-  C:3937H         LINE#         193
-  C:3939H         LINE#         194
-  C:393CH         LINE#         195
-  C:3943H         LINE#         196
-  C:3948H         LINE#         197
-  C:394FH         LINE#         198
-  C:3951H         LINE#         199
-  C:3951H         LINE#         200
-  C:3956H         LINE#         201
-  C:3958H         LINE#         202
-  C:3958H         LINE#         203
-  C:395FH         LINE#         204
-  C:3961H         LINE#         205
+  C:3922H         LINE#         186
+  C:3928H         LINE#         188
+  C:3928H         LINE#         189
+  C:3930H         LINE#         190
+  C:3938H         LINE#         191
+  C:3946H         LINE#         192
+  C:394DH         LINE#         193
+  C:394FH         LINE#         194
+  C:3952H         LINE#         195
+  C:3959H         LINE#         196
+  C:395EH         LINE#         197
+  C:3965H         LINE#         198
+  C:3967H         LINE#         199
+  C:3967H         LINE#         200
+  C:396CH         LINE#         201
+  C:396EH         LINE#         202
+  C:396EH         LINE#         203
+  C:3975H         LINE#         204
+  C:3977H         LINE#         205
   -------         ENDPROC       _NRF24L01_SEND
   -------         PROC          _NRF24L01_RECV
   D:0001H         SYMBOL        pBuf
   -------         DO            
   D:0004H         SYMBOL        ret
   -------         ENDDO         
-  C:3FC7H         LINE#         210
-  C:3FC7H         LINE#         211
-  C:3FC9H         LINE#         212
-  C:3FD0H         LINE#         213
-  C:3FD5H         LINE#         215
-  C:3FDDH         LINE#         216
-  C:3FDEH         LINE#         217
-  C:3FDEH         LINE#         218
-  C:3FE5H         LINE#         219
-  C:3FECH         LINE#         220
-  C:3FEEH         LINE#         221
+  C:3FE5H         LINE#         210
+  C:3FE5H         LINE#         211
+  C:3FE7H         LINE#         212
+  C:3FEEH         LINE#         213
+  C:3FF3H         LINE#         215
+  C:3FFBH         LINE#         216
+  C:3FFCH         LINE#         217
+  C:3FFCH         LINE#         218
+  C:4003H         LINE#         219
+  C:400AH         LINE#         220
+  C:400CH         LINE#         221
   -------         ENDPROC       _NRF24L01_RECV
   -------         PROC          _NRF24L01_TESTREG
   D:0007H         SYMBOL        reg
-  C:45D5H         LINE#         226
-  C:45D5H         LINE#         227
-  C:45D8H         LINE#         228
+  C:45F3H         LINE#         226
+  C:45F3H         LINE#         227
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 47
+
+
+  C:45F6H         LINE#         228
   -------         ENDPROC       _NRF24L01_TESTREG
   -------         ENDMOD        NRF24L01
 
   -------         MODULE        CONTROLLER
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 47
-
-
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0080H         PUBLIC        P0
   D:0090H         PUBLIC        P1
@@ -2771,14 +2776,14 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00C8H         PUBLIC        P5
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
-  C:4231H         PUBLIC        Controller_Read
+  C:424FH         PUBLIC        Controller_Read
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  C:36E4H         PUBLIC        Controller_Init
+  C:3758H         PUBLIC        Controller_Init
   D:00D8H         PUBLIC        CCON
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:44ECH         PUBLIC        Controller_IsConnected
+  C:450AH         PUBLIC        Controller_IsConnected
   X:0651H         SYMBOL        isConnected
   D:00D0H         PUBLIC        PSW
   -------         PROC          CONTROLLER_INIT
@@ -2786,44 +2791,44 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:0022H         SYMBOL        buf
   D:002AH         SYMBOL        i
   -------         ENDDO         
-  C:36E4H         LINE#         11
-  C:36E4H         LINE#         12
-  C:36E9H         LINE#         14
-  C:36EFH         LINE#         15
-  C:36F6H         LINE#         16
-  C:36F9H         LINE#         17
-  C:3700H         LINE#         18
-  C:3701H         LINE#         19
-  C:3704H         LINE#         20
-  C:3709H         LINE#         23
-  C:370CH         LINE#         25
-  C:370FH         LINE#         26
-  C:372CH         LINE#         27
-  C:3733H         LINE#         28
-  C:3734H         LINE#         29
-  C:3734H         LINE#         30
-  C:3739H         LINE#         31
-  C:3742H         LINE#         32
-  C:3742H         LINE#         33
-  C:3742H         LINE#         34
+  C:3758H         LINE#         11
+  C:3758H         LINE#         12
+  C:375DH         LINE#         14
+  C:3763H         LINE#         15
+  C:376AH         LINE#         16
+  C:376DH         LINE#         17
+  C:3774H         LINE#         18
+  C:3775H         LINE#         19
+  C:3778H         LINE#         20
+  C:377DH         LINE#         23
+  C:3780H         LINE#         25
+  C:3783H         LINE#         26
+  C:37A0H         LINE#         27
+  C:37A7H         LINE#         28
+  C:37A8H         LINE#         29
+  C:37A8H         LINE#         30
+  C:37ADH         LINE#         31
+  C:37B6H         LINE#         32
+  C:37B6H         LINE#         33
+  C:37B6H         LINE#         34
   -------         ENDPROC       CONTROLLER_INIT
   -------         PROC          CONTROLLER_READ
-  C:4231H         LINE#         36
-  C:4231H         LINE#         37
-  C:4238H         LINE#         38
-  C:423BH         LINE#         39
-  C:423BH         LINE#         40
-  C:4242H         LINE#         41
-  C:4248H         LINE#         42
-  C:4248H         LINE#         43
+  C:424FH         LINE#         36
+  C:424FH         LINE#         37
+  C:4256H         LINE#         38
+  C:4259H         LINE#         39
+  C:4259H         LINE#         40
+  C:4260H         LINE#         41
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 48
+
+
+  C:4266H         LINE#         42
+  C:4266H         LINE#         43
   -------         ENDPROC       CONTROLLER_READ
   -------         PROC          CONTROLLER_ISCONNECTED
-  C:44ECH         LINE#         45
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 48
-
-
-  C:44ECH         LINE#         46
-  C:44F6H         LINE#         47
+  C:450AH         LINE#         45
+  C:450AH         LINE#         46
+  C:4514H         LINE#         47
   -------         ENDPROC       CONTROLLER_ISCONNECTED
   -------         ENDMOD        CONTROLLER
 
@@ -2833,7 +2838,7 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
 
   -------         MODULE        IST3932
   C:0000H         SYMBOL        _ICE_DUMMY_
-  C:448CH         SYMBOL        IST3932_Display
+  C:44AAH         SYMBOL        IST3932_Display
   D:0080H         PUBLIC        P0
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
@@ -2842,116 +2847,116 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00C8H         PUBLIC        P5
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
-  C:4364H         SYMBOL        _IST3932_SetRow
+  C:4382H         SYMBOL        _IST3932_SetRow
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  C:4472H         SYMBOL        IST3932_Sleep
+  C:4490H         SYMBOL        IST3932_Sleep
   D:00D8H         PUBLIC        CCON
-  C:44CAH         SYMBOL        _IST3932_SetContrast
-  C:4377H         SYMBOL        _IST3932_SetFrameControl
-  C:45C8H         SYMBOL        IST3932_EndIST
+  C:44E8H         SYMBOL        _IST3932_SetContrast
+  C:4395H         SYMBOL        _IST3932_SetFrameControl
+  C:45E6H         SYMBOL        IST3932_EndIST
   C:000EH         SYMBOL        _IST3932_SetStartingLine
-  C:4465H         SYMBOL        IST3932_Power
+  C:4483H         SYMBOL        IST3932_Power
   D:0098H         PUBLIC        SCON
   C:2584H         PUBLIC        _IST3932_DrawChar
   D:0088H         PUBLIC        TCON
-  C:3C42H         PUBLIC        _IST3932_DrawPixel
-  C:3BBFH         PUBLIC        IST3932_Init
+  C:3C60H         PUBLIC        _IST3932_DrawPixel
+  C:3BDDH         PUBLIC        IST3932_Init
   C:2A1DH         PUBLIC        _IST3932_FillRect
-  C:45BEH         SYMBOL        IST3932_SoftReset
-  C:447FH         SYMBOL        IST3932_Osc
-  C:45C3H         SYMBOL        IST3932_Nop
-  C:4550H         SYMBOL        _IST3932_SetBias
+  C:45DCH         SYMBOL        IST3932_SoftReset
+  C:449DH         SYMBOL        IST3932_Osc
+  C:45E1H         SYMBOL        IST3932_Nop
+  C:456EH         SYMBOL        _IST3932_SetBias
   B:0090H.0       PUBLIC        LCM12864_CS
-  C:4499H         SYMBOL        IST3932_SetInterleave
-  C:4559H         SYMBOL        _IST3932_SetCol
-  C:3F0CH         PUBLIC        IST3932_Refresh
-  C:4277H         SYMBOL        _IST3932_SetDuty
-  C:41ACH         SYMBOL        IST3932_DriverControl
+  C:44B7H         SYMBOL        IST3932_SetInterleave
+  C:4577H         SYMBOL        _IST3932_SetCol
+  C:3F2AH         PUBLIC        IST3932_Refresh
+  C:4295H         SYMBOL        _IST3932_SetDuty
+  C:41CAH         SYMBOL        IST3932_DriverControl
   D:00D0H         PUBLIC        PSW
-  C:42F1H         SYMBOL        IST3932_BeginIST
-  C:30E1H         SYMBOL        Com0088
-  C:30E1H         SYMBOL        L?0137
-  C:30E1H         SYMBOL        L?0138
-  C:30E8H         SYMBOL        L?0139
-  C:30EDH         SYMBOL        L?0140
-  C:30F3H         SYMBOL        L?0141
-  C:30FDH         SYMBOL        L?0142
-  C:30FDH         SYMBOL        L?0143
-  C:30FFH         SYMBOL        L?0144
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 49
+  C:430FH         SYMBOL        IST3932_BeginIST
+  C:30E8H         SYMBOL        Com0088
+  C:30E8H         SYMBOL        L?0137
+  C:30E8H         SYMBOL        L?0138
+  C:30EFH         SYMBOL        L?0139
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 49
 
 
-  C:310DH         SYMBOL        L?0145
-  C:310DH         SYMBOL        L?0146
-  C:311AH         SYMBOL        L?0147
-  C:3140H         SYMBOL        L?0148
-  C:3142H         SYMBOL        L?0149
-  C:3143H         SYMBOL        L?0150
-  C:314EH         SYMBOL        L?0151
-  C:314EH         SYMBOL        L?0152
-  C:3156H         SYMBOL        L?0153
-  C:3156H         SYMBOL        L?0154
-  C:315EH         SYMBOL        L?0155
-  C:316AH         SYMBOL        L?0156
-  C:316BH         SYMBOL        L?0157
-  C:3172H         SYMBOL        L?0158
-  C:317DH         SYMBOL        L?0159
-  C:317DH         SYMBOL        L?0160
-  C:3184H         SYMBOL        L?0161
+  C:30F4H         SYMBOL        L?0140
+  C:30FAH         SYMBOL        L?0141
+  C:3104H         SYMBOL        L?0142
+  C:3104H         SYMBOL        L?0143
+  C:3106H         SYMBOL        L?0144
+  C:3114H         SYMBOL        L?0145
+  C:3114H         SYMBOL        L?0146
+  C:3121H         SYMBOL        L?0147
+  C:3147H         SYMBOL        L?0148
+  C:3149H         SYMBOL        L?0149
+  C:314AH         SYMBOL        L?0150
+  C:3155H         SYMBOL        L?0151
+  C:3155H         SYMBOL        L?0152
+  C:315DH         SYMBOL        L?0153
+  C:315DH         SYMBOL        L?0154
+  C:3165H         SYMBOL        L?0155
+  C:3171H         SYMBOL        L?0156
+  C:3172H         SYMBOL        L?0157
+  C:3179H         SYMBOL        L?0158
+  C:3184H         SYMBOL        L?0159
+  C:3184H         SYMBOL        L?0160
+  C:318BH         SYMBOL        L?0161
   -------         PROC          COM0088
   -------         ENDPROC       COM0088
   -------         PROC          _IST3932_SETROW
   D:0006H         SYMBOL        row
-  C:4364H         LINE#         31
-  C:4366H         LINE#         32
-  C:436DH         LINE#         33
+  C:4382H         LINE#         31
+  C:4384H         LINE#         32
+  C:438BH         LINE#         33
   -------         ENDPROC       _IST3932_SETROW
   -------         PROC          IST3932_POWER
   B:0020H.0       SYMBOL        isOn
-  C:4465H         LINE#         39
-  C:4465H         LINE#         40
-  C:4468H         LINE#         41
-  C:446AH         LINE#         42
-  C:446CH         LINE#         43
-  C:4471H         LINE#         44
-  C:4471H         LINE#         45
+  C:4483H         LINE#         39
+  C:4483H         LINE#         40
+  C:4486H         LINE#         41
+  C:4488H         LINE#         42
+  C:448AH         LINE#         43
+  C:448FH         LINE#         44
+  C:448FH         LINE#         45
   -------         ENDPROC       IST3932_POWER
   -------         PROC          _IST3932_SETBIAS
   D:0007H         SYMBOL        bias
-  C:4550H         LINE#         50
-  C:4550H         LINE#         51
+  C:456EH         LINE#         50
+  C:456EH         LINE#         51
   -------         ENDPROC       _IST3932_SETBIAS
   -------         PROC          IST3932_SLEEP
   B:0021H.0       SYMBOL        isSleep
-  C:4472H         LINE#         57
-  C:4472H         LINE#         58
-  C:4475H         LINE#         59
-  C:4479H         LINE#         61
-  C:447EH         LINE#         62
+  C:4490H         LINE#         57
+  C:4490H         LINE#         58
+  C:4493H         LINE#         59
+  C:4497H         LINE#         61
+  C:449CH         LINE#         62
   -------         ENDPROC       IST3932_SLEEP
   -------         PROC          IST3932_OSC
   B:0021H.1       SYMBOL        isOff
-  C:447FH         LINE#         67
-  C:447FH         LINE#         68
-  C:4482H         LINE#         69
-  C:4484H         LINE#         70
-  C:4486H         LINE#         71
-  C:448BH         LINE#         72
-  C:448BH         LINE#         73
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 50
+  C:449DH         LINE#         67
+  C:449DH         LINE#         68
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 50
 
 
+  C:44A0H         LINE#         69
+  C:44A2H         LINE#         70
+  C:44A4H         LINE#         71
+  C:44A9H         LINE#         72
+  C:44A9H         LINE#         73
   -------         ENDPROC       IST3932_OSC
   -------         PROC          IST3932_DISPLAY
   B:0020H.0       SYMBOL        isOn
-  C:448CH         LINE#         78
-  C:448CH         LINE#         79
-  C:448FH         LINE#         80
-  C:4491H         LINE#         81
-  C:4493H         LINE#         82
-  C:4498H         LINE#         83
-  C:4498H         LINE#         84
+  C:44AAH         LINE#         78
+  C:44AAH         LINE#         79
+  C:44ADH         LINE#         80
+  C:44AFH         LINE#         81
+  C:44B1H         LINE#         82
+  C:44B6H         LINE#         83
+  C:44B6H         LINE#         84
   -------         ENDPROC       IST3932_DISPLAY
   -------         PROC          _IST3932_SETSTARTINGLINE
   D:0006H         SYMBOL        line
@@ -2967,107 +2972,107 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   -------         DO            
   D:0007H         SYMBOL        cmd
   -------         ENDDO         
-  C:41ACH         LINE#         97
-  C:41ACH         LINE#         98
-  C:41AEH         LINE#         99
-  C:41B4H         LINE#         100
-  C:41BAH         LINE#         101
-  C:41C0H         LINE#         102
-  C:41C6H         LINE#         103
+  C:41CAH         LINE#         97
+  C:41CAH         LINE#         98
+  C:41CCH         LINE#         99
+  C:41D2H         LINE#         100
+  C:41D8H         LINE#         101
+  C:41DEH         LINE#         102
+  C:41E4H         LINE#         103
   -------         ENDPROC       IST3932_DRIVERCONTROL
   -------         PROC          IST3932_SOFTRESET
-  C:45BEH         LINE#         109
-  C:45BEH         LINE#         110
+  C:45DCH         LINE#         109
+  C:45DCH         LINE#         110
   -------         ENDPROC       IST3932_SOFTRESET
   -------         PROC          _IST3932_SETDUTY
   D:0006H         SYMBOL        duty
-  C:4277H         LINE#         116
-  C:4279H         LINE#         117
-  C:4282H         LINE#         118
+  C:4295H         LINE#         116
+  C:4297H         LINE#         117
+  C:42A0H         LINE#         118
   -------         ENDPROC       _IST3932_SETDUTY
   -------         PROC          _IST3932_SETCOL
   D:0007H         SYMBOL        col
-  C:4559H         LINE#         124
-  C:4559H         LINE#         125
+  C:4577H         LINE#         124
+  C:4577H         LINE#         125
   -------         ENDPROC       _IST3932_SETCOL
   -------         PROC          _IST3932_SETCONTRAST
   D:0006H         SYMBOL        contrast
-  C:44CAH         LINE#         131
-  C:44CCH         LINE#         132
-  C:44D1H         LINE#         133
+  C:44E8H         LINE#         131
+  C:44EAH         LINE#         132
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 51
+
+
+  C:44EFH         LINE#         133
   -------         ENDPROC       _IST3932_SETCONTRAST
   -------         PROC          _IST3932_SETFRAMECONTROL
   D:0005H         SYMBOL        value0
   D:0006H         SYMBOL        value1
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 51
-
-
-  C:4377H         LINE#         139
-  C:437BH         LINE#         140
-  C:4380H         LINE#         141
-  C:4385H         LINE#         142
+  C:4395H         LINE#         139
+  C:4399H         LINE#         140
+  C:439EH         LINE#         141
+  C:43A3H         LINE#         142
   -------         ENDPROC       _IST3932_SETFRAMECONTROL
   -------         PROC          IST3932_NOP
-  C:45C3H         LINE#         148
-  C:45C3H         LINE#         149
+  C:45E1H         LINE#         148
+  C:45E1H         LINE#         149
   -------         ENDPROC       IST3932_NOP
   -------         PROC          IST3932_BEGINIST
-  C:42F1H         LINE#         155
-  C:42F1H         LINE#         156
-  C:42F6H         LINE#         157
-  C:42FBH         LINE#         158
-  C:4300H         LINE#         159
+  C:430FH         LINE#         155
+  C:430FH         LINE#         156
+  C:4314H         LINE#         157
+  C:4319H         LINE#         158
+  C:431EH         LINE#         159
   -------         ENDPROC       IST3932_BEGINIST
   -------         PROC          IST3932_SETINTERLEAVE
   B:0020H.0       SYMBOL        isInterleave
-  C:4499H         LINE#         165
-  C:4499H         LINE#         166
-  C:449CH         LINE#         167
-  C:449EH         LINE#         168
-  C:44A0H         LINE#         169
-  C:44A5H         LINE#         170
-  C:44A5H         LINE#         171
+  C:44B7H         LINE#         165
+  C:44B7H         LINE#         166
+  C:44BAH         LINE#         167
+  C:44BCH         LINE#         168
+  C:44BEH         LINE#         169
+  C:44C3H         LINE#         170
+  C:44C3H         LINE#         171
   -------         ENDPROC       IST3932_SETINTERLEAVE
   -------         PROC          IST3932_ENDIST
-  C:45C8H         LINE#         176
-  C:45C8H         LINE#         177
+  C:45E6H         LINE#         176
+  C:45E6H         LINE#         177
   -------         ENDPROC       IST3932_ENDIST
   -------         PROC          IST3932_INIT
-  C:3BBFH         LINE#         180
-  C:3BBFH         LINE#         181
-  C:3BC1H         LINE#         184
-  C:3BC8H         LINE#         186
-  C:3BCDH         LINE#         188
-  C:3BD2H         LINE#         190
-  C:3BD7H         LINE#         192
-  C:3BDEH         LINE#         194
-  C:3BE3H         LINE#         196
-  C:3BEEH         LINE#         198
-  C:3BF3H         LINE#         200
-  C:3BF6H         LINE#         201
-  C:3BFBH         LINE#         202
-  C:3BFEH         LINE#         204
-  C:3C00H         LINE#         205
+  C:3BDDH         LINE#         180
+  C:3BDDH         LINE#         181
+  C:3BDFH         LINE#         184
+  C:3BE6H         LINE#         186
+  C:3BEBH         LINE#         188
+  C:3BF0H         LINE#         190
+  C:3BF5H         LINE#         192
+  C:3BFCH         LINE#         194
+  C:3C01H         LINE#         196
+  C:3C0CH         LINE#         198
+  C:3C11H         LINE#         200
+  C:3C14H         LINE#         201
+  C:3C19H         LINE#         202
+  C:3C1CH         LINE#         204
+  C:3C1EH         LINE#         205
   -------         ENDPROC       IST3932_INIT
   -------         PROC          IST3932_REFRESH
   -------         DO            
   D:0004H         SYMBOL        x
   D:0005H         SYMBOL        y
   -------         ENDDO         
-  C:3F0CH         LINE#         207
-  C:3F0CH         LINE#         209
-  C:3F0EH         LINE#         213
-  C:3F10H         LINE#         215
-  C:3F15H         LINE#         216
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 52
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 52
 
 
-  C:3F1AH         LINE#         217
-  C:3F1CH         LINE#         218
-  C:3F32H         LINE#         219
-  C:3F36H         LINE#         220
-  C:3F3AH         LINE#         221
-  C:3F3CH         LINE#         222
+  C:3F2AH         LINE#         207
+  C:3F2AH         LINE#         209
+  C:3F2CH         LINE#         213
+  C:3F2EH         LINE#         215
+  C:3F33H         LINE#         216
+  C:3F38H         LINE#         217
+  C:3F3AH         LINE#         218
+  C:3F50H         LINE#         219
+  C:3F54H         LINE#         220
+  C:3F58H         LINE#         221
+  C:3F5AH         LINE#         222
   -------         ENDPROC       IST3932_REFRESH
   -------         PROC          _IST3932_DRAWCHAR
   D:004DH         SYMBOL        fontSize
@@ -3114,14 +3119,14 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:26E8H         LINE#         281
   C:26EDH         LINE#         282
   C:26F2H         LINE#         283
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 53
+
+
   C:26F5H         LINE#         284
   C:2710H         LINE#         286
   C:2730H         LINE#         287
   C:2730H         LINE#         288
   C:2730H         LINE#         289
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 53
-
-
   C:2730H         LINE#         290
   C:2735H         LINE#         291
   -------         ENDPROC       _IST3932_DRAWCHAR
@@ -3129,13 +3134,13 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:0004H         SYMBOL        x
   D:0005H         SYMBOL        y
   B:0021H.2       SYMBOL        c
-  C:3C42H         LINE#         296
-  C:3C44H         LINE#         297
-  C:3C4AH         LINE#         301
-  C:3C50H         LINE#         304
-  C:3C53H         LINE#         305
-  C:3C6AH         LINE#         307
-  C:3C81H         LINE#         308
+  C:3C60H         LINE#         296
+  C:3C62H         LINE#         297
+  C:3C68H         LINE#         301
+  C:3C6EH         LINE#         304
+  C:3C71H         LINE#         305
+  C:3C88H         LINE#         307
+  C:3C9FH         LINE#         308
   -------         ENDPROC       _IST3932_DRAWPIXEL
   -------         PROC          _IST3932_FILLRECT
   D:0001H         SYMBOL        x
@@ -3174,14 +3179,14 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:2AC7H         LINE#         335
   C:2AD4H         LINE#         336
   C:2ADBH         LINE#         337
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 54
+
+
   C:2ADEH         LINE#         338
   C:2AE8H         LINE#         339
   C:2AE8H         LINE#         340
   C:2AEBH         LINE#         341
   C:2AF3H         LINE#         342
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 54
-
-
   C:2AF8H         LINE#         343
   C:2AFBH         LINE#         344
   C:2B10H         LINE#         346
@@ -3225,56 +3230,57 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:403AH         SYMBOL        Init
+  C:4058H         SYMBOL        Init
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  C:3436H         PUBLIC        main
+  C:343DH         PUBLIC        main
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:0000H         PUBLIC        currentModule
   D:00D0H         PUBLIC        PSW
   D:0094H         PUBLIC        P0M0
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 55
+
+
   -------         PROC          INIT
-  C:403AH         LINE#         80
-  C:403AH         LINE#         81
-  C:403FH         LINE#         82
-  C:4043H         LINE#         83
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 55
-
-
-  C:4047H         LINE#         84
-  C:404BH         LINE#         85
-  C:404FH         LINE#         86
-  C:4052H         LINE#         87
-  C:4055H         LINE#         88
-  C:4058H         LINE#         89
-  C:405BH         LINE#         90
-  C:405EH         LINE#         91
+  C:4058H         LINE#         81
+  C:4058H         LINE#         82
+  C:405DH         LINE#         83
+  C:4061H         LINE#         84
+  C:4065H         LINE#         85
+  C:4069H         LINE#         86
+  C:406DH         LINE#         87
+  C:4070H         LINE#         88
+  C:4073H         LINE#         89
+  C:4076H         LINE#         90
+  C:4079H         LINE#         91
+  C:407CH         LINE#         92
   -------         ENDPROC       INIT
   -------         PROC          MAIN
-  C:3436H         LINE#         93
-  C:3436H         LINE#         94
-  C:3439H         LINE#         95
-  C:343CH         LINE#         96
-  C:343FH         LINE#         97
-  C:3442H         LINE#         98
-  C:3445H         LINE#         99
-  C:3448H         LINE#         101
-  C:344BH         LINE#         102
-  C:344EH         LINE#         103
-  C:3453H         LINE#         104
-  C:3456H         LINE#         105
-  C:3459H         LINE#         107
-  C:3459H         LINE#         108
-  C:345CH         LINE#         110
-  C:348AH         LINE#         111
-  C:348FH         LINE#         112
-  C:3494H         LINE#         113
-  C:3499H         LINE#         114
-  C:349EH         LINE#         115
-  C:34A3H         LINE#         116
-  C:34A8H         LINE#         117
-  C:34ADH         LINE#         118
+  C:343DH         LINE#         94
+  C:343DH         LINE#         95
+  C:3440H         LINE#         96
+  C:3443H         LINE#         97
+  C:3446H         LINE#         98
+  C:3449H         LINE#         99
+  C:344CH         LINE#         100
+  C:344FH         LINE#         102
+  C:3452H         LINE#         103
+  C:3455H         LINE#         104
+  C:345AH         LINE#         105
+  C:345DH         LINE#         106
+  C:3460H         LINE#         108
+  C:3460H         LINE#         109
+  C:3463H         LINE#         111
+  C:3494H         LINE#         112
+  C:3499H         LINE#         113
+  C:349EH         LINE#         114
+  C:34A3H         LINE#         115
+  C:34A8H         LINE#         116
+  C:34ADH         LINE#         117
+  C:34B2H         LINE#         118
+  C:34B7H         LINE#         119
+  C:34BCH         LINE#         120
   -------         ENDPROC       MAIN
   -------         ENDMOD        MAIN
 
@@ -3289,39 +3295,39 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:45EAH         SYMBOL        Init
+  C:4608H         SYMBOL        Init
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   D:0098H         PUBLIC        SCON
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 56
+
+
   D:0088H         PUBLIC        TCON
-  C:37FFH         PUBLIC        ModuleConnect
+  C:3815H         PUBLIC        ModuleConnect
   D:00D0H         PUBLIC        PSW
   -------         PROC          INIT
-  C:45EAH         LINE#         7
-  C:45EAH         LINE#         9
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 56
-
-
+  C:4608H         LINE#         7
+  C:4608H         LINE#         9
   -------         ENDPROC       INIT
-  C:383EH         SYMBOL        L?0004
+  C:3854H         SYMBOL        L?0004
   -------         PROC          MODULECONNECT
   -------         DO            
   D:0006H         SYMBOL        len
   -------         ENDDO         
-  C:37FFH         LINE#         11
-  C:37FFH         LINE#         14
-  C:3802H         LINE#         16
-  C:3807H         LINE#         17
-  C:380BH         LINE#         19
-  C:380BH         LINE#         21
-  C:380EH         LINE#         22
-  C:3810H         LINE#         23
-  C:381FH         LINE#         24
-  C:3821H         LINE#         25
-  C:3830H         LINE#         26
-  C:3833H         LINE#         27
-  C:383AH         LINE#         28
-  C:383DH         LINE#         29
+  C:3815H         LINE#         11
+  C:3815H         LINE#         14
+  C:3818H         LINE#         16
+  C:381DH         LINE#         17
+  C:3821H         LINE#         19
+  C:3821H         LINE#         21
+  C:3824H         LINE#         22
+  C:3826H         LINE#         23
+  C:3835H         LINE#         24
+  C:3837H         LINE#         25
+  C:3846H         LINE#         26
+  C:3849H         LINE#         27
+  C:3850H         LINE#         28
+  C:3853H         LINE#         29
   -------         ENDPROC       MODULECONNECT
   -------         ENDMOD        MODULECONNECT
 
@@ -3336,52 +3342,52 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:3DE1H         SYMBOL        Init
+  C:3DFFH         SYMBOL        Init
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  C:3AAAH         PUBLIC        ModuleCountdown
+  C:3AC8H         PUBLIC        ModuleCountdown
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
-  C:45E2H         SYMBOL        Timer_Interrupt
+  C:4600H         SYMBOL        Timer_Interrupt
   D:0000H         SYMBOL        countdown
   D:00D0H         PUBLIC        PSW
   -------         PROC          TIMER_INTERRUPT
-  C:45E2H         LINE#         11
-  C:45E2H         LINE#         12
-  C:45E4H         LINE#         13
+  C:4600H         LINE#         11
+  C:4600H         LINE#         12
+  C:4602H         LINE#         13
   -------         ENDPROC       TIMER_INTERRUPT
   -------         PROC          INIT
-  C:3DE1H         LINE#         15
-  C:3DE1H         LINE#         16
-  C:3DE8H         LINE#         17
-  C:3DF1H         LINE#         18
-  C:3DF4H         LINE#         20
-  C:3DF4H         LINE#         21
-  C:3E02H         LINE#         22
+  C:3DFFH         LINE#         15
+  C:3DFFH         LINE#         16
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 57
+
+
+  C:3E06H         LINE#         17
+  C:3E0FH         LINE#         18
+  C:3E12H         LINE#         20
+  C:3E12H         LINE#         21
+  C:3E20H         LINE#         22
   -------         ENDPROC       INIT
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 57
-
-
   -------         PROC          MODULECOUNTDOWN
-  C:3AAAH         LINE#         26
-  C:3AAAH         LINE#         27
-  C:3AADH         LINE#         29
-  C:3AADH         LINE#         30
-  C:3AADH         LINE#         31
-  C:3ABBH         LINE#         32
-  C:3AD0H         LINE#         33
-  C:3AD0H         LINE#         35
-  C:3AD3H         LINE#         37
-  C:3AD6H         LINE#         38
-  C:3ADFH         LINE#         39
-  C:3AE2H         LINE#         40
-  C:3AE6H         LINE#         42
-  C:3AE6H         LINE#         44
-  C:3AEAH         LINE#         45
-  C:3AEDH         LINE#         46
-  C:3AF0H         LINE#         48
-  C:3AF0H         LINE#         49
-  C:3AF0H         LINE#         50
+  C:3AC8H         LINE#         26
+  C:3AC8H         LINE#         27
+  C:3ACBH         LINE#         29
+  C:3ACBH         LINE#         30
+  C:3ACBH         LINE#         31
+  C:3AD9H         LINE#         32
+  C:3AEEH         LINE#         33
+  C:3AEEH         LINE#         35
+  C:3AF1H         LINE#         37
+  C:3AF4H         LINE#         38
+  C:3AFDH         LINE#         39
+  C:3B00H         LINE#         40
+  C:3B04H         LINE#         42
+  C:3B04H         LINE#         44
+  C:3B08H         LINE#         45
+  C:3B0BH         LINE#         46
+  C:3B0EH         LINE#         48
+  C:3B0EH         LINE#         49
+  C:3B0EH         LINE#         50
   -------         ENDPROC       MODULECOUNTDOWN
   -------         ENDMOD        MODULECOUNTDOWN
 
@@ -3396,31 +3402,31 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:44F7H         SYMBOL        Init
+  C:4515H         SYMBOL        Init
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  C:4502H         PUBLIC        ModuleGeneric
+  C:4520H         PUBLIC        ModuleGeneric
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00D0H         PUBLIC        PSW
   -------         PROC          INIT
-  C:44F7H         LINE#         8
-  C:44F7H         LINE#         9
-  C:44FAH         LINE#         12
-  C:44FFH         LINE#         14
+  C:4515H         LINE#         8
+  C:4515H         LINE#         9
+  C:4518H         LINE#         12
+  C:451DH         LINE#         14
   -------         ENDPROC       INIT
   -------         PROC          MODULEGENERIC
-  C:4502H         LINE#         17
-  C:4502H         LINE#         18
-  C:4505H         LINE#         20
-  C:4508H         LINE#         21
-  C:4508H         LINE#         22
-  C:450BH         LINE#         23
+  C:4520H         LINE#         17
+  C:4520H         LINE#         18
+  C:4523H         LINE#         20
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 58
+
+
+  C:4526H         LINE#         21
+  C:4526H         LINE#         22
+  C:4529H         LINE#         23
   -------         ENDPROC       MODULEGENERIC
   -------         ENDMOD        MODULEGENERIC
-
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 58
-
 
   -------         MODULE        MODULECONFIGMENU
   C:0000H         SYMBOL        _ICE_DUMMY_
@@ -3433,7 +3439,7 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:3962H         SYMBOL        Init
+  C:3978H         SYMBOL        Init
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   D:0098H         PUBLIC        SCON
@@ -3444,12 +3450,12 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   -------         DO            
   D:0027H         SYMBOL        len
   -------         ENDDO         
-  C:3962H         LINE#         12
-  C:3962H         LINE#         13
-  C:396DH         LINE#         14
-  C:3985H         LINE#         15
-  C:3993H         LINE#         16
-  C:399FH         LINE#         17
+  C:3978H         LINE#         12
+  C:3978H         LINE#         13
+  C:3983H         LINE#         14
+  C:399BH         LINE#         15
+  C:39A9H         LINE#         16
+  C:39B5H         LINE#         17
   -------         ENDPROC       INIT
   C:2C5FH         SYMBOL        L?0014
   -------         PROC          MODULECONFIGMENU
@@ -3473,15 +3479,15 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:2BA9H         LINE#         33
   C:2BB3H         LINE#         34
   C:2BD3H         LINE#         36
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 59
+
+
   C:2BDFH         LINE#         37
   C:2C0BH         LINE#         38
   C:2C0BH         LINE#         39
   C:2C0EH         LINE#         41
   C:2C11H         LINE#         43
   C:2C1AH         LINE#         44
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 59
-
-
   C:2C1CH         LINE#         45
   C:2C28H         LINE#         46
   C:2C28H         LINE#         47
@@ -3510,38 +3516,38 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:359CH         SYMBOL        Init
+  C:35ABH         SYMBOL        Init
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   C:2736H         PUBLIC        ModuleKeyMapping
   D:00D0H         PUBLIC        PSW
-  C:4152H         SYMBOL        Com0014
-  C:4152H         SYMBOL        L?0021
-  C:4152H         SYMBOL        L?0022
-  C:4154H         SYMBOL        L?0023
-  C:4159H         SYMBOL        L?0024
-  C:4164H         SYMBOL        L?0025
-  C:4168H         SYMBOL        L?0026
+  C:4170H         SYMBOL        Com0014
+  C:4170H         SYMBOL        L?0021
+  C:4170H         SYMBOL        L?0022
+  C:4172H         SYMBOL        L?0023
+  C:4177H         SYMBOL        L?0024
+  C:4182H         SYMBOL        L?0025
+  C:4186H         SYMBOL        L?0026
   -------         PROC          COM0014
   -------         ENDPROC       COM0014
   -------         PROC          INIT
   -------         DO            
   D:002AH         SYMBOL        len
   -------         ENDDO         
-  C:359CH         LINE#         9
-  C:359CH         LINE#         10
-  C:359FH         LINE#         12
-  C:359FH         LINE#         13
-  C:35AAH         LINE#         14
-  C:35C2H         LINE#         15
-  C:35DBH         LINE#         16
-  C:35E8H         LINE#         17
-  C:3601H         LINE#         18
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 60
+  C:35ABH         LINE#         9
+  C:35ABH         LINE#         10
+  C:35AEH         LINE#         12
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 60
 
 
+  C:35AEH         LINE#         13
+  C:35B9H         LINE#         14
+  C:35D1H         LINE#         15
+  C:35EAH         LINE#         16
+  C:35F7H         LINE#         17
+  C:3610H         LINE#         18
   -------         ENDPROC       INIT
   C:28A2H         SYMBOL        L?0027
   -------         PROC          MODULEKEYMAPPING
@@ -3593,15 +3599,15 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:2874H         LINE#         62
   C:2884H         LINE#         63
   C:2884H         LINE#         64
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 61
+
+
   C:288DH         LINE#         65
   C:2890H         LINE#         67
   C:2892H         LINE#         69
   C:2892H         LINE#         70
   C:289EH         LINE#         71
   C:28A1H         LINE#         73
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 61
-
-
   C:28A1H         LINE#         74
   C:28A1H         LINE#         75
   -------         ENDPROC       MODULEKEYMAPPING
@@ -3619,27 +3625,27 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
   C:28AAH         PUBLIC        ModuleAnalogMapping
-  C:385CH         SYMBOL        Init
+  C:3872H         SYMBOL        Init
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00D0H         PUBLIC        PSW
-  C:452BH         SYMBOL        Com0024
-  C:452BH         SYMBOL        L?0037
+  C:4549H         SYMBOL        Com0024
+  C:4549H         SYMBOL        L?0037
   -------         PROC          COM0024
   -------         ENDPROC       COM0024
   -------         PROC          INIT
   -------         DO            
   D:0027H         SYMBOL        len
   -------         ENDDO         
-  C:385CH         LINE#         12
-  C:385CH         LINE#         13
-  C:385FH         LINE#         15
-  C:385FH         LINE#         16
-  C:386AH         LINE#         17
-  C:3882H         LINE#         18
-  C:389BH         LINE#         19
+  C:3872H         LINE#         12
+  C:3872H         LINE#         13
+  C:3875H         LINE#         15
+  C:3875H         LINE#         16
+  C:3880H         LINE#         17
+  C:3898H         LINE#         18
+  C:38B1H         LINE#         19
   -------         ENDPROC       INIT
   -------         PROC          MODULEANALOGMAPPING
   -------         DO            
@@ -3653,15 +3659,15 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:28AAH         LINE#         24
   C:28B0H         LINE#         25
   C:28B3H         LINE#         27
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 62
+
+
   C:28B6H         LINE#         29
   C:28B6H         LINE#         30
   C:28B6H         LINE#         33
   C:28C4H         LINE#         34
   C:28D3H         LINE#         36
   C:28E1H         LINE#         37
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 62
-
-
   C:28EDH         LINE#         38
   C:28F2H         LINE#         39
   C:28F7H         LINE#         40
@@ -3713,15 +3719,15 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:29FBH         LINE#         90
   C:29FFH         LINE#         91
   C:29FFH         LINE#         92
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 63
+
+
   C:29FFH         LINE#         93
   C:29FFH         LINE#         94
   C:2A08H         LINE#         95
   C:2A0BH         LINE#         97
   C:2A0DH         LINE#         99
   C:2A0DH         LINE#         100
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 63
-
-
   C:2A19H         LINE#         101
   C:2A1CH         LINE#         103
   C:2A1CH         LINE#         104
@@ -3740,48 +3746,48 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:37A1H         SYMBOL        Init
+  C:37B7H         SYMBOL        Init
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   C:1CF9H         PUBLIC        ModuleAnalogCalibration
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00D0H         PUBLIC        PSW
-  C:3F9BH         SYMBOL        Com0029
-  C:3F9BH         SYMBOL        L?0042
-  C:3F9BH         SYMBOL        L?0043
-  C:3FA2H         SYMBOL        L?0044
-  C:3FA2H         SYMBOL        L?0045
-  C:3FAAH         SYMBOL        L?0046
-  C:3FAAH         SYMBOL        L?0047
-  C:3FB2H         SYMBOL        L?0050
-  C:3FB4H         SYMBOL        L?0051
-  C:3FBBH         SYMBOL        L?0053
+  C:3FB9H         SYMBOL        Com0029
+  C:3FB9H         SYMBOL        L?0042
+  C:3FB9H         SYMBOL        L?0043
+  C:3FC0H         SYMBOL        L?0044
+  C:3FC0H         SYMBOL        L?0045
+  C:3FC8H         SYMBOL        L?0046
+  C:3FC8H         SYMBOL        L?0047
+  C:3FD0H         SYMBOL        L?0050
+  C:3FD2H         SYMBOL        L?0051
+  C:3FD9H         SYMBOL        L?0053
   -------         PROC          COM0029
   -------         ENDPROC       COM0029
-  C:37F1H         SYMBOL        L?0052
+  C:3807H         SYMBOL        L?0052
   -------         PROC          INIT
   -------         DO            
   D:003BH         SYMBOL        len
   -------         ENDDO         
-  C:37A1H         LINE#         10
-  C:37A1H         LINE#         11
-  C:37A4H         LINE#         13
-  C:37A4H         LINE#         14
-  C:37AFH         LINE#         15
-  C:37C7H         LINE#         16
-  C:37DBH         LINE#         17
-  C:37E3H         LINE#         18
-  C:37F1H         LINE#         19
-  C:37F1H         LINE#         20
+  C:37B7H         LINE#         10
+  C:37B7H         LINE#         11
+  C:37BAH         LINE#         13
+  C:37BAH         LINE#         14
+  C:37C5H         LINE#         15
+  C:37DDH         LINE#         16
+  C:37F1H         LINE#         17
+  C:37F9H         LINE#         18
+  C:3807H         LINE#         19
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 64
+
+
+  C:3807H         LINE#         20
   -------         ENDPROC       INIT
   C:207BH         SYMBOL        L?0040
   C:208EH         SYMBOL        L?0048
   C:2096H         SYMBOL        L?0049
   C:209EH         SYMBOL        L?0054
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 64
-
-
   -------         PROC          MODULEANALOGCALIBRATION
   -------         DO            
   D:0022H         SYMBOL        offset
@@ -3833,15 +3839,15 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:1E08H         LINE#         65
   C:1E0DH         LINE#         66
   C:1E10H         LINE#         67
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 65
+
+
   C:1E13H         LINE#         68
   C:1E13H         LINE#         69
   C:1E13H         LINE#         70
   C:1E1CH         LINE#         71
   C:1E21H         LINE#         72
   C:1E24H         LINE#         73
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 65
-
-
   C:1E27H         LINE#         74
   C:1E27H         LINE#         75
   C:1E2CH         LINE#         76
@@ -3893,15 +3899,15 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:1F0EH         LINE#         126
   C:1F19H         LINE#         127
   C:1F19H         LINE#         128
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 66
+
+
   C:1F1FH         LINE#         129
   C:1F2AH         LINE#         130
   C:1F35H         LINE#         131
   C:1F35H         LINE#         132
   C:1F43H         LINE#         133
   C:1F50H         LINE#         134
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 66
-
-
   C:1F5FH         LINE#         135
   C:1F6EH         LINE#         136
   C:1F7BH         LINE#         137
@@ -3939,7 +3945,7 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:38B4H         SYMBOL        Init
+  C:38CAH         SYMBOL        Init
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   C:2DC1H         SYMBOL        items
@@ -3949,29 +3955,29 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:2DCAH         SYMBOL        wiiButtons
   C:23D0H         PUBLIC        ModuleTurboSetting
   D:00D0H         PUBLIC        PSW
-  C:41C9H         SYMBOL        Com0028
-  C:41C9H         SYMBOL        L?0041
-  C:41CAH         SYMBOL        L?0042
-  C:41D3H         SYMBOL        L?0043
-  C:41D3H         SYMBOL        L?0044
-  C:41DDH         SYMBOL        L?0045
-  C:41DDH         SYMBOL        L?0046
+  C:41E7H         SYMBOL        Com0028
+  C:41E7H         SYMBOL        L?0041
+  C:41E8H         SYMBOL        L?0042
+  C:41F1H         SYMBOL        L?0043
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 67
+
+
+  C:41F1H         SYMBOL        L?0044
+  C:41FBH         SYMBOL        L?0045
+  C:41FBH         SYMBOL        L?0046
   -------         PROC          COM0028
   -------         ENDPROC       COM0028
   -------         PROC          INIT
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 67
-
-
   -------         DO            
   D:0027H         SYMBOL        len
   -------         ENDDO         
-  C:38B4H         LINE#         44
-  C:38B4H         LINE#         45
-  C:38B7H         LINE#         47
-  C:38B7H         LINE#         48
-  C:38C2H         LINE#         49
-  C:38DAH         LINE#         50
-  C:38F3H         LINE#         51
+  C:38CAH         LINE#         44
+  C:38CAH         LINE#         45
+  C:38CDH         LINE#         47
+  C:38CDH         LINE#         48
+  C:38D8H         LINE#         49
+  C:38F0H         LINE#         50
+  C:3909H         LINE#         51
   -------         ENDPROC       INIT
   -------         PROC          MODULETURBOSETTING
   -------         DO            
@@ -4013,15 +4019,15 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   C:24D0H         LINE#         92
   C:24DCH         LINE#         93
   C:24DCH         LINE#         94
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 68
+
+
   C:24E5H         LINE#         95
   C:24E7H         LINE#         96
   C:24F2H         LINE#         97
   C:24F2H         LINE#         98
   C:24FBH         LINE#         99
   C:2507H         LINE#         100
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 68
-
-
   C:2507H         LINE#         101
   C:250AH         LINE#         102
   C:250FH         LINE#         103
@@ -4073,14 +4079,14 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
 
   -------         MODULE        ?C?CLDOPTR
   C:1799H         PUBLIC        ?C?CLDOPTR
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 69
+
+
   -------         ENDMOD        ?C?CLDOPTR
 
   -------         MODULE        ?C?CSTPTR
   C:17C6H         PUBLIC        ?C?CSTPTR
   -------         ENDMOD        ?C?CSTPTR
-
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 69
-
 
   -------         MODULE        ?C?CSTOPTR
   C:17D8H         PUBLIC        ?C?CSTOPTR
@@ -4112,7 +4118,7 @@ SYMBOL TABLE OF MODULE:  3DSWiiPlus (UTILITY)
   -------         ENDMOD        ?C?STRCPY
 
   -------         MODULE        STRLEN
-  C:428CH         PUBLIC        _STRLEN
+  C:42AAH         PUBLIC        _STRLEN
   -------         ENDMOD        STRLEN
 
   -------         MODULE        ?C?MEMCMP
@@ -4133,15 +4139,15 @@ FUNCTION . . . . . . . . . . . . . . REG MASK
 
 CONTROLLER_ISCONNECTED . . . . . . . @0xf300
 CONTROLLER_READ. . . . . . . . . . . @0xf3ff
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 70
+
+
 CTRINTERFACE_INIT. . . . . . . . . . @0x8000
 CTRINTERFACE_PREPARE . . . . . . . . @0xf373
 CTRINTERFACE_UPDATE. . . . . . . . . @0xf7ff
 I2C_GETACK . . . . . . . . . . . . . @0xf00d
 I2C_PUTACK . . . . . . . . . . . . . @0xd001
 I2C_READ . . . . . . . . . . . . . . @0xf007
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 70
-
-
 I2C_START. . . . . . . . . . . . . . @0xc001
 I2C_STOP . . . . . . . . . . . . . . @0xe00d
 IAP_IDLE . . . . . . . . . . . . . . @0xe000
@@ -4171,13 +4177,11 @@ WIICLASSICCONTROLLER_GETLANALOGY . . @0xf001
 WIICLASSICCONTROLLER_GETPTR. . . . . @0x8070
 WIICLASSICCONTROLLER_GETRANALOGX . . @0xf001
 WIICLASSICCONTROLLER_GETRANALOGY . . @0xf001
-WIICLASSICCONTROLLER_INIT. . . . . . @0xf3ff
 WIICLASSICCONTROLLER_READ. . . . . . @0xf3ff
 _DEC2STRING. . . . . . . . . . . . . @0xf7ff
 _DELAY . . . . . . . . . . . . . . . @0xe00b
 _DELAY10US . . . . . . . . . . . . . @0xe003
 _HEX2STRING. . . . . . . . . . . . . @0xf383
-_I2C_CHECKSLAVEVALIDITY. . . . . . . @0xf3ff
 _I2C_GETS. . . . . . . . . . . . . . @0xf3ff
 _I2C_PUTS. . . . . . . . . . . . . . @0xf3ff
 _I2C_WRITE . . . . . . . . . . . . . @0xf007
@@ -4195,13 +4199,13 @@ _LCM12864_GETSTRLENFROMIDX . . . . . @0xf7ff
 _LCM12864_SENDCOMMAND. . . . . . . . @0xe001
 _LCM12864_SENDDATA . . . . . . . . . @0xe001
 _NRF24L01_RECV . . . . . . . . . . . @0xf3ff
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 71
+
+
 _NRF24L01_SEND . . . . . . . . . . . @0xf3ff
 _NRF24L01_SPI_READ . . . . . . . . . @0xe001
 _NRF24L01_SPI_READ_BUF . . . . . . . @0xf3f7
 _NRF24L01_SPI_WRITE. . . . . . . . . @0xe007
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 71
-
-
 _NRF24L01_SPI_WRITE_BUF. . . . . . . @0xf3f7
 _NRF24L01_TESTREG. . . . . . . . . . @0xe001
 _PWM_SETCHANNELSTATUS. . . . . . . . @0xe001
@@ -4224,17 +4228,9 @@ MESSAGE                         MODULE
    INFORMATION
 --------------------------------------
 
-** RE-TRANSLATION REQUIRED **   I2C.obj (I2C)
-   REG MASK (@0xf371) IS TOO OPTIMISTIC FOR FUNCTION '_UART_STRING'
-   REG MASK (@0xf3f3) IS TOO OPTIMISTIC FOR FUNCTION '_UART_HEX'
-
-** RE-TRANSLATION REQUIRED **   WiiClassicController.obj (WIICLASSICCONTROLLER)
-   REG MASK (@0xf371) IS TOO OPTIMISTIC FOR FUNCTION '_UART_STRING'
-   REG MASK (@0xf3f3) IS TOO OPTIMISTIC FOR FUNCTION '_UART_HEX'
-
-** RE-TRANSLATION REQUIRED **   NRF24L01.obj (NRF24L01)
-   REG MASK (@0xf371) IS TOO OPTIMISTIC FOR FUNCTION '_UART_STRING'
-   REG MASK (@0xf3f3) IS TOO OPTIMISTIC FOR FUNCTION '_UART_HEX'
+** RE-TRANSLATION REQUIRED **   Controller.obj (CONTROLLER)
+   REG MASK (@0xf3ff) IS TOO OPTIMISTIC FOR FUNCTION '_I2C_CHECKSLAVEVALIDITY'
+   REG MASK (@0xf3ff) IS TOO OPTIMISTIC FOR FUNCTION 'WIICLASSICCONTROLLER_INIT'
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_UART_SEND?UART
@@ -4259,12 +4255,12 @@ MESSAGE                         MODULE
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?SAVEDATA_RESTORE?SAVEDATA
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 72
-
-
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?NRF24L01_TX_MODE?NRF24L01
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 72
+
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_NRF24L01_SEND?NRF24L01
@@ -4297,31 +4293,40 @@ MESSAGE                         MODULE
     SEGMENT: ?DT?MODULECOUNTDOWN
     LENGTH:  0001H
 
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  MODULEDEVICESETTING
+    MODULE:  main.obj (MAIN)
+
 *** ERROR L105: PUBLIC REFERS TO IGNORED SEGMENT
     SYMBOL:  CURRENTMODULE
     SEGMENT: ?DT?MAIN
 
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  MODULEDEVICESETTING
+    MODULE:  main.obj (MAIN)
+    ADDRESS: 34BDH
+
 *** ERROR L118: REFERENCE MADE TO ERRONEOUS EXTERNAL
     SYMBOL:  CURRENTMODULE
     MODULE:  ModuleConnect.obj (MODULECONNECT)
-    ADDRESS: 3808H
+    ADDRESS: 381EH
 
 *** ERROR L118: REFERENCE MADE TO ERRONEOUS EXTERNAL
     SYMBOL:  CURRENTMODULE
     MODULE:  ModuleCountdown.obj (MODULECOUNTDOWN)
-    ADDRESS: 3AE3H
+    ADDRESS: 3B01H
 
 *** ERROR L118: REFERENCE MADE TO ERRONEOUS EXTERNAL
     SYMBOL:  CURRENTMODULE
     MODULE:  ModuleCountdown.obj (MODULECOUNTDOWN)
-    ADDRESS: 3AEEH
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/10/2017  10:00:40  PAGE 73
+
+
+    ADDRESS: 3B0CH
 
 *** ERROR L118: REFERENCE MADE TO ERRONEOUS EXTERNAL
     SYMBOL:  CURRENTMODULE
     MODULE:  ModuleConfigMenu.obj (MODULECONFIGMENU)
-BL51 BANKED LINKER/LOCATER V6.22                                                      08/08/2017  16:17:42  PAGE 73
-
-
     ADDRESS: 2C4DH
 
 *** ERROR L118: REFERENCE MADE TO ERRONEOUS EXTERNAL
@@ -4351,5 +4356,5 @@ MESSAGE                         MODULE
 
 *** APPLICATION REQUIRES RE-TRANSLATIONS! ***
 
-Program Size: data=130.3 xdata=1618 code=17899
-LINK/LOCATE RUN COMPLETE.  16 WARNING(S),  12 ERROR(S)
+Program Size: data=130.3 xdata=1618 code=17929
+LINK/LOCATE RUN COMPLETE.  18 WARNING(S),  12 ERROR(S)

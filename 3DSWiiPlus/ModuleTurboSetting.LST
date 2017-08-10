@@ -1,4 +1,4 @@
-C51 COMPILER V9.52.0.0   MODULETURBOSETTING                                                08/08/2017 16:17:42 PAGE 1   
+C51 COMPILER V9.52.0.0   MODULETURBOSETTING                                                08/10/2017 10:00:40 PAGE 1   
 
 
 C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MODULETURBOSETTING
@@ -62,7 +62,7 @@ line level    source
   52   2              }
   53   1      }
   54          
-C51 COMPILER V9.52.0.0   MODULETURBOSETTING                                                08/08/2017 16:17:42 PAGE 2   
+C51 COMPILER V9.52.0.0   MODULETURBOSETTING                                                08/10/2017 10:00:40 PAGE 2   
 
   55          void ModuleTurboSetting(){
   56   1              s16 offset = 128 << 4;  // ¶¨µãÊý
@@ -126,7 +126,7 @@ line level    source
  111   4                                              break;
  112   4                              }
  113   3                      }
-C51 COMPILER V9.52.0.0   MODULETURBOSETTING                                                08/08/2017 16:17:42 PAGE 3   
+C51 COMPILER V9.52.0.0   MODULETURBOSETTING                                                08/10/2017 10:00:40 PAGE 3   
 
  114   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_RIGHT)){
  115   3                              switch(selectedItem){

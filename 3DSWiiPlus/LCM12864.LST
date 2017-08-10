@@ -1,4 +1,4 @@
-C51 COMPILER V9.52.0.0   LCM12864                                                          08/08/2017 16:17:41 PAGE 1   
+C51 COMPILER V9.52.0.0   LCM12864                                                          08/10/2017 10:00:38 PAGE 1   
 
 
 C51 COMPILER V9.52.0.0, COMPILATION OF MODULE LCM12864
@@ -62,7 +62,7 @@ line level    source
   52          void LCM12864_Clear(){
   53   1              memset(VRAM, 0, sizeof(VRAM));
   54   1      }
-C51 COMPILER V9.52.0.0   LCM12864                                                          08/08/2017 16:17:41 PAGE 2   
+C51 COMPILER V9.52.0.0   LCM12864                                                          08/10/2017 10:00:38 PAGE 2   
 
   55          
   56          void LCM12864_Refresh(){
@@ -126,7 +126,7 @@ line level    source
  114   2              }
  115   1      }
  116          
-C51 COMPILER V9.52.0.0   LCM12864                                                          08/08/2017 16:17:41 PAGE 3   
+C51 COMPILER V9.52.0.0   LCM12864                                                          08/10/2017 10:00:38 PAGE 3   
 
  117          void LCM12864_DrawStringIdx(u8 fontSize, u8 idx, s16 x, s16 y, bit c){
  118   1              u8 i = 0;
@@ -190,7 +190,7 @@ line level    source
  176   3                      }
  177   2              }
  178   1      }
-C51 COMPILER V9.52.0.0   LCM12864                                                          08/08/2017 16:17:41 PAGE 4   
+C51 COMPILER V9.52.0.0   LCM12864                                                          08/10/2017 10:00:38 PAGE 4   
 
  179          
  180          /*
@@ -254,7 +254,7 @@ line level    source
 MODULE INFORMATION:   STATIC OVERLAYABLE
    CODE SIZE        =   1056    ----
    CONSTANT SIZE    =   5732    ----
-C51 COMPILER V9.52.0.0   LCM12864                                                          08/08/2017 16:17:41 PAGE 5   
+C51 COMPILER V9.52.0.0   LCM12864                                                          08/10/2017 10:00:38 PAGE 5   
 
    XDATA SIZE       =   1056    ----
    PDATA SIZE       =   ----    ----

@@ -1,4 +1,4 @@
-C51 COMPILER V9.52.0.0   PWM                                                               08/08/2017 16:17:41 PAGE 1   
+C51 COMPILER V9.52.0.0   PWM                                                               08/10/2017 10:00:37 PAGE 1   
 
 
 C51 COMPILER V9.52.0.0, COMPILATION OF MODULE PWM
@@ -62,7 +62,7 @@ line level    source
 MODULE INFORMATION:   STATIC OVERLAYABLE
    CODE SIZE        =    152    ----
    CONSTANT SIZE    =     36    ----
-C51 COMPILER V9.52.0.0   PWM                                                               08/08/2017 16:17:41 PAGE 2   
+C51 COMPILER V9.52.0.0   PWM                                                               08/10/2017 10:00:37 PAGE 2   
 
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

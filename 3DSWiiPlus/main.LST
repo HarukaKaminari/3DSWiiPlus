@@ -1,4 +1,4 @@
-C51 COMPILER V9.52.0.0   MAIN                                                              08/08/2017 16:17:41 PAGE 1   
+C51 COMPILER V9.52.0.0   MAIN                                                              08/10/2017 10:00:39 PAGE 1   
 
 
 C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
@@ -62,7 +62,7 @@ line level    source
   52          */
   53          
   54          
-C51 COMPILER V9.52.0.0   MAIN                                                              08/08/2017 16:17:41 PAGE 2   
+C51 COMPILER V9.52.0.0   MAIN                                                              08/10/2017 10:00:39 PAGE 2   
 
   55          #include <INTRINS.h>
   56          #include "main.h"
@@ -84,59 +84,61 @@ line level    source
   72          #include "ModuleAnalogMapping.h"
   73          #include "ModuleAnalogCalibration.h"
   74          #include "ModuleTurboSetting.h"
-  75          
+  75          #include "ModuleDeviceSetting.h"
   76          
-  77          enumModuleType currentModule = Module_Connect;
-  78          
+  77          
+  78          enumModuleType currentModule = Module_Connect;
   79          
-  80          static void Init(){
-  81   1              P0M0 = 0;P0M1 = 0;
-  82   1              P1M0 = 0;P1M1 = 0;
-  83   1              P2M0 = 0;P2M1 = 0;
-  84   1              P3M0 = 0;P3M1 = 0;
-  85   1              P4M0 = 0;P4M1 = 0;      // 设置所有P口均为弱上拉
-  86   1              P0 = 0xFF;
-  87   1              P1 = 0xFF;
-  88   1              P2 = 0xFF;
-  89   1              P3 = 0xFF;
-  90   1              P4 = 0xFF;                      // 所有P口均输出高电平
-  91   1      }
-  92          
-  93          void main(){
-  94   1              Init();
-  95   1              Uart_Init();
-  96   1              I2C_Init();
-  97   1              PWM_Init();
-  98   1              Timer_Init();
-  99   1              SPI_Init();
- 100   1              
- 101   1              CTRInterface_Init();
- 102   1              LCM12864_Init();
- 103   1              LCM12864_Backlight(0);
- 104   1              SaveData_Init();
- 105   1              Controller_Init();
- 106   1              
- 107   1              while(1){
- 108   2                      LCM12864_Clear();
- 109   2                      
- 110   2                      switch(currentModule){
- 111   3                              case Module_Connect:                    ModuleConnect();                        break;
- 112   3                              case Module_Countdown:                  ModuleCountdown();                      break;
- 113   3                              case Module_Generic:                    ModuleGeneric();                        break;
- 114   3                              case Module_ConfigMenu:                 ModuleConfigMenu();                     break;
- 115   3                              case Module_KeyMapping:                 ModuleKeyMapping();                     break;
- 116   3                              case Module_AnalogMapping:              ModuleAnalogMapping();          break;
-C51 COMPILER V9.52.0.0   MAIN                                                              08/08/2017 16:17:41 PAGE 3   
+  80          
+  81          static void Init(){
+  82   1              P0M0 = 0;P0M1 = 0;
+  83   1              P1M0 = 0;P1M1 = 0;
+  84   1              P2M0 = 0;P2M1 = 0;
+  85   1              P3M0 = 0;P3M1 = 0;
+  86   1              P4M0 = 0;P4M1 = 0;      // 设置所有P口均为弱上拉
+  87   1              P0 = 0xFF;
+  88   1              P1 = 0xFF;
+  89   1              P2 = 0xFF;
+  90   1              P3 = 0xFF;
+  91   1              P4 = 0xFF;                      // 所有P口均输出高电平
+  92   1      }
+  93          
+  94          void main(){
+  95   1              Init();
+  96   1              Uart_Init();
+  97   1              I2C_Init();
+  98   1              PWM_Init();
+  99   1              Timer_Init();
+ 100   1              SPI_Init();
+ 101   1              
+ 102   1              CTRInterface_Init();
+ 103   1              LCM12864_Init();
+ 104   1              LCM12864_Backlight(0);
+ 105   1              SaveData_Init();
+ 106   1              Controller_Init();
+ 107   1              
+ 108   1              while(1){
+ 109   2                      LCM12864_Clear();
+ 110   2                      
+ 111   2                      switch(currentModule){
+ 112   3                              case Module_Connect:                    ModuleConnect();                        break;
+ 113   3                              case Module_Countdown:                  ModuleCountdown();                      break;
+ 114   3                              case Module_Generic:                    ModuleGeneric();                        break;
+ 115   3                              case Module_ConfigMenu:                 ModuleConfigMenu();                     break;
+ 116   3                              case Module_KeyMapping:                 ModuleKeyMapping();                     break;
+C51 COMPILER V9.52.0.0   MAIN                                                              08/10/2017 10:00:39 PAGE 3   
 
- 117   3                              case Module_AnalogCalibration:  ModuleAnalogCalibration();      break;
- 118   3                              case Module_TurboSetting:               ModuleTurboSetting();           break;
- 119   3                      }
- 120   2              }
- 121   1      }
+ 117   3                              case Module_AnalogMapping:              ModuleAnalogMapping();          break;
+ 118   3                              case Module_AnalogCalibration:  ModuleAnalogCalibration();      break;
+ 119   3                              case Module_TurboSetting:               ModuleTurboSetting();           break;
+ 120   3                              case Module_DeviceSetting:              ModuleDeviceSetting();          break;
+ 121   3                      }
+ 122   2              }
+ 123   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    161    ----
+   CODE SIZE        =    169    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

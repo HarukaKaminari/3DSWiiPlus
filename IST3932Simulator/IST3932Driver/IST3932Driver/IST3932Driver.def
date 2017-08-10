@@ -1,0 +1,14 @@
+LIBRARY IST3932DriverDll
+EXPORTS
+
+LCM12864_Init @1
+LCM12864_Clear @2
+LCM12864_Refresh @3
+LCM12864_DrawChar @4
+LCM12864_DrawString @5
+LCM12864_DrawStringIdx @6
+LCM12864_DrawPixel @7
+LCM12864_DrawLine @8
+LCM12864_FillRect @9
+LCM12864_DrawCircle @10
+LCM12864_GetStrLenFromIdx @11

@@ -1,4 +1,4 @@
-C51 COMPILER V9.52.0.0   MODULEKEYMAPPING                                                  08/08/2017 16:17:41 PAGE 1   
+C51 COMPILER V9.52.0.0   MODULEKEYMAPPING                                                  08/10/2017 10:00:40 PAGE 1   
 
 
 C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MODULEKEYMAPPING
@@ -62,7 +62,7 @@ line level    source
   49   3                              selectedWiiButton--;
   50   3                              if(selectedWiiButton < 0)selectedWiiButton = KEY_ITEM_COUNT - 1;
   51   3                      }
-C51 COMPILER V9.52.0.0   MODULEKEYMAPPING                                                  08/08/2017 16:17:41 PAGE 2   
+C51 COMPILER V9.52.0.0   MODULEKEYMAPPING                                                  08/10/2017 10:00:40 PAGE 2   
 
   52   2                      if(Controller_IsKeyDown(WII_CLASSIC_CONTROLLER_BUTTON_DOWN)){
   53   3                              selectedWiiButton++;

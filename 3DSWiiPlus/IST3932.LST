@@ -1,4 +1,4 @@
-C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 1   
+C51 COMPILER V9.52.0.0   IST3932                                                           08/10/2017 10:00:39 PAGE 1   
 
 
 C51 COMPILER V9.52.0.0, COMPILATION OF MODULE IST3932
@@ -62,7 +62,7 @@ line level    source
   52   1      }
   53          
   54          /*
-C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 2   
+C51 COMPILER V9.52.0.0   IST3932                                                           08/10/2017 10:00:39 PAGE 2   
 
   55          睡眠模式
   56          */
@@ -126,7 +126,7 @@ line level    source
  113          /*
  114          设置占空比。取值范围为1~65。貌似和对比度有关
  115          */
-C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 3   
+C51 COMPILER V9.52.0.0   IST3932                                                           08/10/2017 10:00:39 PAGE 3   
 
  116          static void IST3932_SetDuty(u8 duty){
  117   1              LCM12864_SendCommand(0x90 | (duty & 0xF));
@@ -190,7 +190,7 @@ line level    source
  175          */
  176          static void IST3932_EndIST(){
  177   1              LCM12864_SendCommand(0xE3);
-C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 4   
+C51 COMPILER V9.52.0.0   IST3932                                                           08/10/2017 10:00:39 PAGE 4   
 
  178   1      }
  179          
@@ -254,7 +254,7 @@ line level    source
               #else
  238   1              if(y > 63)return;
  239   1      #endif
-C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 5   
+C51 COMPILER V9.52.0.0   IST3932                                                           08/10/2017 10:00:39 PAGE 5   
 
  240   1              page = x >> 3;
  241   1              
@@ -318,7 +318,7 @@ line level    source
                       if(y > 31)return;
               #else
  301   1              if(y > 63)return;
-C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 6   
+C51 COMPILER V9.52.0.0   IST3932                                                           08/10/2017 10:00:39 PAGE 6   
 
  302   1      #endif
  303   1              
@@ -382,7 +382,7 @@ line level    source
  361   1      }
  362          
  363          
-C51 COMPILER V9.52.0.0   IST3932                                                           08/08/2017 16:17:41 PAGE 7   
+C51 COMPILER V9.52.0.0   IST3932                                                           08/10/2017 10:00:39 PAGE 7   
 
  364          #endif
 

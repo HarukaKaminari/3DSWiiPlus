@@ -1,4 +1,4 @@
-C51 COMPILER V9.52.0.0   MODULEANALOGCALIBRATION                                           08/08/2017 16:17:41 PAGE 1   
+C51 COMPILER V9.52.0.0   MODULEANALOGCALIBRATION                                           08/10/2017 10:00:40 PAGE 1   
 
 
 C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MODULEANALOGCALIBRATION
@@ -62,7 +62,7 @@ line level    source
              -∆¡ø A±£¥Ê…Ë∂®≤¢∑µªÿ…Ë÷√≤Àµ• B≤ª±£¥Ê…Ë∂®÷±Ω”∑µªÿ…Ë÷√≤Àµ•
   52   3      
   53   3                              offset -= 8;
-C51 COMPILER V9.52.0.0   MODULEANALOGCALIBRATION                                           08/08/2017 16:17:41 PAGE 2   
+C51 COMPILER V9.52.0.0   MODULEANALOGCALIBRATION                                           08/10/2017 10:00:40 PAGE 2   
 
   54   3                              if(offset < -(len << 4))offset = 128 << 4;
   55   3                      }
@@ -126,7 +126,7 @@ line level    source
  113   2                      if(saveData.analogMapping){
  114   3                              trx = Controller_GetLAnalogX();
  115   3                              try = Controller_GetLAnalogY();
-C51 COMPILER V9.52.0.0   MODULEANALOGCALIBRATION                                           08/08/2017 16:17:41 PAGE 3   
+C51 COMPILER V9.52.0.0   MODULEANALOGCALIBRATION                                           08/10/2017 10:00:40 PAGE 3   
 
  116   3                              tlx = Controller_GetRAnalogX();
  117   3                              tly = Controller_GetRAnalogY();
