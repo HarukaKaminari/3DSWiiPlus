@@ -1,5 +1,7 @@
 # 3DSWiiPlus
-这是一个3DS硬件扩展，实现了3DS外接手柄的功能。
+![](https://github.com/HarukaKaminari/3DSWiiPlus/raw/master/3dswii+.png)<br/>
+
+这是一个3DS硬件扩展，实现了3DS外接手柄的功能。<br/>
 
 原理
 ----
